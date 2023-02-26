@@ -350,7 +350,7 @@ const Navbar = ({ mainCategory, category }) => {
 
         <Link href="/admin">
           <a  className="flex items-center mr-2 xl:mr-0 xl:gap-x-1 xl:border xl:bg-[#ef394e] xl:px-3 xl:rounded-lg font-bold xl:py-1">
-          <span className="hidden xl:block">مدیریت داشبورد</span>
+          <span className="hidden xl:block">پنل مدیریت</span>
           <SupervisorAccountIcon className="w-8 h-max" />
           </a>
         </Link>
