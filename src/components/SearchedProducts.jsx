@@ -164,12 +164,12 @@ const SearchedProducts = ({ products }) => {
                     {product.offer}%
                   </span>
                   <span className="text-[13px] md:text-sm font-bold lg:text-sm text-[#424750]">
-                    {product.price} تومان
+                  {Math.round((product.price * (100 - product.offer)) / 100)} تومان
                   </span>
                 </div>
                 <div>
                   <del className="text-xs lg:text-sm text-gray-400 ml-2 lg:mt-1">
-                    {Math.round((product.price * (100 - product.offer)) / 100)}
+                    {product.price}
                   </del>
                 </div>
               </div>
@@ -190,12 +190,12 @@ const SearchedProducts = ({ products }) => {
                 {product.offer}%
               </span>
               <span className="text-sm font-bold lg:text-sm text-[#424750]">
-                {product.price} تومان
+              {Math.round((product.price * (100 - product.offer)) / 100).toLocaleString()} تومان
               </span>
             </div>
             <div>
               <del className="text-xs lg:text-sm text-gray-400 ml-2 lg:mt-1">
-                {Math.round((product.price * (100 - product.offer)) / 100)}
+                {product.price}
               </del>
             </div>
           </div>

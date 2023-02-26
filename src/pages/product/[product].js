@@ -594,8 +594,11 @@ function HomePage({
 
   // when go to the clicked related product page url with smoothy scroll to top
   useEffect(() => {
-    smoothScrollToTopRef?.current?.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+    console.log()
+    smoothScrollToTopRef?.current?.childNodes.forEach(items =>{
+      items.addEventListener('click', (e) => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      })
     })
   })
 
@@ -773,7 +776,7 @@ function HomePage({
                   </div>
 
                   <div className="flex flex-col  border border-t-0 border-r-0 border-l-0 border-[#e0e0e2] items-start gap-y-3 pb-6">
-                    {specificationsValue
+                    {product.productsValues
                       .slice(0, propertyDisplayCount)
                       .map((item, index) => {
                         return (
@@ -1000,7 +1003,7 @@ function HomePage({
                 </div>
 
                 <ul className="flex flex-col border border-t-0 border-r-0 border-l-0 border-[#e0e0e2] pb-6 items-start gap-y-3">
-                  {specificationsValue
+                  {product.productsValues
                     .slice(0, propertyDisplayCount)
                     .map((item, index) => {
                       return (
@@ -1190,18 +1193,18 @@ function HomePage({
                               {relatedProduct.offer}%
                             </span>
                             <span className="text-xs lg:text-sm">
-                              {relatedProduct.price} تومان
+                            {Math.round(
+                                (Number(relatedProduct.price) *
+                                  (100 - Number(relatedProduct.offer))) /
+                                100
+                              ).toLocaleString()} تومان
                             </span>
                           </div>
                           <div>
                             <del
                               className="text-xs lg:text-sm text-gray-400 ml-2 mt-1"
                             >
-                              {Math.round(
-                                (Number(relatedProduct.price) *
-                                  (100 - Number(relatedProduct.offer))) /
-                                100
-                              ).toLocaleString()}
+                              {relatedProduct.price}
                             </del>
                           </div>
                         </div>
@@ -1541,9 +1544,11 @@ function HomePage({
                       ) : (
 
 
-                        <h2 className="w-full text-center">
+                        <div className="flex justify-center items-center w-full h-full">
+                          <h2 className="w-full text-center">
                           هنوز دیدگاهی ثبت نشده است
                         </h2>
+                        </div>
 
                       )}
 
@@ -1637,9 +1642,9 @@ function HomePage({
                   <div
                     className={`xl:max-h-[80vh] xl:max-w-[800px] w-full h-full rounded-lg bg-white z-20 flex flex-col `}
                   >
-                    <div className="flex items-center w-auto mx-6 border border-t-0 border-r-0 border-l-0 mb-4 border-[#e0e0e2]">
-                      <div className="relative w-fit h-auto text-center pt-2 pb-2 overflow-y-hidden flex flex-col gap-y-2">
-                        <p className="font-bold">تصاویر رسمی</p>
+                    <div className="flex items-center w-auto mx-6 border border-t-0 border-r-0 border-l-0 mb-4 border-[#e0e0e2] xl:shadow-md">
+                      <div className="relative h-auto text-center pt-2 pb-2 overflow-y-hidden flex flex-col gap-y-2 w-full items-start">
+                        <p className="font-bold text-start">تصاویر رسمی</p>
                         <span className="text-[#81858b] text-xs">
                           در مورد {product.name}
                         </span>
@@ -2003,7 +2008,7 @@ function HomePage({
                   </div>
                 </div>
                 ):(
-                  <div className="flex justify-center items-center py-2">
+                  <div className="flex justify-center items-center py-2 lg:hidden">
                     <h2 className="font-bold ">
 هیچ سوالی موجود نمی باشد
                     </h2>

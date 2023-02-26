@@ -3,6 +3,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import QuestionMarkIcon from "@mui/icons-material/QuestionMark";
 import Link from "next/link";
 import { SearchOutlined } from "@mui/icons-material";
+import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import EggIcon from "@mui/icons-material/Egg";
@@ -322,12 +323,11 @@ const Navbar = ({ mainCategory, category }) => {
       >
         <div className="hidden xl:flex items-center w-auto xl:w-24 ">
           <Link href="/">
-            <a className="relative  flex items-center w-24 h-full cursor-pointer">
+            <a className="relative  flex items-center h-full cursor-pointer">
               <Image
                 src="https://www.digikala.com/statics/img/svg/logo.svg"
-                // layout="fill"
-                width="100%"
-                height={24}
+                width={115}
+                height={30}
                 alt=""
               />
             </a>
@@ -347,6 +347,13 @@ const Navbar = ({ mainCategory, category }) => {
           />
           <SearchOutlined className="absolute right-4 w-6 h-6 fill-[#a1a3a8] text-sm cursor-pointer font-normal" />
         </form>
+
+        <Link href="/admin">
+          <a  className="flex items-center mr-2 xl:mr-0 xl:gap-x-1 xl:border xl:bg-[#ef394e] xl:px-3 xl:rounded-lg font-bold xl:py-1">
+          <span className="hidden xl:block">مدیریت داشبورد</span>
+          <SupervisorAccountIcon className="w-8 h-max" />
+          </a>
+        </Link>
 
         <Link href="/login" passHref>
           <PersonOutlineOutlinedIcon className="mr-3 h-max w-8 border-2 border-white cursor-pointer" />
@@ -403,7 +410,7 @@ const Navbar = ({ mainCategory, category }) => {
 
                           {/* product name and information */}
                           <div className="flex flex-col w-auto  mr-1 flex-1 ">
-                            <div className="text-[#23254e] text-[12px] lg:text-base font-bold">
+                            <div className="text-[#23254e] text-[12px] lg:text-[15px] font-bold line-clamp-3">
                               <Link href={`/product/${product.slug}`} passHref>
                                 {product.name}
                               </Link>
@@ -472,7 +479,7 @@ const Navbar = ({ mainCategory, category }) => {
                           </div>
 
                           <div className="flex items-center text-base text-[#23254e] font-bold mr-5">
-                            {product.price} تومان
+                            {product.price.toLocaleString()} تومان
                           </div>
                         </div>
                       </>
@@ -644,7 +651,7 @@ const Navbar = ({ mainCategory, category }) => {
 
         <div
           className={`bg-white -translate-y-[1px] list-none shadow-sm h-[500px] w-auto mx-4 border ${
-            hover ? "flex" : "hidden"
+            hover ? "flex flex-wrap" : "hidden"
           }`}
           onMouseEnter={mouses}
           onMouseLeave={pak}
@@ -663,10 +670,9 @@ const Navbar = ({ mainCategory, category }) => {
               );
             })}
           </div>
-          <div className="w-[88%] h-full flex flex-col py-5 px-4 bg-white">
+          <div className="w-[88%] h-full flex flex-col flex-wrap py-5 px-4 bg-white">
             {hoverSubMenu ? (
-              <ul className="h-full w-full justify-start flex flex-col  flex-wrap">
-                <li>
+                <>
                   {category
                     .filter(
                       (category) =>
@@ -675,62 +681,18 @@ const Navbar = ({ mainCategory, category }) => {
                     .map((category) => {
                       return (
                         <>
-                          <Link href={`/search/${category.slug}`}>
-                            <a className="text-[#0c0c0c] hover:text-[#ef394e] !leading-[2.15rem] text-sm h-auto w-auto ml-12">
-                              {category.name}
-                            </a>
-                          </Link>
-                          {category.subCategory.map((subCategory, index) => {
-                            return (
-                              <li
-                                key={index}
-                                className="text-[#81858b] ml-12 hover:text-[#ef394e] !leading-[2.17rem] text-xs h-auto w-auto"
-                              >
-                                {subCategory.name}
-                              </li>
-                            );
-                          })}
-                        </>
-                      );
-                    })}
-                </li>
-
-                {/* return(
-                            <>
-                          <Link  href={`/main/${category.slug}`}>
-                            <a  className="text-[#0c0c0c] hover:text-[#ef394e] !leading-[2.15rem] text-sm h-auto w-auto ml-12">{category.name}</a>
-                          </Link>
-                          {category.subCategory.map((subCategory,index) =>{
-                            return(
-                              <li key={index} className="text-[#81858b] ml-12 hover:text-[#ef394e] !leading-[2.17rem] text-xs h-auto w-auto">{subCategory.name}</li>
-                            )
-                          }
-                          )}
-                          </>
-                          ) */}
-
-                <div className="w-[285px] h-full bg-white"></div>
-              </ul>
-            ) : (
-              category
-                .filter(
-                  (category) => category.mainCategory == hoverMainCategory
-                )
-                .map((category) => {
-                  return (
-                    <ul className="flex flex-col flex-wrap w-full h-full">
                       <li>
                         <Link href={`/search/${category.slug}`}>
-                          <a className="text-[#0c0c0c] !leading-[2.15rem] text-sm h-auto w-auto ml-12">
+                          <a className="text-[#0c0c0c] !leading-[2.15rem] text-sm h-auto w-auto ml-12 hover:text-[#ef394e]">
                             {category.name}
                           </a>
                         </Link>
                       </li>
                       {category.subCategory.map((subCategory) => {
                         return (
-                          <li>
+                          subCategory.name != "" && <li>
                             <Link href={`/search/${subCategory.slug}`}>
-                              <a className="text-[#81858b] !leading-[2.17rem] text-xs h-auto w-auto ml-12">
+                              <a className="text-[#81858b] !leading-[2.17rem] text-xs h-auto w-auto ml-12 hover:text-[#ef394e]">
                                 {subCategory.name}
                               </a>
                             </Link>
@@ -738,8 +700,45 @@ const Navbar = ({ mainCategory, category }) => {
                         );
                       })}
 
-                      <div className="w-[285px] h-full bg-white"></div>
-                    </ul>
+                      {/* <div className="w-[285px] h-full bg-white"></div> */}
+                    </>
+                      );
+                    })}
+                </>
+
+                
+                  /* <div className="w-[285px] h-full bg-white"></div> */
+                
+              
+            ) : (
+              category
+                .filter(
+                  (category) => category.mainCategory == hoverMainCategory
+                )
+                .map((category) => {
+                  return (
+                    <>
+                      <li>
+                        <Link href={`/search/${category.slug}`}>
+                          <a className="text-[#0c0c0c] !leading-[2.15rem] text-sm h-auto w-auto ml-12 hover:text-[#ef394e]">
+                            {category.name}
+                          </a>
+                        </Link>
+                      </li>
+                      {category.subCategory.map((subCategory) => {
+                        return (
+                          subCategory.name != "" && <li>
+                            <Link href={`/search/${subCategory.slug}`}>
+                              <a className="text-[#81858b] !leading-[2.17rem] text-xs h-auto w-auto ml-12 hover:text-[#ef394e]">
+                                {subCategory.name}
+                              </a>
+                            </Link>
+                          </li>
+                        );
+                      })}
+
+                      {/* <div className="w-[285px] h-full bg-white"></div> */}
+                    </>
                   );
                 })
             )}

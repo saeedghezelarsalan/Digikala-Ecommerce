@@ -4,18 +4,19 @@ import React from 'react'
 
 const ProductsBasedOnViews = ({product,category}) => {
   return (
+    product &&
     <div className='w-full h-auto border border-l-0 border-b-0 lg:border-b-[1px] my-4 lg:flex grid grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 items-center'>
-        {category.slice(0,4).map(category=>{
+        {category?.map(category=>category.subCategory).flatMap(sub=>sub).slice(0,4).map(category=>{
             return(
         <div className='flex flex-col w-full border border-t-0 border-r-0 lg:border-b-0 p-2'>
             <h5 className='font-semibold'>{category.name.replace("-", " ")}</h5>
             <span className='py-2'>بر اساس بازدید های شما</span>
             <div className='grid bg-[#e5e7eb] grid-cols-2 grid-rows-2 gap-[1px]'>
-            {product.filter(products => products.category== category.name).slice(0,4).map(product=>{
+            {product.filter(products => products.subCategory== category.name).slice(0,4).map(product=>{
                 return(
                     <Link href={`/product/${product.slug}`}>
                     <a>
-                    <div className="block w-full px-5 bg-white relative">
+                    <div className="block w-full px-5 lg:p-5 bg-white relative">
                 <Image 
                 src={product.thumbnail} 
                 width="100%"

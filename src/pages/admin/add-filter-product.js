@@ -45,9 +45,33 @@ export default function HomePage() {
     setShowFilter(!showFilter)
   }
 
+
+  const [CategorySlug, setCategorySlug] = useState("");
+
+  useEffect(() => {
+     function fetchCategorySlug() {
+      let categorySlugs =  category?.filter(category => category.name == product.category);
+      categorySlugs = categorySlugs?.map((c) => c.slug).join("")
+      setCategorySlug(categorySlugs);
+    }
+    fetchCategorySlug()
+  }, [category, product, CategorySlug]);
+
+
+  const [subCategorySlug, setSubCategorySlug] = useState("");
+
+  useEffect(() => {
+      function fetchSubCategorySlug() {
+      let subCategorySlugs = subCategory.flatMap(sub=>sub).filter(subCategory => subCategory.name == product.subCategory);
+      subCategorySlugs = subCategorySlugs?.map((c) => c.slug).join('')
+      setSubCategorySlug(subCategorySlugs);
+    }
+    fetchSubCategorySlug()
+  }, [subCategory, product, subCategorySlug]);
+
   const submitHandler = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/filterProduct', { ...product, productValues, showFilter }, { headers: { "Content-Type": "application/json" } })
+    await axios.post('http://localhost:3001/filterProduct', { ...product, productValues, showFilter,CategorySlug,subCategorySlug }, { headers: { "Content-Type": "application/json" } })
       .then(res => {
         console.log(res)
         setProduct({
@@ -60,7 +84,8 @@ export default function HomePage() {
           updatedAt: new Date(),
         })
         setShowFilter(false)
-
+        setCategorySlug("")
+        setSubCategorySlug("")
 
       }
       )
@@ -164,7 +189,7 @@ export default function HomePage() {
             value={product.subCategory}
           >
             <option value="">انتخاب دسته بندی</option>
-            {product.category && category && category.filter(category => category.mainCategory === product.mainCategory).map(category => category.subCategory.map(subCategory => (
+            {product.category && category && category.filter(category => category.mainCategory === product.mainCategory).filter(category => category.name === product.category).map(category => category.subCategory.map(subCategory => (
               <option className='text-black' key={subCategory.id} value={subCategory.name}>{subCategory.name}</option>
             )))
             }

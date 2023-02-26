@@ -22,6 +22,7 @@ export default function HomePage() {
     name: "",
     icon: "",
     slug: "",
+    AmazingOfferSliderColor: "#323ea8",
     createdAt: new Date(),
     updatedAt: new Date(),
   })
@@ -32,17 +33,28 @@ export default function HomePage() {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/mainCategory', { ...mainCategory, serviceList, specifications }, { headers: { "Content-Type": "application/json" } })
+    await axios.post('http://localhost:3001/mainCategory', { ...mainCategory, slider, banner }, { headers: { "Content-Type": "application/json" } })
       .then(res => {
         console.log(res)
         setMainCategory({
           id: "",
           name: "",
           icon: "",
+          thumbnail: "",
           slug: "",
           createdAt: new Date(),
           updatedAt: new Date(),
         })
+        setSlider([{
+          id: Math.ceil(Math.random() * 1000000),
+          image: "",
+          slug: "",
+        }])
+        setBanner([{
+          id: Math.ceil(Math.random() * 1000000),
+          image: "",
+          slug: "",
+        }])
 
       }
       )
@@ -132,6 +144,9 @@ export default function HomePage() {
           <label>آیکون</label>
           <input type="text" name="icon" value={mainCategory.icon} onChange={changeHandler} />
 
+          <label>عکس دسته بندی کلی</label>
+          <input type="text" name="thumbnail" value={mainCategory.thumbnail} onChange={changeHandler} />
+
           <label>آدرس دسته بندی کلی</label>
           <input type="text" name="slug" value={mainCategory.slug} onChange={changeHandler} />
 
@@ -157,7 +172,7 @@ export default function HomePage() {
                   id="service"
                   value={sliders.slug}
                   onChange={(e) => handleSliderChanges(e, index)}
-                  required
+                  
                 />
 
 
@@ -207,7 +222,7 @@ export default function HomePage() {
                   id="service"
                   value={banners.slug}
                   onChange={(e) => handleBannerChanges(e, index)}
-                  required
+                  
                 />
 
 

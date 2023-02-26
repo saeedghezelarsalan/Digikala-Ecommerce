@@ -19,6 +19,7 @@ export default function HomePage() {
     name: "",
     slug: "",
     mainCategory: '',
+    thumbnail:'',
     createdAt: new Date(),
     updatedAt: new Date(),
   })
@@ -128,6 +129,9 @@ export default function HomePage() {
 
           <label>آدرس دسته بندی</label>
           <input type="text" name="slug" value={category.slug} onChange={changeHandler} />
+          
+          <label>عکس دسته بندی</label>
+          <input type="text" name="thumbnail" value={category.thumbnail} onChange={changeHandler} />
 
 
           <h2 className='mt-6 mb-1 text-black'>دسته بندی فرعی</h2>
@@ -141,7 +145,7 @@ export default function HomePage() {
                   id="service"
                   value={subCategories.name}
                   onChange={(e) => handleSubCategoryChanges(e, index)}
-                  required
+                  
                 />
                 <label>لینک دسته بندی فرعی</label>
                 <input
@@ -150,7 +154,7 @@ export default function HomePage() {
                   id="service"
                   value={subCategories.slug}
                   onChange={(e) => handleSubCategoryChanges(e, index)}
-                  required
+                  
                 />
                 <label>عکس دسته بندی فرعی</label>
                 <input
@@ -159,7 +163,7 @@ export default function HomePage() {
                   id="service"
                   value={subCategories.image}
                   onChange={(e) => handleSubCategoryChanges(e, index)}
-                  required
+                  
                 />
 
 

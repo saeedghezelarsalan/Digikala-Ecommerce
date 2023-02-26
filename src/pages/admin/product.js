@@ -217,6 +217,41 @@ export default function HomePage() {
     setProductsValues([...productsValues]);
   };
 
+  const [categorySlug, setCategorySlug] = useState("");
+
+  useEffect(() => {
+     function fetchCategorySlug() {
+      let categorySlugs =  category?.filter(category => category.name == product.category);
+      categorySlugs = categorySlugs?.map((c) => c.slug).join('')
+      setCategorySlug(categorySlugs);
+    }
+    fetchCategorySlug()
+  }, [category, product, categorySlug]);
+
+
+  const [mainCategorySlug, setMainCategorySlug] = useState("");
+
+  useEffect(() => {
+     function fetchMainCategorySlug() {
+      let mainCategorySlugs =  mainCategory?.filter(mainCategory => mainCategory.name == product.mainCategory);
+      mainCategorySlugs = mainCategorySlugs?.map((c) => c.slug).join('')
+      setMainCategorySlug(mainCategorySlugs);
+    }
+    fetchMainCategorySlug()
+  }, [mainCategory, product, mainCategorySlug]);
+
+
+  const [subCategorySlug, setSubCategorySlug] = useState("");
+
+  useEffect(() => {
+      function fetchSubCategorySlug() {
+      let subCategorySlugs = subCategory.flatMap(sub=>sub).filter(subCategory => subCategory.name == product.subCategory);
+      subCategorySlugs = subCategorySlugs?.map((c) => c.slug).join('')
+      setSubCategorySlug(subCategorySlugs);
+    }
+    fetchSubCategorySlug()
+  }, [subCategory, product, subCategorySlug]);
+
   const submitHandler = async (e) => {
     e.preventDefault();
     await axios
@@ -278,39 +313,7 @@ export default function HomePage() {
 
 
 
-  const [categorySlug, setCategorySlug] = useState("");
-
-  useEffect(() => {
-    async function fetchCategorySlug() {
-      let categorySlugs = await category?.filter(category => category.name == product.category);
-      categorySlugs = categorySlugs?.map((c) => c.slug)
-      setCategorySlug(categorySlugs);
-    }
-    fetchCategorySlug()
-  }, [category, product, categorySlug]);
-
-
-  const [mainCategorySlug, setMainCategorySlug] = useState("");
-
-  useEffect(() => {
-    async function fetchMainCategorySlug() {
-      let mainCategorySlugs = await mainCategory.filter(mainCategory => mainCategory.name == product.mainCategory);
-      mainCategorySlugs = mainCategorySlugs?.map((c) => c.slug)
-      setMainCategorySlug(mainCategorySlugs);
-    }
-  }, [mainCategory, product, mainCategorySlug]);
-
-
-  const [subCategorySlug, setSubCategorySlug] = useState("");
-
-  useEffect(() => {
-    async function fetchSubCategorySlug() {
-      let subCategorySlugs = await subCategory.filter(subCategory => subCategory.name == product.subCategory);
-      subCategorySlugs = subCategorySlugs?.map((c) => c.slug)
-      setSubCategorySlug(subCategorySlugs);
-    }
-    fetchSubCategorySlug()
-  }, [subCategory, product, subCategorySlug]);
+  
 
   return (
     <div className="bg-[#f14d60] flex justify-center">
@@ -339,7 +342,7 @@ export default function HomePage() {
 
             <label>نام محصول :</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="name"
@@ -348,7 +351,7 @@ export default function HomePage() {
 
             <label>نام لاتین محصول :</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="latinName"
@@ -357,7 +360,7 @@ export default function HomePage() {
 
             <label>آدرس محصول</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="slug"
@@ -367,7 +370,7 @@ export default function HomePage() {
             <label>دسته بندی کلی محصول</label>
             <select
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               name="mainCategory"
               id=""
               value={product?.mainCategory}
@@ -383,7 +386,7 @@ export default function HomePage() {
 
             <label>دسته بندی محصول</label>
             <select
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               name="category"
               id=""
               value={product?.category}
@@ -404,7 +407,7 @@ export default function HomePage() {
 
             <label>دسته بندی فرعی محصول</label>
             <select
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               name="subCategory"
               id=""
               value={product?.subCategory}
@@ -415,6 +418,8 @@ export default function HomePage() {
                 category
                   .filter(
                     (category) => category.mainCategory === product.mainCategory
+                  ).filter(
+                    (category) => category.name === product.category
                   )
                   .map((category) =>
                     category.subCategory.map((subCategory, index) => (
@@ -431,7 +436,7 @@ export default function HomePage() {
 
             <label>برند</label>
             <select
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               name="brand"
               id=""
               value={product?.brand}
@@ -447,7 +452,7 @@ export default function HomePage() {
 
             <label>قیمت</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="price"
@@ -456,7 +461,7 @@ export default function HomePage() {
 
             <label>موجودی</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="stock"
@@ -465,7 +470,7 @@ export default function HomePage() {
 
             <label>تعداد فروش</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="sellCount"
@@ -474,7 +479,7 @@ export default function HomePage() {
 
             <label>توضیحات محصول (معرفی)</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="description"
@@ -483,7 +488,7 @@ export default function HomePage() {
 
             <label>تصویر شاخص</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               name="thumbnail"
               value={product.thumbnail}
@@ -491,7 +496,7 @@ export default function HomePage() {
 
             <label>چند درصد تخفیف</label>
             <input
-              onChange={changeHandler}
+              onChange={(e)=>changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="offer"

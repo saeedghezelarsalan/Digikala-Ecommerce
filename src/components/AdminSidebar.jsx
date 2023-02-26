@@ -38,9 +38,6 @@ export const AdminSidebar = ({showSidebar,setShowSidebar}) => {
           <Link href='/admin/home-setting'>
             <li className='w-auto h-auto font-bold text-white hover:bg-gray-500 cursor-pointer mt-8 text-center border-r-0 border-l-0 border-b-0 border-black py-4 navss px-2 mb-[1px]'>تنظیمات خانه</li>
           </Link>
-          <Link href='/admin/amazingslider'>
-            <li className='w-auto h-auto font-bold text-white hover:bg-gray-500 cursor-pointer mt-8 text-center border-r-0 border-l-0 border-b-0 border-black py-4 navss px-2 mb-[1px] break-words'>محصولات شگفت انگیز</li>
-          </Link>
       </ul>     
       </div>
   )

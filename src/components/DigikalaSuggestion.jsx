@@ -7,7 +7,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function DigiSuggestion({ product }) {
+  const suggestionLenght = product.filter((products) => products.isSuggest == true).lenght
   return (
+    product &&
+    <>
+    <h5 className="text-center py-5 text-xl font-semibold">
+          پیشنهاد دیجی‌کالا
+        </h5>
     <div className="w-full h-80 cursor-pointer mb-5">
       <Swiper
         slidesPerView="auto"
@@ -49,7 +55,7 @@ export default function DigiSuggestion({ product }) {
                       height={80}
                       objectFit="cover"
                     />
-                    <span className="font-bold lg:text-xs">{product.name}</span>
+                    <span className="font-bold lg:text-xs line-clamp-1">{product.name}</span>
                   </div>
               </Link>
                 </SwiperSlide>
@@ -57,5 +63,6 @@ export default function DigiSuggestion({ product }) {
           })}
       </Swiper>
     </div>
+    </>
   );
 }
