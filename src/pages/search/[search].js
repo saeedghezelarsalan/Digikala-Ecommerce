@@ -6,10 +6,14 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import ImportExportIcon from '@mui/icons-material/ImportExport';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from "../../components/Navbar";
+import { LayoutGroup } from "framer-motion";
+import { useRouter } from "next/router";
 
 export default function HomePage({ productss, brand, query, filterProduct, category, mainCategories, data, productsSubCategorySlug, productsCategorySlug }) {
-  const [products, setProducts] = useState(productss);
-  const [filteredProducts, setFilteredProducts] = useState(productss || null);
+
+
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState(null)
   const [brands, setBrands] = useState(brand);
   const [newBrands, setNewBrands] = useState(brands || null);
@@ -18,11 +22,23 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
   const [currentPage, setCurrentPage] = useState(1);
   const [isOffer, setIsOffer] = useState(false)
   const [isAvailable, setIsAvailable] = useState(false)
-  const [sortText, setSortText] = useState("پربازدیدترین")
   const [openBrand, setOpenBrand] = useState(false)
   const [openValue, setOpenValue] = useState(false)
   const [searchFilter, setSearchFilter] = useState("")
   const [openModalFilter, setOpenModalFilter] = useState(false)
+const [clickCheckBox, setClickCheckbox] = useState(false)
+
+useEffect(()=>{
+  setProducts(productss)
+},[])
+
+  useEffect(()=>{
+    setNewBrands(brand)
+  },[])
+
+  useEffect(()=>{
+    setFilteredProducts(productss)
+  },[productss])
 
   const modalFilterRef = useRef()
 
@@ -48,17 +64,13 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
 
   useEffect(() => {
     setFilterProducts(filterProduct.filter(filter => filter.showFilter == true))
-  }, [])
-  const searchHandler = (e) => {
-    setSearchFilter([e.target.value])
-  }
-  useEffect(() => {
-  }, [searchFilter, filterProducts])
+  }, [query])
 
   const openValueHandler = (e) => {
     if (openValue == e) {
       return setOpenValue(null)
     }
+
     setOpenValue(e)
     setSearchFilter("")
   }
@@ -102,17 +114,34 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
     setCheckedValue(newChecked);
   };
 
-  useEffect(() => {
-    let filteredArray = products.slice()
-    filteredArray = filteredArray
-      .filter(data => data.productsValues.some(elemet => elemet.value == ["ابریشم"])).map(data => data)
-  })
+  // useEffect(() => {
+  //   let filteredArray = products && [...products]
+  //   filteredArray = filteredArray
+  //     .filter(data => data.productsValues.some(elemet => elemet.value == ["ابریشم"])).map(data => data)
+  // })
+
+  const clickBrand = (id) =>{
+    // setChecked()
+    setBrands((current) =>
+      current.map((obj, index) => {
+        if (obj.id === id ) {
+          return {
+            ...obj,
+            checkbox: !obj.checkbox
+          };
+        }
+
+        return obj;
+      })
+    );
+  }
 
 
+  // filter product item based on this filter list
   useEffect(() => {
-    let filteredArray = products.slice()
+    let filteredArray = products && [...products]
     if (checked.length != 0) {
-      filteredArray = filteredArray
+       filteredArray = filteredArray
         .filter((data) => checked.includes(data.brand))
         .map((filteredName) => {
           return filteredName;
@@ -128,26 +157,52 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
       setFilteredProducts(filteredArray);
     }
     if (isAvailable) {
-      filteredArray = filteredArray.filter(data => data.stock > 0)
+      filteredArray = filteredArray.filter(data => Number(data.stock) > 0)
+      setFilteredProducts(filteredArray)
+    }else{
+      filteredArray = filteredArray.filter(data => Number(data.stock) >= 0)
       setFilteredProducts(filteredArray)
     }
     if (isOffer) {
-      filteredArray = filteredArray.filter(data => data.offer > 0)
+      filteredArray = filteredArray.filter(data => Number(data.offer) > 0)
+      setFilteredProducts(filteredArray)
+    }else{
+      filteredArray = filteredArray.filter(data => Number(data.offer) >= 0)
       setFilteredProducts(filteredArray)
     }
 
     setFilteredProducts(filteredArray)
     setCurrentPage(1)
-  }, [checked, isOffer, checkedValue, isAvailable]);
+  }, [checked, isOffer, checkedValue, isAvailable,newBrands]);
+
+  // useEffect(() => {
+  //   let filterBrands = products.map((product) => product.brand);
+  //   const newFilter = (filterBrands = [...new Set(filterBrands)]);
+  //   const data = brands
+  //     .filter((data) => newFilter.includes(data.name))
+  //     .map((filterBrand) => filterBrand);
+  //   setNewBrands(data);
+  // }, []);
 
   useEffect(() => {
     let filterBrands = products.map((product) => product.brand);
-    const newFilter = (filterBrands = [...new Set(filterBrands)]);
+    const newFilter =[...new Set(filterBrands)]
     const data = brands
       .filter((data) => newFilter.includes(data.name))
       .map((filterBrand) => filterBrand);
     setNewBrands(data);
   }, []);
+
+  
+  const router = useRouter()
+
+  // when change route(change subCategory or category)
+  useEffect(()=>{
+    setIsOffer(false)
+    setProducts(productss)
+    setBrands (brand);
+    setOpenBrand(false)
+  },[router])
 
   return (
     <div className="flex flex-col w-full h-auto ">
@@ -180,17 +235,19 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
                 </div>
 
                 <div>
-                  {newBrands.map((brand) => {
+                  {brands?.map((brand) => {
                     return (
                       <div key={brand.id}
                         className={`w-full border border-x-0 border-t-0 flex items-center ${openBrand ? "max-h-auto visible" : "h-0 max-h-0 invisible"} `}
                       >
                         <input
+                        onClick={()=>clickBrand(brand.id)}
                           className="w-[15px] h-[15px] ml-4 py-1 accent-[#008eb2] cursor-pointer"
                           onChange={() => changeBrandHandler(brand.name)}
                           type="checkbox"
                           name=""
                           id={brand.name}
+                          checked={brand.checkbox ? true : false}
                         />
                         <label className="select-none text-[#424750] text-[15px]font-bold py-2 cursor-pointer" htmlFor={brand.name}>
                           {brand.name}
@@ -280,11 +337,12 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
               </div>
               <div className="hidden items-center mr-2">
                 <ImportExportIcon className="lg:hidden w-6 h-6 fill-[#424750]" />
-                <span className="text-xs font-bold">{sortText}</span>
+                {/* <span className="text-xs font-bold">{sortText}</span> */}
               </div>
             </div>
 
             {/* products */}
+            <LayoutGroup>
             <Pagination
               data={filteredProducts}
               RenderComponent={Product}
@@ -295,6 +353,7 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
               currentPage={currentPage}
               setCurrentPage={setCurrentPage}
             />
+            </LayoutGroup>
           </div>
         </div>
       </div>
@@ -319,7 +378,7 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
                 </div>
 
                 <div>
-                  {newBrands.map((brand) => {
+                  {brands?.map((brand) => {
                     return (
                       <div key={brand.id}
                         className={`w-full border border-x-0 border-t-0 flex items-center ${openBrand ? "max-h-auto visible" : "h-0 max-h-0 invisible"} `}

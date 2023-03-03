@@ -7,6 +7,7 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from "../../components/Navbar";
 import { useRouter } from "next/router";
+import { LayoutGroup } from "framer-motion";
 
 export default function HomePage({ productss, brand, query, filterProduct, category, mainCategories, data }) {
   const [products, setProducts] = useState(productss);
@@ -294,6 +295,7 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
           </div>
 
           {/* products */}
+          <LayoutGroup>
           <Pagination
             data={filteredProducts}
             RenderComponent={Product}
@@ -304,6 +306,7 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
             currentPage={currentPage}
             setCurrentPage={setCurrentPage}
           />
+          </LayoutGroup>
 </div>
         </div>
       </div>

@@ -6,6 +6,7 @@ import {
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Pagination = ({
   data,
@@ -55,17 +56,22 @@ const Pagination = ({
     return data.slice(startIndex, endIndex);
   };
 
-  const productLength = data.map((a) => a).length;
+  const productLength = data?.map((a) => a).length;
   return productLength > 0 ? (
     <>
       <div className="w-full bg-white">
         {/* show the post 10 post at a time*/}
         <div className="bg-white md:mx-8">
-          <div className="productsFilters grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 ">
-            {getPaginatedData().map((product, index) => {
-              return <RenderComponent products={product} />;
-            })}
-          </div>
+          <motion.div
+            layout
+            className="productsFilters grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-5 "
+          >
+            <AnimatePresence>
+              {getPaginatedData().map((product, index) => {
+                return <RenderComponent products={product} />;
+              })}
+            </AnimatePresence>
+          </motion.div>
         </div>
         {/* show the pagiantion
                 it consists of next and previous buttons
