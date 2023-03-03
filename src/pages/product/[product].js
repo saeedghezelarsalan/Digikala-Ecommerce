@@ -92,13 +92,6 @@ function HomePage({
   const [openCustomersComment, setOpenCustomersComment] = useState(false);
   const [openCustomersQuestion, setOpenCustomersQuestion] = useState(false);
   const [quantityReduxProduct, setQuantityReduxProduct] = useState(0)
-
-  // const [positiveComments, setPositiveComments] = useState({
-  //   description: "",
-  // });
-  // const [negativeComments, setNegativeComments] = useState({
-  //   description: "",
-  // });
   const [allPositive, setAllPositive] = useState([]);
   const [allNegative, setAllNegative] = useState([]);
   const [customerComment, setCustomerComment] = useState({
@@ -594,7 +587,6 @@ function HomePage({
 
   // when go to the clicked related product page url with smoothy scroll to top
   useEffect(() => {
-    console.log()
     smoothScrollToTopRef?.current?.childNodes.forEach(items =>{
       items.addEventListener('click', (e) => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -1169,6 +1161,7 @@ function HomePage({
                 modules={[Pagination, Navigation, Lazy]}
                 className="!h-full w-full cursor-pointer"
               >
+                <div className="w-fit border-4 bg-green-700">
                 {relatedProducts.slice(0, 10).map((relatedProduct) => {
                   return (
                     <SwiperSlide>
@@ -1212,6 +1205,7 @@ function HomePage({
                     </SwiperSlide>
                   );
                 })}
+                </div>
               </Swiper>
             </div>
           </div>
@@ -1260,7 +1254,7 @@ function HomePage({
             </ul>
             <div
               ref={activeLine}
-              class="h-1 bg-[#ef394e] rounded-tl-[4px] rounded-tr-[4px] absolute bottom-0 transition-all duration-[0.2]"
+              className="h-1 bg-[#ef394e] rounded-tl-[4px] rounded-tr-[4px] absolute bottom-0 transition-all duration-[0.2]"
             ></div>
           </nav>
 
@@ -1699,13 +1693,13 @@ function HomePage({
                               step="1"
                             />
 
-                            <ul class="flex justify-between w-full px-[10px]">
-                              <li class="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
-                              <li class="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
-                              <li class="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
-                              <li class="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
-                              <li class="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
-                              <li class="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
+                            <ul className="flex justify-between w-full px-[10px]">
+                              <li className="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
+                              <li className="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
+                              <li className="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
+                              <li className="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
+                              <li className="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
+                              <li className="flex justify-center relative w-1 h-1 rounded-full bg-[#ccc]"></li>
                             </ul>
                           </div>
 

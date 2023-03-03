@@ -2,9 +2,13 @@ import Head from "next/head";
 import "../../styles/globals.css";
 import Footer from "../components/Footer";
 import { store } from "../feature/store";
-function MyApp({ Component, pageProps }) {
+import {AnimatePresence, AnimateSharedLayout} from 'framer-motion'
+
+function MyApp({ Component, pageProps, router }) {
 
   return (
+    // <AnimateSharedLayout>
+    <AnimatePresence mode="wait">
       <div className="relative">
       <Head>
         <title></title>
@@ -14,9 +18,11 @@ function MyApp({ Component, pageProps }) {
           href="https://iili.io/hufgQj.th.png"
         />
       </Head>
-      <Component {...pageProps} />
+     
+            <Component {...pageProps} key={router.route} />
       <Footer />
     </div>
+    </ AnimatePresence>
   );
 }
 
