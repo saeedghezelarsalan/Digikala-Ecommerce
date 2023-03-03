@@ -8,10 +8,10 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export default function HomePage() {
+
+  // useState
   const [filterProducts, setFilterProducts] = useState(null);
-
   const [isSuggest, setIsSuggest] = useState(false);
-
   const [filterValue, setFilterValue] = useState(null);
 
 
@@ -22,6 +22,10 @@ export default function HomePage() {
       value: "",
     },
   ]);
+
+  useEffect(() => {
+    console.log(productsFilters)
+  })
   const [productsValues, setProductsValues] = useState([]);
 
   const [productImage, setProductImage] = useState([{ image: "" }]);
@@ -57,6 +61,25 @@ export default function HomePage() {
     createdAt: new Date(),
     updatedAt: new Date(),
   });
+
+
+
+  // remove duplicate product features
+  const productFeatures = filterProducts?.map(a => a.productValues).flatMap(a => a).filter(b => b.specifications == productsFilters.filter).filter(c => c.subCategory == product.subCategory)
+
+  const features = productFeatures?.reduce((acc, current) => {
+    const x = acc.find(item => item.value === current.value);
+    if (!x) {
+      return acc.concat([current]);
+    } else {
+      return acc;
+    }
+  }, []);
+
+  const productsValuesLength = productsValues.map(a => a).length
+
+
+  // get category
 
   useEffect(() => {
     const fetchCategory = async () => {
@@ -185,6 +208,11 @@ export default function HomePage() {
     fetchFilterProducts();
   }, []);
 
+  useEffect(() => {
+    console.log(filterProducts?.map(a => a.productValues).flatMap(a => a).filter(b => b.specifications == productsFilters.filter
+    ))
+  })
+
   // get filter value
 
   useEffect(() => {
@@ -220,8 +248,8 @@ export default function HomePage() {
   const [categorySlug, setCategorySlug] = useState("");
 
   useEffect(() => {
-     function fetchCategorySlug() {
-      let categorySlugs =  category?.filter(category => category.name == product.category);
+    function fetchCategorySlug() {
+      let categorySlugs = category?.filter(category => category.name == product.category);
       categorySlugs = categorySlugs?.map((c) => c.slug).join('')
       setCategorySlug(categorySlugs);
     }
@@ -232,8 +260,8 @@ export default function HomePage() {
   const [mainCategorySlug, setMainCategorySlug] = useState("");
 
   useEffect(() => {
-     function fetchMainCategorySlug() {
-      let mainCategorySlugs =  mainCategory?.filter(mainCategory => mainCategory.name == product.mainCategory);
+    function fetchMainCategorySlug() {
+      let mainCategorySlugs = mainCategory?.filter(mainCategory => mainCategory.name == product.mainCategory);
       mainCategorySlugs = mainCategorySlugs?.map((c) => c.slug).join('')
       setMainCategorySlug(mainCategorySlugs);
     }
@@ -244,8 +272,8 @@ export default function HomePage() {
   const [subCategorySlug, setSubCategorySlug] = useState("");
 
   useEffect(() => {
-      function fetchSubCategorySlug() {
-      let subCategorySlugs = subCategory.flatMap(sub=>sub).filter(subCategory => subCategory.name == product.subCategory);
+    function fetchSubCategorySlug() {
+      let subCategorySlugs = subCategory.flatMap(sub => sub).filter(subCategory => subCategory.name == product.subCategory);
       subCategorySlugs = subCategorySlugs?.map((c) => c.slug).join('')
       setSubCategorySlug(subCategorySlugs);
     }
@@ -310,11 +338,6 @@ export default function HomePage() {
       });
   };
 
-
-
-
-  
-
   return (
     <div className="bg-[#f14d60] flex justify-center">
       <div className="flex w-full px-0 lg:max-w-screen-2xl h-full min-h-screen ">
@@ -342,7 +365,7 @@ export default function HomePage() {
 
             <label>نام محصول :</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="name"
@@ -351,7 +374,7 @@ export default function HomePage() {
 
             <label>نام لاتین محصول :</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="latinName"
@@ -360,7 +383,7 @@ export default function HomePage() {
 
             <label>آدرس محصول</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="slug"
@@ -370,7 +393,7 @@ export default function HomePage() {
             <label>دسته بندی کلی محصول</label>
             <select
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               name="mainCategory"
               id=""
               value={product?.mainCategory}
@@ -386,7 +409,7 @@ export default function HomePage() {
 
             <label>دسته بندی محصول</label>
             <select
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               name="category"
               id=""
               value={product?.category}
@@ -407,7 +430,7 @@ export default function HomePage() {
 
             <label>دسته بندی فرعی محصول</label>
             <select
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               name="subCategory"
               id=""
               value={product?.subCategory}
@@ -436,7 +459,7 @@ export default function HomePage() {
 
             <label>برند</label>
             <select
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               name="brand"
               id=""
               value={product?.brand}
@@ -452,7 +475,7 @@ export default function HomePage() {
 
             <label>قیمت</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="price"
@@ -461,7 +484,7 @@ export default function HomePage() {
 
             <label>موجودی</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="stock"
@@ -470,7 +493,7 @@ export default function HomePage() {
 
             <label>تعداد فروش</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="sellCount"
@@ -479,7 +502,7 @@ export default function HomePage() {
 
             <label>توضیحات محصول (معرفی)</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="description"
@@ -488,7 +511,7 @@ export default function HomePage() {
 
             <label>تصویر شاخص</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               name="thumbnail"
               value={product.thumbnail}
@@ -496,7 +519,7 @@ export default function HomePage() {
 
             <label>چند درصد تخفیف</label>
             <input
-              onChange={(e)=>changeHandler(e)}
+              onChange={(e) => changeHandler(e)}
               className="w-full py-1 border-2 border-gray-600 rounded-lg"
               type="text"
               name="offer"
@@ -612,17 +635,18 @@ export default function HomePage() {
               value={productsFilters?.value}
             >
               <option value="">انتخاب دسته بندی</option>
+
+
               {productsFilters &&
                 filterValue &&
-                filterProducts?.map((data) =>
-                  data.productValues.map((filterProducts, index) => {
-                    return (
-                      <option className="text-black" key={index} value={filterProducts.value}>
-                        {filterProducts.value}
-                      </option>
-                    );
-                  })
-                )}
+                features?.map((filterProducts, index) => {
+                  return (
+                    <option className="text-black" key={index} value={filterProducts.value}>
+                      {filterProducts.value}
+                    </option>
+                  );
+                })
+              }
             </select>
             <button
               onClick={submitFilterHandler}
@@ -631,30 +655,35 @@ export default function HomePage() {
               ثبت ویژگی
             </button>
 
-            <h5>موارد ویژگی</h5>
-            {productsValues.map((filter, index) => {
+            {productsValuesLength > 0 && (
+              <>
 
-              return (
-                <div key={index} className="flex gap-x-3 text-white">
-                  <div>{filter.filter}</div>
-                  <div>{filter.value}</div>
-                  <div
-                    className=""
-                    onClick={() => deleteProductsValue(filter.id)}
-                  >
-                    delete
-                  </div>
-                  <div
-                    onClick={() => changeIsSpecificationsHandler(filter.id)}
-                    className={`select-none ${filter.isSpecifications ? "text-2xl" : "text-lg"
-                      }`}
-                  >
-                    click
-                  </div>
-                </div>
-              );
-            })}
+                <h5>موارد ویژگی</h5>
+                {productsValues.map((filter, index) => {
 
+                  return (
+
+                    <div key={index} className="flex gap-x-3 text-white">
+                      <div>{filter.filter}</div>
+                      <div>{filter.value}</div>
+                      <div
+                        className=""
+                        onClick={() => deleteProductsValue(filter.id)}
+                      >
+                        delete
+                      </div>
+                      <div
+                        onClick={() => changeIsSpecificationsHandler(filter.id)}
+                        className={`select-none ${filter.isSpecifications ? "text-2xl" : "text-lg"
+                          }`}
+                      >
+                        click
+                      </div>
+                    </div>
+                  );
+                })}
+              </>
+            )}
             <h2 className="my-4 text-black">عکس محصول</h2>
             {productImage.map((singleImage, index) => (
               <div key={index} className="flex flex-col gap-y-6">

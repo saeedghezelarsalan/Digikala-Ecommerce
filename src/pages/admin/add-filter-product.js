@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { AdminSidebar } from '../../components/AdminSidebar'
 import axios from 'axios'
-import DatePicker from "react-multi-date-picker";
-import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
-import persian from "react-date-object/calendars/persian"
-import persian_fa from "react-date-object/locales/persian_fa"
 import MenuIcon from '@mui/icons-material/Menu';
 
 
@@ -15,19 +11,9 @@ export default function HomePage() {
   const [subCategory, setSubCategory] = useState([])
   const [showSidebar, setShowSidebar] = useState(false)
   const [showFilter, setShowFilter] = useState(false)
-  const [isSpecifications, setIsSpecifications] = useState(false)
-  const [productValues, setProductValues] = useState([{ value: "", specifications: isSpecifications }]);
+  const [productValues, setProductValues] = useState([{ value: "", specifications: "" }]);
 
-
-  // useEffect(()=>{
-  //   setProductValues(
-  //     [{ value: productValues.value, specifications: isSpecifications }]
-  //   )
-  // },[isSpecifications])
-
-
-
-  const [product, setProduct] = useState({
+  const [filter, setFilter] = useState({
     id: "",
     mainCategory: "",
     category: "",
@@ -38,43 +24,42 @@ export default function HomePage() {
   })
 
   const changeHandler = (e) => {
-    setProduct({ ...product, [e.target.name]: e.target.value })
+    setFilter({ ...filter, [e.target.name]: e.target.value })
   }
 
   const showFilterHandler = () => {
     setShowFilter(!showFilter)
   }
 
-
+  // category slug
   const [CategorySlug, setCategorySlug] = useState("");
 
   useEffect(() => {
-     function fetchCategorySlug() {
-      let categorySlugs =  category?.filter(category => category.name == product.category);
-      categorySlugs = categorySlugs?.map((c) => c.slug).join("")
+    function fetchCategorySlug() {
+      let categorySlugs = category?.filter(category => category.name == filter.category);
+      categorySlugs = categorySlugs?.map((c) => c.slug)[0]
       setCategorySlug(categorySlugs);
     }
     fetchCategorySlug()
-  }, [category, product, CategorySlug]);
+  }, [category, filter, CategorySlug]);
 
-
+  // subCategory slug
   const [subCategorySlug, setSubCategorySlug] = useState("");
 
   useEffect(() => {
-      function fetchSubCategorySlug() {
-      let subCategorySlugs = subCategory.flatMap(sub=>sub).filter(subCategory => subCategory.name == product.subCategory);
-      subCategorySlugs = subCategorySlugs?.map((c) => c.slug).join('')
+    function fetchSubCategorySlug() {
+      let subCategorySlugs = subCategory.flatMap(sub => sub).filter(subCategory => subCategory.name == filter.subCategory);
+      subCategorySlugs = subCategorySlugs?.map((c) => c.slug)[0]
       setSubCategorySlug(subCategorySlugs);
     }
     fetchSubCategorySlug()
-  }, [subCategory, product, subCategorySlug]);
+  }, [subCategory, filter, subCategorySlug]);
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/filterProduct', { ...product, productValues, showFilter,CategorySlug,subCategorySlug }, { headers: { "Content-Type": "application/json" } })
+    await axios.post('http://localhost:3001/filterProduct', { ...filter, productValues, showFilter, CategorySlug, subCategorySlug }, { headers: { "Content-Type": "application/json" } })
       .then(res => {
-        console.log(res)
-        setProduct({
+        setFilter({
           id: "",
           mainCategory: "",
           category: "",
@@ -86,13 +71,11 @@ export default function HomePage() {
         setShowFilter(false)
         setCategorySlug("")
         setSubCategorySlug("")
-
-      }
-      )
+        setProductValues([{ value: "", specifications: "" }])
+      })
       .catch(err => {
         console.log(err)
-      }
-      )
+      })
   }
 
   // get main category
@@ -113,10 +96,25 @@ export default function HomePage() {
       setSubCategory(result.data.map(category => category.subCategory))
     }
     fetchCategory()
-
   }, [])
 
-  // عکس محصول
+  // set filter title for all Filter feature
+  useEffect(() => {
+    setProductValues((current) =>
+      current.map((obj, index) => {
+        if (filter.filterProduct != "") {
+          return {
+            ...obj,
+            specifications: filter.filterProduct
+          }
+        }
+        return obj;
+      })
+    );
+  }, [filter])
+
+
+  // Filter feature
 
   const handleProductValuesChange = (e, index) => {
     const { name, value } = e.target;
@@ -132,24 +130,20 @@ export default function HomePage() {
   };
 
   const handleProductValuesAdd = () => {
-    setProductValues([...productValues, { value: "" }]);
+    setProductValues([...productValues, { value: "",specifications: filter.filterProduct }]);
   };
 
 
   return (
     <div className='flex w-full  h-full min-h-screen bg-[#f14d60]'>
 
-
-      {/* hover:bg-[#6e3636] */}
-
-      {/* سایدبار */}
+      {/* sidebar */}
       <AdminSidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />
 
-      {/* لیست اصلی */}
+      {/* main list */}
 
       <div className=' w-full xl:w-10/12 h-full flex flex-col bg-[#f14d60] py-4 px-5 pb-12'>
         <div
-
           className='py-4 mt-3 block xl:hidden '>
           <MenuIcon onClick={() => setShowSidebar(true)} className='w-10 h-10 cursor-pointer' />
         </div>
@@ -161,7 +155,7 @@ export default function HomePage() {
             className='w-full py-1 border-2 border-gray-600 rounded-lg'
             onChange={changeHandler}
             name="mainCategory" id=""
-            value={product.mainCategory}
+            value={filter.mainCategory}
           >
             <option value="">انتخاب دسته بندی کلی</option>
             {mainCategory && mainCategory.map(mainCategory => (
@@ -173,10 +167,10 @@ export default function HomePage() {
           <select
             onChange={changeHandler}
             name="category" id=""
-            value={product.category}
+            value={filter.category}
           >
             <option value="">انتخاب دسته بندی</option>
-            {category && category.map(category => category).filter(category => category.mainCategory === product.mainCategory).map(category => (
+            {category && category.map(category => category).filter(category => category.mainCategory === filter.mainCategory).map(category => (
               <option key={category.id} value={category.name}>{category.name}</option>
             ))
             }
@@ -186,33 +180,31 @@ export default function HomePage() {
           <select
             onChange={changeHandler}
             name="subCategory" id=""
-            value={product.subCategory}
+            value={filter.subCategory}
           >
             <option value="">انتخاب دسته بندی</option>
-            {product.category && category && category.filter(category => category.mainCategory === product.mainCategory).filter(category => category.name === product.category).map(category => category.subCategory.map(subCategory => (
+            {filter.category && category && category.filter(category => category.mainCategory === filter.mainCategory).filter(category => category.name === filter.category).map(category => category.subCategory.map(subCategory => (
               <option className='text-black' key={subCategory.id} value={subCategory.name}>{subCategory.name}</option>
             )))
             }
           </select>
 
-
           <label>نام فیلتر محصولات</label>
           <input
             onChange={changeHandler}
-            type="text" name="filterProduct" value={product.filterProduct} />
+            type="text" name="filterProduct" value={filter.filterProduct} />
           <div className='flex gap-x-2'>
 
             <input
+            id="setFilter"
               className='w-6 h-6'
               onChange={showFilterHandler}
               type="checkbox"
               checked={showFilter}
               name=""
             />
-            <label>نمایش در قسمت فیلتر محصولات</label>
+            <label htmlFor='setFilter'>نمایش در قسمت فیلتر محصولات</label>
           </div>
-
-
 
           <h2 className='my-4 text-black'>ویژگی محصول</h2>
           {productValues.map((values, index) => (
@@ -227,17 +219,6 @@ export default function HomePage() {
                   onChange={(e) => handleProductValuesChange(e, index)}
                   required
                 />
-                <div className='flex gap-x-3 items-center mt-4'>
-                  <input
-                    className='w-6 h-6 border-2 border-gray-600 rounded-lg'
-                    name="specifications"
-                    type="checkbox"
-                    id="specifications"
-                    value={values.specifications}
-                    onClick={() => setIsSpecifications(!isSpecifications)}
-                  />
-                  <label htmlFor="specifications">نمایش در قسمت مشخصات محصولات</label>
-                </div>
 
               </div>
               <div className="flex gap-x-5">

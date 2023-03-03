@@ -1,5 +1,4 @@
-import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { AdminSidebar } from "../../components/AdminSidebar";
 import axios from "axios";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -43,7 +42,6 @@ export default function HomePage() {
 
   return (
     <div className="flex w-full xl:px-8 h-full min-h-screen bg-[#f14d60]">
-      {/* hover:bg-[#6e3636] */}
 
       {/* سایدبار */}
       <AdminSidebar showSidebar={showSidebar} setShowSidebar={setShowSidebar} />

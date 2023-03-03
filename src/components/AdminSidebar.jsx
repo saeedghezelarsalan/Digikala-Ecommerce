@@ -33,11 +33,7 @@ export const AdminSidebar = ({showSidebar,setShowSidebar}) => {
           <Link href='/admin/add-filter-product'>
             <li className='w-auto h-auto font-bold text-white hover:bg-gray-500 cursor-pointer mt-8 text-center border-r-0 border-l-0 border-b-0 border-black py-4 navss px-2 mb-[1px]'>فیلتر محصولات</li>
           </Link>
-
-
-          <Link href='/admin/home-setting'>
-            <li className='w-auto h-auto font-bold text-white hover:bg-gray-500 cursor-pointer mt-8 text-center border-r-0 border-l-0 border-b-0 border-black py-4 navss px-2 mb-[1px]'>تنظیمات خانه</li>
-          </Link>
+          
       </ul>     
       </div>
   )
