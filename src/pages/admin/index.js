@@ -145,12 +145,12 @@ export default function HomePage() {
                 {comments &&
                   comments.slice(0, 5).map((item) => (
                     <div className="">
-                      <div className="flex items-center border border-black border-r-0 border-l-0 border-b-0 pt-2">
+                      <div className="flex items-start flex-col border border-black border-r-0 border-l-0 border-b-0 pt-2">
                         <div className="mr-2">{item.name}</div>
-                        <div className="mr-auto">
+                        <div className="mr-2">
                           <Link href={`/product/${item.slug}`}>
                             <a>
-                              <h1>{item.productName}</h1>
+                              <h1>لینک : {item.productName}</h1>
                             </a>
                           </Link>
                         </div>

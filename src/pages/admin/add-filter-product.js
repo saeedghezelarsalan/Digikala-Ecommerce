@@ -11,7 +11,14 @@ export default function HomePage() {
   const [subCategory, setSubCategory] = useState([])
   const [showSidebar, setShowSidebar] = useState(false)
   const [showFilter, setShowFilter] = useState(false)
-  const [productValues, setProductValues] = useState([{ value: "", specifications: "" }]);
+  const [productValues, setProductValues] = useState(
+    [{ 
+      id: Math.floor(Math.random() * 10000), 
+      value: "", 
+      specifications: "", 
+      subCategory: "", 
+      isChecked: false 
+    }]);
 
   const [filter, setFilter] = useState({
     id: "",
@@ -105,7 +112,10 @@ export default function HomePage() {
         if (filter.filterProduct != "") {
           return {
             ...obj,
-            specifications: filter.filterProduct
+            id: Math.floor(Math.random()*10000) ,
+            specifications: filter.filterProduct,
+            subCategory: filter.subCategory,
+            isChecked:false
           }
         }
         return obj;
@@ -130,7 +140,7 @@ export default function HomePage() {
   };
 
   const handleProductValuesAdd = () => {
-    setProductValues([...productValues, { value: "",specifications: filter.filterProduct }]);
+    setProductValues([...productValues, {id: Math.floor(Math.random()*10000) ,value: "", specifications: filter.filterProduct, subCategory: filter.subCategory,isChecked:false }]);
   };
 
 
@@ -196,7 +206,7 @@ export default function HomePage() {
           <div className='flex gap-x-2'>
 
             <input
-            id="setFilter"
+              id="setFilter"
               className='w-6 h-6'
               onChange={showFilterHandler}
               type="checkbox"

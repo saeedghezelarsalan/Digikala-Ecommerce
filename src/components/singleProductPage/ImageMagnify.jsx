@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState, useEffect, useRef } from "react";
+import {motion} from 'framer-motion'
 
 const ImageMagnify = ({ product }) => {
   const magnify = useRef();
@@ -82,7 +83,7 @@ h-auto lg:!block relative"
             className="w-11/12 h-40 absolute z-[1] hidden bg-[#860f0f] opacity-25"
           ></div>
           <div className="aspect-w-12 aspect-h-14">
-            <div ref={small}>
+            <motion.div ref={small}>
               <Image
                 src={product.thumbnail}
                 alt=""
@@ -91,7 +92,7 @@ h-auto lg:!block relative"
                 layout="responsive"
                 objectFit="contain"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

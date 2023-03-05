@@ -7,8 +7,6 @@ import {AnimatePresence, AnimateSharedLayout} from 'framer-motion'
 function MyApp({ Component, pageProps, router }) {
 
   return (
-    // <AnimateSharedLayout>
-    <AnimatePresence mode="wait">
       <div className="relative">
       <Head>
         <title></title>
@@ -19,10 +17,10 @@ function MyApp({ Component, pageProps, router }) {
         />
       </Head>
      
-            <Component {...pageProps} key={router.route} />
+            <Component {...pageProps}  key={router.asPath} />
       <Footer />
     </div>
-    </ AnimatePresence>
+
   );
 }
 

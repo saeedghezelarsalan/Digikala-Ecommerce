@@ -208,7 +208,7 @@ const HomePage = ({ mainCategories, category }) => {
                     </div>
 
                     <div className="flex items-center text-base text-[#23254e] font-bold mr-5">
-                      {product.price} تومان
+                      {Number(product.price).toLocaleString()} تومان
                     </div>
                   </div>
                 </>

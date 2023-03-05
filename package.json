@@ -16,6 +16,8 @@
     "@reduxjs/toolkit": "^1.9.1",
     "@tailwindcss/line-clamp": "^0.4.0",
     "axios": "^0.27.2",
+    "formik": "^2.2.9",
+    "framer-motion": "^10.0.1",
     "gsap": "^3.11.4",
     "heroicons": "^1.0.6",
     "moment-jalaali": "^0.9.6",
@@ -32,7 +34,8 @@
     "redux": "^4.2.0",
     "redux-saga": "^1.2.1",
     "redux-thunk": "^2.4.1",
-    "swiper": "^8.0.5"
+    "swiper": "^8.0.5",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "^0.4.0",

@@ -1,67 +1,18 @@
 {
   "user": [
     {
+      "id": 1,
+      "name": "سامان",
+      "email": "saman@gmail.com",
+      "createdAt": "2023-03-04T12:29:45.605Z",
+      "updatedAt": "2023-03-04T12:29:45.605Z"
+    },
+    {
       "id": 2,
-      "name": "سعید",
-      "email": "saeedghezelarsalan@gmail.com",
-      "createdAt": "2022-07-25T19:19:02.523Z",
-      "updatedAt": "2022-07-25T19:19:02.523Z"
-    },
-    {
-      "id": 3,
-      "name": "سعید",
-      "email": "saeedghezelarsalan@gmail.com",
-      "createdAt": "2022-07-25T19:34:23.194Z",
-      "updatedAt": "2022-07-25T19:34:23.194Z"
-    },
-    {
-      "id": 4,
-      "name": "سارا",
-      "email": "saeedghezelarsalan@gmail.com",
-      "createdAt": "2022-07-25T19:36:14.224Z",
-      "updatedAt": "2022-07-25T19:36:14.224Z"
-    },
-    {
-      "id": 5,
-      "name": "saeed",
-      "email": "saeed@gmail.com",
-      "createdAt": "2022-07-25T19:42:42.605Z",
-      "updatedAt": "2022-07-25T19:42:42.605Z"
-    },
-    {
-      "id": 6,
-      "name": "sara",
-      "email": "saeed@gmail.com",
-      "createdAt": "2022-07-25T23:07:50.909Z",
-      "updatedAt": "2022-07-25T23:07:50.909Z"
-    },
-    {
-      "id": 7,
-      "name": "sara",
-      "email": "saeedghezelarsalan@gmail.com",
-      "createdAt": "2022-07-26T08:21:39.673Z",
-      "updatedAt": "2022-07-26T08:21:39.673Z"
-    },
-    {
-      "id": 8,
-      "name": "سعید",
-      "email": "saeedghezelarsalan@gmail.com",
-      "createdAt": "2022-07-26T09:26:26.838Z",
-      "updatedAt": "2022-07-26T09:26:26.838Z"
-    },
-    {
-      "id": 9,
-      "name": "سعید",
-      "email": "saeedghezelarsalan@gmail.com",
-      "createdAt": "2022-07-26T21:30:12.184Z",
-      "updatedAt": "2022-07-26T21:30:12.184Z"
-    },
-    {
-      "id": 10,
-      "name": "سعید ارسلان",
-      "email": "target708090@gmail.com",
-      "createdAt": "2023-02-22T00:05:53.502Z",
-      "updatedAt": "2023-02-22T00:05:53.502Z"
+      "name": "کوروش",
+      "email": "koroush@gmail.com",
+      "createdAt": "2023-03-04T13:13:20.913Z",
+      "updatedAt": "2023-03-04T13:13:20.913Z"
     }
   ],
   "product": [
@@ -662,8 +613,8 @@
     },
     {
       "id": 8,
-      "name": "گوشی موبایل اپل مدل iPhone SE 2022 JA تک سیم کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت      ",
-      "latinName": "Apple iPhone SE 2022 JA Single SIM 128GB And 4GB RAM Mobile Phone      ",
+      "name": "گوشی موبایل اپل مدل iPhone SE 2022 JA تک سیم کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت ",
+      "latinName": "Apple iPhone SE 2022 JA Single SIM 128GB And 4GB RAM Mobile Phone",
       "slug": "apple-iphone-se-2022",
       "mainCategory": "کالای دیجیتال",
       "category": "گوشی موبایل",
@@ -1507,11 +1458,11 @@
       "id": 19,
       "name": "گوشی موبایل اپل مدل iPhone SE 2022 JA تک سیم کارت ظرفیت 128 گیگابایت و رم 4 گیگابایت      ",
       "latinName": "Apple iPhone SE 2022 JA Single SIM 128GB And 4GB RAM Mobile Phone",
-      "slug": "nokia",
+      "slug": "iphone-ja-2022",
       "mainCategory": "کالای دیجیتال",
       "category": "گوشی موبایل",
-      "subCategory": "نوکیا",
-      "brand": "نوکیا",
+      "subCategory": "اپل",
+      "brand": "اپل",
       "price": "30000000",
       "stock": "10",
       "sellCount": "2",
@@ -1875,167 +1826,83 @@
   ],
   "customersComment": [
     {
-      "title": "فوق عالی",
-      "name": "سارا قزل ارسلان",
-      "description": "خیلی محشرررره !!!",
-      "createdAt": "2022-08-20T16:56:39.955Z",
-      "updatedAt": "2022-08-20T16:56:39.955Z",
+      "title": "درحد گوشی معمولی بسیار خوب می باشد",
+      "name": "سعید قزل ارسلان",
+      "description": "گوشی خوبی هستش ولی انتظار زیادی نباید ازش داشت الان که قیمتش زیاد شده ولی قبلا (یکماه پیش) که ارزون تر بود ارزش خرید بالایی داشت",
+      "createdAt": "2023-03-04T10:36:17.773Z",
+      "updatedAt": "2023-03-04T10:36:17.773Z",
       "positiveComments": [
         {
-          "id": 749209,
-          "description": "قیمت ارزان"
+          "id": 526656,
+          "description": "طراحی"
         }
       ],
-      "negativeComments": [
-        {
-          "id": 552905,
-          "description": "گروووون"
-        }
-      ],
-      "unknown": true,
-      "slug": "doorbin",
-      "rate": "2",
-      "productName": "دوربین",
+      "negativeComments": [],
+      "unknown": false,
+      "slug": "samsung-galaxy-s21-fe-5g",
+      "rate": "4",
+      "productName": "گوشی موبایل سامسونگ مدل Galaxy S21 FE 5G دو سیم‌ کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
       "id": 1
     },
     {
-      "title": "تجربه خرید",
-      "name": "سعید قزل ارسلان",
-      "description": "استفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشتاستفاده مناسبی داشت",
-      "createdAt": "2022-08-20T17:43:16.557Z",
-      "updatedAt": "2022-08-20T17:43:16.557Z",
-      "positiveComments": [
-        {
-          "id": 318466,
-          "description": "به صرفه"
-        },
-        {
-          "id": 80844,
-          "description": "ارزان"
-        },
-        {
-          "id": 834774,
-          "description": "قابل استفاده"
-        }
-      ],
-      "negativeComments": [
-        {
-          "id": 513169,
-          "description": "تجربه منفی"
-        },
-        {
-          "id": 347519,
-          "description": "گرووون"
-        }
-      ],
-      "unknown": false,
-      "slug": "doorbin",
-      "rate": "4",
-      "productName": "دوربین",
+      "title": "عالی",
+      "name": "سعید",
+      "description": "عالی بود",
+      "createdAt": "2023-03-04T10:39:04.594Z",
+      "updatedAt": "2023-03-04T10:39:04.594Z",
+      "positiveComments": [],
+      "negativeComments": [],
+      "unknown": true,
+      "slug": "samsung-galaxy-s21-fe-5g",
+      "rate": "5",
+      "productName": "گوشی موبایل سامسونگ مدل Galaxy S21 FE 5G دو سیم‌ کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
       "id": 2
     },
     {
-      "title": "عااالی",
-      "name": "حمید",
-      "description": "نظر",
-      "createdAt": "2022-08-22T09:34:19.844Z",
-      "updatedAt": "2022-08-22T09:34:19.844Z",
-      "positiveComments": [
-        {
-          "id": 930450,
-          "description": "مثبت"
-        }
-      ],
-      "negativeComments": [
-        {
-          "id": 200775,
-          "description": "منفی"
-        }
-      ],
-      "unknown": true,
-      "slug": "doorbin",
-      "rate": "1",
-      "productName": "دوربین",
-      "id": 3
-    },
-    {
-      "title": "wed",
-      "name": "wed",
-      "description": "wed",
-      "createdAt": "2022-08-27T10:46:10.147Z",
-      "updatedAt": "2022-08-27T10:46:10.147Z",
-      "positiveComments": [
-        {
-          "id": 72739,
-          "description": "wed"
-        }
-      ],
-      "negativeComments": [
-        {
-          "id": 378477,
-          "description": "wed"
-        },
-        {
-          "id": 642681,
-          "description": "wedwed"
-        }
-      ],
-      "unknown": true,
-      "slug": "doorbin",
-      "rate": "2",
-      "productName": "دوربین",
-      "id": 4
-    },
-    {
-      "title": "محصول",
+      "title": "تخفیف خوب",
       "name": "سعید",
-      "description": "بسیار از محصول راضیم",
-      "createdAt": "2023-02-14T23:47:35.382Z",
-      "updatedAt": "2023-02-14T23:47:35.382Z",
+      "description": "با این تخفیف خیلی عالی بود",
+      "createdAt": "2023-03-04T10:39:45.769Z",
+      "updatedAt": "2023-03-04T10:39:45.769Z",
       "positiveComments": [
         {
-          "id": 750983,
-          "description": "عالی"
+          "id": 521636,
+          "description": "تخفیف"
         }
       ],
-      "negativeComments": [
-        {
-          "id": 795072,
-          "description": "بد"
-        }
-      ],
+      "negativeComments": [],
       "unknown": false,
-      "slug": "mouse",
-      "rate": "2",
-      "productName": "موز",
-      "id": 5
+      "slug": "samsung-galaxy-s21-fe-5g",
+      "rate": "3",
+      "productName": "گوشی موبایل سامسونگ مدل Galaxy S21 FE 5G دو سیم‌ کارت ظرفیت 256 گیگابایت و رم 8 گیگابایت",
+      "id": 3
     }
   ],
   "customersQuestion": [
     {
       "id": 1,
-      "questionsBox": "آیا تخفیف میزارید؟آیا تخفیف میزارید؟آیا تخفیف میزارید؟آیا تخفیف میزارید؟آیا تخفیف میزارید؟آیا تخفیففب",
-      "slug": "mouse"
+      "questionsBox": "حافظه جانبی تا چند گیگ رم پشتیبانی میکنه",
+      "slug": "samsung-galaxy-s21-fe-5g"
     },
     {
       "id": 2,
-      "questionsBox": "آیا تخفیف میزارید؟آیا تخفیف  تخفیف میزارید؟آیا تخفیففب",
-      "slug": "mouse"
+      "questionsBox": "چه کشوری هست؟",
+      "slug": "samsung-galaxy-s21-fe-5g"
     },
     {
       "id": 3,
-      "questionsBox": "آیا تخفیف ",
-      "slug": "mouse"
+      "questionsBox": "سری ساخت کجاست",
+      "slug": "samsung-galaxy-s21-fe-5g"
     },
     {
       "id": 4,
-      "questionsBox": "کی موجود میشه؟",
-      "slug": "mousesss"
+      "questionsBox": "کیفیت دوربینش چطوره؟",
+      "slug": "samsung-galaxy-s21-fe-5g"
     },
     {
       "id": 5,
-      "questionsBox": "آیا محصول اصله ؟",
-      "slug": "mouse"
+      "questionsBox": "سلام این گوشی ضدآب هست یانه ؟",
+      "slug": "samsung-galaxy-s21-fe-5g"
     }
   ],
   "mainCategory": [
@@ -2493,13 +2360,13 @@
         {
           "id": 827503,
           "name": "اپل",
-          "slug": "phone-apple",
+          "slug": "apple",
           "image": ""
         },
         {
           "id": "",
           "image": "",
-          "slug": "phone-samsung",
+          "slug": "samsung",
           "name": "سامسونگ"
         },
         {
@@ -2515,7 +2382,6 @@
       "name": "لوازم جانبی گوشی",
       "slug": "phone-accessories",
       "mainCategory": "کالای دیجیتال",
-      "thumbnail": "",
       "createdAt": "2023-02-22T15:03:36.403Z",
       "updatedAt": "2023-02-22T15:03:36.403Z",
       "subCategory": [
@@ -2559,7 +2425,6 @@
       "name": "مچ بند و ساعت هوشمند",
       "slug": "galaxy-watch",
       "mainCategory": "کالای دیجیتال",
-      "thumbnail": "",
       "createdAt": "2023-02-23T11:11:48.928Z",
       "updatedAt": "2023-02-23T11:11:48.928Z",
       "subCategory": [
@@ -2876,7 +2741,7 @@
       "id": 19,
       "name": "باتری",
       "slug": "battery",
-      "mainCategory": "",
+      "mainCategory": "کالای دیجیتال",
       "createdAt": "2023-02-23T11:31:52.803Z",
       "updatedAt": "2023-02-23T11:31:52.803Z",
       "subCategory": [
@@ -2932,469 +2797,29 @@
         }
       ]
     },
-
-
-
-
-
-
-    {
-      "id": 22,
-      "name": "خودرو های ایرانی و خارجی",
-      "slug": "iran-and-others-car",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:33:37.308Z",
-      "updatedAt": "2023-02-23T11:33:37.308Z",
-      "subCategory": [
-        {
-          "id": 229144,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
     {
       "id": 1,
-      "name": "گوشی موبایل",
+      "name": "خودرو های ایرانی",
       "slug": "phone",
       "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
       "createdAt": "2023-02-22T15:09:27.093Z",
       "updatedAt": "2023-02-22T15:09:27.093Z",
       "subCategory": [
         {
-          "id": 827503,
-          "name": "اپل",
-          "slug": "phone-apple",
+          "id": 644188,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "phone-samsung",
-          "name": "سامسونگ"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "pgone-nokia",
-          "name": "نوکیا"
         }
       ]
     },
     {
       "id": 2,
-      "name": "لوازم جانبی گوشی",
+      "name": "موتور سیکلت",
       "slug": "phone-accessories",
       "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "thumbnail": "",
       "createdAt": "2023-02-22T15:03:36.403Z",
       "updatedAt": "2023-02-22T15:03:36.403Z",
-      "subCategory": [
-        {
-          "name": "کیف و کاور گوشی",
-          "slug": "phone-cover",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "powerbank",
-          "name": "پاوربانک (شارژر همراه)"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "phone-holder",
-          "name": "پایه نگهدارنده گوشی"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "name": "واقعیت مجازی",
-      "slug": "vr",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-22T15:11:31.046Z",
-      "updatedAt": "2023-02-22T15:11:31.046Z",
-      "subCategory": [
-        {
-          "id": 409918,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "name": "مچ بند و ساعت هوشمند",
-      "slug": "galaxy-watch",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "thumbnail": "",
-      "createdAt": "2023-02-23T11:11:48.928Z",
-      "updatedAt": "2023-02-23T11:11:48.928Z",
-      "subCategory": [
-        {
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "name": "تلویزیون",
-      "slug": "television",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:15:24.406Z",
-      "updatedAt": "2023-02-23T11:15:24.406Z",
-      "subCategory": [
-        {
-          "id": 674596,
-          "name": "جی پلاس",
-          "slug": "gplus-tv",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "xvision-tv",
-          "name": "ایکس ویژن"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "devoo-tv",
-          "name": "دوو"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "snova-tv",
-          "name": "اسنوا"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "name": "هدفون،هدست،هندزفری",
-      "slug": "handsfree-category",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:18:39.889Z",
-      "updatedAt": "2023-02-23T11:18:39.889Z",
-      "subCategory": [
-        {
-          "id": "",
-          "name": "",
-          "image": "",
-          "slug": ""
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "name": "اسپیکر بلوتوث و با سیم",
-      "slug": "blutooth-speaker",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:19:30.069Z",
-      "updatedAt": "2023-02-23T11:19:30.069Z",
-      "subCategory": [
-        {
-          "id": 378537,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "name": "هارد،فلش و ssd",
-      "slug": "ssd-hdd",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:20:03.359Z",
-      "updatedAt": "2023-02-23T11:20:03.359Z",
-      "subCategory": [
-        {
-          "id": 135515,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 9,
-      "name": "دوربین",
-      "slug": "camera",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:20:32.429Z",
-      "updatedAt": "2023-02-23T11:20:32.429Z",
-      "subCategory": [
-        {
-          "id": 54835,
-          "name": "دوربین عکاسی دیجیتال",
-          "slug": "digital-camera",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "sport-camera",
-          "name": "دوربین ورزشی و فیلم برداری"
-        }
-      ]
-    },
-    {
-      "id": 10,
-      "name": "لوازم جانبی دوربین",
-      "slug": "camera-tools",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:21:48.260Z",
-      "updatedAt": "2023-02-23T11:21:48.260Z",
-      "subCategory": [
-        {
-          "id": 29674,
-          "name": "لنز",
-          "slug": "lenz",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "bag",
-          "name": "کیف"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "memmory-card",
-          "name": "کارت حافظه"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "print-image-paper",
-          "name": "کاغذ چاپ عکس"
-        }
-      ]
-    },
-    {
-      "id": 11,
-      "name": "دوربین دو چشمی و شکاری",
-      "slug": "hunting-camera",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:24:32.400Z",
-      "updatedAt": "2023-02-23T11:24:32.400Z",
-      "subCategory": [
-        {
-          "id": 827921,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 12,
-      "name": "تلسکوپ",
-      "slug": "telescope",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:25:25.854Z",
-      "updatedAt": "2023-02-23T11:25:25.854Z",
-      "subCategory": [
-        {
-          "id": 101900,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "name": "پلی استیشن،ایکس باکس",
-      "slug": "ps-xbox",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:25:46.934Z",
-      "updatedAt": "2023-02-23T11:25:46.934Z",
-      "subCategory": [
-        {
-          "id": 933929,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "name": "کامپیوتر و تجهیزات جانبی",
-      "slug": "pc",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:26:14.648Z",
-      "updatedAt": "2023-02-23T11:26:14.648Z",
-      "subCategory": [
-        {
-          "id": 259502,
-          "name": "تجهیزات مخصوص بازی",
-          "slug": "computer-tools",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "monitor",
-          "name": "مانیتور"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "assemble-case",
-          "name": "کیس های اسمبل شده"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "internal-px-tools",
-          "name": "قطعات داخلی کامپیوتر"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "mouse",
-          "name": "موس"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "keyboard",
-          "name": "کیبورد"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "name": "لپ تاپ",
-      "slug": "laptop",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:28:22.035Z",
-      "updatedAt": "2023-02-23T11:28:22.035Z",
-      "subCategory": [
-        {
-          "id": 303709,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "name": "لوازم جانبی لپ تاپ",
-      "slug": "laptop-tools",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:28:45.587Z",
-      "updatedAt": "2023-02-23T11:28:45.587Z",
-      "subCategory": [
-        {
-          "id": 424473,
-          "name": "کیف، کوله و کاور",
-          "slug": "bag-cover",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "aux",
-          "name": "کابل صدا"
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "name": "تبلت",
-      "slug": "tablet",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:31:07.417Z",
-      "updatedAt": "2023-02-23T11:31:07.417Z",
-      "subCategory": [
-        {
-          "id": 365426,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "name": "شارژر تبلت و موبایل",
-      "slug": "tablet-charger",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:31:23.896Z",
-      "updatedAt": "2023-02-23T11:31:23.896Z",
-      "subCategory": [
-        {
-          "id": 137106,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "name": "باتری",
-      "slug": "battery",
-      "mainCategory": "",
-      "createdAt": "2023-02-23T11:31:52.803Z",
-      "updatedAt": "2023-02-23T11:31:52.803Z",
-      "subCategory": [
-        {
-          "id": 655113,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "name": "ماشین های اداری",
-      "slug": "printers",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:32:11.321Z",
-      "updatedAt": "2023-02-23T11:32:11.321Z",
-      "subCategory": [
-        {
-          "id": 924037,
-          "name": "تلفن،بی سیم",
-          "slug": "phone-p",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "fax",
-          "name": "فکس"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "p-printer",
-          "name": "پرینتر"
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "name": "کارت هدیه",
-      "slug": "gift-card",
-      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
-      "createdAt": "2023-02-23T11:33:19.998Z",
-      "updatedAt": "2023-02-23T11:33:19.998Z",
       "subCategory": [
         {
           "id": 644188,
@@ -3404,49 +2829,356 @@
         }
       ]
     },
-
-
-
-
+    {
+      "id": 3,
+      "name": "لوازم جانبی خودرو و موتور سیکلت",
+      "slug": "vr",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-22T15:11:31.046Z",
+      "updatedAt": "2023-02-22T15:11:31.046Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "لوازم تزیینی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "سیستم صوتی و تصویری"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "نظافت و نگهداری خودرو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "کلاه کاسکت و لوازم جانبی موتور"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "لوازم یدکی خودرو و موتورسیکلت",
+      "slug": "galaxy-watch",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:11:48.928Z",
+      "updatedAt": "2023-02-23T11:11:48.928Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "دیسک و صفحه کلاچ",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "جلوبندی و تعلیق"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "چراغ خودرو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "تسمه خودرو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "کمک فنر"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "لوازم مصرفی خودرو و موتورسیکلت",
+      "slug": "television",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:15:24.406Z",
+      "updatedAt": "2023-02-23T11:15:24.406Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "لاستیک و تایر",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "لنت ترمز"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "روغن موتور و ضد یخ"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "مکمل سوخت و روغن و انواع فیلتر"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "ابزار برقی",
+      "slug": "handsfree-category",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:18:39.889Z",
+      "updatedAt": "2023-02-23T11:18:39.889Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "دریل، پیچ گوشتی برقی و شارژی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "فرز و سنگ رومیزی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "موتور برق"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "مکنده و دمنده"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "کارواش"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "کمپرسور و جک خودرو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "ابزار همه کاره برقی و شارژی"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "ابزار غیر برقی",
+      "slug": "blutooth-speaker",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:19:30.069Z",
+      "updatedAt": "2023-02-23T11:19:30.069Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "ابزار دستی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "مجموعه ابزار"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "نردبان"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "پیچ گوشتی و فازمتر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "نظم دهنده ابزار"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "متر، تراز، اندازه گیری دقیق"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "لوازم روانکاری"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "چسب صنعتی"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "لوازم و یراق آلات ساختمانی",
+      "slug": "ssd-hdd",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:20:03.359Z",
+      "updatedAt": "2023-02-23T11:20:03.359Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "شیرآلات"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "رنگ"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "دستگیره در"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "لوازم باغبانی",
+      "slug": "camera",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:20:32.429Z",
+      "updatedAt": "2023-02-23T11:20:32.429Z",
+      "subCategory": [
+        {
+          "id": 54835,
+          "name": "قیچی، چاقو و ابزار باغبانی",
+          "slug": "digital-camera",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "بذر و تخم گیاهان"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "تبر، بیل و کلنگ"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "خاک، کود و آفت کش"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "نور و روشنایی",
+      "slug": "camera-tools",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:21:48.260Z",
+      "updatedAt": "2023-02-23T11:21:48.260Z",
+      "subCategory": [
+        {
+          "id": 29674,
+          "name": "لوستر و آباژور",
+          "slug": "lenz",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "bag",
+          "name": "لامپ"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "memmory-card",
+          "name": "چند راهی برق و محافظ ولتاژ"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "تجهیزات ایمنی و کار",
+      "slug": "hunting-camera",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:24:32.400Z",
+      "updatedAt": "2023-02-23T11:24:32.400Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "memmory-card",
+          "name": "کفش ایمنی"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "حفاظتی و امنیتی",
+      "slug": "telescope",
+      "mainCategory": "خودرو، ابزار و تجهیزات صنعتی",
+      "createdAt": "2023-02-23T11:25:25.854Z",
+      "updatedAt": "2023-02-23T11:25:25.854Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "memmory-card",
+          "name": "گاوصندوق"
+        }
+      ]
+    },
     {
       "id": 1,
-      "name": "گوشی موبایل",
+      "name": "کالای اساسی و خوار و بار",
       "slug": "phone",
       "mainCategory": "محصولات بومی و محلی",
       "createdAt": "2023-02-22T15:09:27.093Z",
       "updatedAt": "2023-02-22T15:09:27.093Z",
       "subCategory": [
         {
-          "id": 827503,
-          "name": "اپل",
-          "slug": "phone-apple",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "phone-samsung",
-          "name": "سامسونگ"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "pgone-nokia",
-          "name": "نوکیا"
-        }
-      ]
-    },
-    {
-      "id": 2,
-      "name": "لوازم جانبی گوشی",
-      "slug": "phone-accessories",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "thumbnail": "",
-      "createdAt": "2023-02-22T15:03:36.403Z",
-      "updatedAt": "2023-02-22T15:03:36.403Z",
-      "subCategory": [
-        {
-          "name": "کیف و کاور گوشی",
+          "name": "نان",
           "slug": "phone-cover",
           "image": ""
         },
@@ -3454,101 +3186,248 @@
           "id": "",
           "image": "",
           "slug": "powerbank",
-          "name": "پاوربانک (شارژر همراه)"
+          "name": "برنج"
         },
         {
           "id": "",
           "image": "",
           "slug": "phone-holder",
-          "name": "پایه نگهدارنده گوشی"
+          "name": "روغن"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "قند"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "شکر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "سس"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "رب و کنسرو گوجه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "خیارشور و ترشیجات"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "آبلیمو، آبغوره و سرکه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ماکارونی، پاستا و رشته"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "زعفران،زرشک و تزیینات غذا"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "حبوبات و سویا"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "صبحانه",
+      "slug": "phone-accessories",
+      "mainCategory": "کالا های سوپرمارکتی",
+      "createdAt": "2023-02-22T15:03:36.403Z",
+      "updatedAt": "2023-02-22T15:03:36.403Z",
+      "subCategory": [
+        {
+          "name": "مربا",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "عسل"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "حلواشکری"
         }
       ]
     },
     {
       "id": 3,
-      "name": "واقعیت مجازی",
+      "name": "مواد پروتئینی",
       "slug": "vr",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-22T15:11:31.046Z",
       "updatedAt": "2023-02-22T15:11:31.046Z",
       "subCategory": [
         {
-          "id": 409918,
-          "name": "",
-          "slug": "",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "سوسیس و کالباس"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "گوشت گوسفندی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "گوشت مرغ"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "گوشت گاو و گوساله"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "میگو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ماهی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "تن ماهی"
         }
       ]
     },
     {
       "id": 4,
-      "name": "مچ بند و ساعت هوشمند",
+      "name": "لبنیات",
       "slug": "galaxy-watch",
       "mainCategory": "کالا های سوپرمارکتی",
-      "thumbnail": "",
       "createdAt": "2023-02-23T11:11:48.928Z",
       "updatedAt": "2023-02-23T11:11:48.928Z",
       "subCategory": [
         {
-          "name": "",
-          "slug": "",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "شیر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ماست"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "پنیر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "خامه"
         }
       ]
     },
     {
       "id": 5,
-      "name": "تلویزیون",
+      "name": "نوشیدنی ها",
       "slug": "television",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:15:24.406Z",
       "updatedAt": "2023-02-23T11:15:24.406Z",
       "subCategory": [
         {
-          "id": 674596,
-          "name": "جی پلاس",
-          "slug": "gplus-tv",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "چای"
         },
         {
           "id": "",
           "image": "",
-          "slug": "xvision-tv",
-          "name": "ایکس ویژن"
+          "slug": "phone-holder",
+          "name": "دمنوش"
         },
         {
           "id": "",
           "image": "",
-          "slug": "devoo-tv",
-          "name": "دوو"
+          "slug": "phone-holder",
+          "name": "قهوه"
         },
         {
           "id": "",
           "image": "",
-          "slug": "snova-tv",
-          "name": "اسنوا"
+          "slug": "phone-holder",
+          "name": "آب و آب معدنی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "نوشابه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "شربت و آبمیوه"
         }
       ]
     },
     {
       "id": 6,
-      "name": "هدفون،هدست،هندزفری",
+      "name": "میوه و سبزی",
       "slug": "handsfree-category",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:18:39.889Z",
       "updatedAt": "2023-02-23T11:18:39.889Z",
       "subCategory": [
         {
-          "id": "",
+          "id": 135515,
           "name": "",
-          "image": "",
-          "slug": ""
+          "slug": "",
+          "image": ""
         }
       ]
     },
     {
       "id": 7,
-      "name": "اسپیکر بلوتوث و با سیم",
+      "name": "غذای آماده و نودل",
       "slug": "blutooth-speaker",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:19:30.069Z",
@@ -3564,7 +3443,7 @@
     },
     {
       "id": 8,
-      "name": "هارد،فلش و ssd",
+      "name": "فراورده های منجمد",
       "slug": "ssd-hdd",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:20:03.359Z",
@@ -3580,29 +3459,23 @@
     },
     {
       "id": 9,
-      "name": "دوربین",
+      "name": "کنسرو و کمپوت",
       "slug": "camera",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:20:32.429Z",
       "updatedAt": "2023-02-23T11:20:32.429Z",
       "subCategory": [
         {
-          "id": 54835,
-          "name": "دوربین عکاسی دیجیتال",
-          "slug": "digital-camera",
+          "id": 135515,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "sport-camera",
-          "name": "دوربین ورزشی و فیلم برداری"
         }
       ]
     },
     {
       "id": 10,
-      "name": "لوازم جانبی دوربین",
+      "name": "تنقلات",
       "slug": "camera-tools",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:21:48.260Z",
@@ -3610,7 +3483,7 @@
       "subCategory": [
         {
           "id": 29674,
-          "name": "لنز",
+          "name": "شکلات",
           "slug": "lenz",
           "image": ""
         },
@@ -3618,25 +3491,37 @@
           "id": "",
           "image": "",
           "slug": "bag",
-          "name": "کیف"
+          "name": "بیسکوییت"
         },
         {
           "id": "",
           "image": "",
           "slug": "memmory-card",
-          "name": "کارت حافظه"
+          "name": "کیک و کلوچه"
         },
         {
           "id": "",
           "image": "",
           "slug": "print-image-paper",
-          "name": "کاغذ چاپ عکس"
+          "name": "چیپس و پاپ کورن"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "memmory-card",
+          "name": "پفک"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "print-image-paper",
+          "name": "آدامس"
         }
       ]
     },
     {
       "id": 11,
-      "name": "دوربین دو چشمی و شکاری",
+      "name": "خشکبار و شیرینی",
       "slug": "hunting-camera",
       "mainCategory": "کالا های سوپرمارکتی",
       "createdAt": "2023-02-23T11:24:32.400Z",
@@ -3651,256 +3536,31 @@
       ]
     },
     {
-      "id": 12,
-      "name": "تلسکوپ",
-      "slug": "telescope",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:25:25.854Z",
-      "updatedAt": "2023-02-23T11:25:25.854Z",
-      "subCategory": [
-        {
-          "id": 101900,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 13,
-      "name": "پلی استیشن،ایکس باکس",
-      "slug": "ps-xbox",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:25:46.934Z",
-      "updatedAt": "2023-02-23T11:25:46.934Z",
-      "subCategory": [
-        {
-          "id": 933929,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 14,
-      "name": "کامپیوتر و تجهیزات جانبی",
-      "slug": "pc",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:26:14.648Z",
-      "updatedAt": "2023-02-23T11:26:14.648Z",
-      "subCategory": [
-        {
-          "id": 259502,
-          "name": "تجهیزات مخصوص بازی",
-          "slug": "computer-tools",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "monitor",
-          "name": "مانیتور"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "assemble-case",
-          "name": "کیس های اسمبل شده"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "internal-px-tools",
-          "name": "قطعات داخلی کامپیوتر"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "mouse",
-          "name": "موس"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "keyboard",
-          "name": "کیبورد"
-        }
-      ]
-    },
-    {
-      "id": 15,
-      "name": "لپ تاپ",
-      "slug": "laptop",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:28:22.035Z",
-      "updatedAt": "2023-02-23T11:28:22.035Z",
-      "subCategory": [
-        {
-          "id": 303709,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 16,
-      "name": "لوازم جانبی لپ تاپ",
-      "slug": "laptop-tools",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:28:45.587Z",
-      "updatedAt": "2023-02-23T11:28:45.587Z",
-      "subCategory": [
-        {
-          "id": 424473,
-          "name": "کیف، کوله و کاور",
-          "slug": "bag-cover",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "aux",
-          "name": "کابل صدا"
-        }
-      ]
-    },
-    {
-      "id": 17,
-      "name": "تبلت",
-      "slug": "tablet",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:31:07.417Z",
-      "updatedAt": "2023-02-23T11:31:07.417Z",
-      "subCategory": [
-        {
-          "id": 365426,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 18,
-      "name": "شارژر تبلت و موبایل",
-      "slug": "tablet-charger",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:31:23.896Z",
-      "updatedAt": "2023-02-23T11:31:23.896Z",
-      "subCategory": [
-        {
-          "id": 137106,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 19,
-      "name": "باتری",
-      "slug": "battery",
-      "mainCategory": "",
-      "createdAt": "2023-02-23T11:31:52.803Z",
-      "updatedAt": "2023-02-23T11:31:52.803Z",
-      "subCategory": [
-        {
-          "id": 655113,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-    {
-      "id": 20,
-      "name": "ماشین های اداری",
-      "slug": "printers",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:32:11.321Z",
-      "updatedAt": "2023-02-23T11:32:11.321Z",
-      "subCategory": [
-        {
-          "id": 924037,
-          "name": "تلفن،بی سیم",
-          "slug": "phone-p",
-          "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "fax",
-          "name": "فکس"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "p-printer",
-          "name": "پرینتر"
-        }
-      ]
-    },
-    {
-      "id": 21,
-      "name": "کارت هدیه",
-      "slug": "gift-card",
-      "mainCategory": "کالا های سوپرمارکتی",
-      "createdAt": "2023-02-23T11:33:19.998Z",
-      "updatedAt": "2023-02-23T11:33:19.998Z",
-      "subCategory": [
-        {
-          "id": 644188,
-          "name": "",
-          "slug": "",
-          "image": ""
-        }
-      ]
-    },
-
-
-
-
-    {
       "id": 1,
-      "name": "گوشی موبایل",
+      "name": "مردانه",
       "slug": "phone",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-22T15:09:27.093Z",
       "updatedAt": "2023-02-22T15:09:27.093Z",
       "subCategory": [
         {
-          "id": 827503,
-          "name": "اپل",
-          "slug": "phone-apple",
+          "id": 644188,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "phone-samsung",
-          "name": "سامسونگ"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "pgone-nokia",
-          "name": "نوکیا"
         }
       ]
     },
     {
       "id": 2,
-      "name": "لوازم جانبی گوشی",
+      "name": "لبای مردانه",
       "slug": "phone-accessories",
       "mainCategory": "مد و پوشاک",
-      "thumbnail": "",
       "createdAt": "2023-02-22T15:03:36.403Z",
       "updatedAt": "2023-02-22T15:03:36.403Z",
       "subCategory": [
         {
-          "name": "کیف و کاور گوشی",
+          "name": "سوییشرت و هودی مردانه",
           "slug": "phone-cover",
           "image": ""
         },
@@ -3908,85 +3568,91 @@
           "id": "",
           "image": "",
           "slug": "powerbank",
-          "name": "پاوربانک (شارژر همراه)"
+          "name": "ژاکت و پلیور مردانه"
         },
         {
           "id": "",
           "image": "",
           "slug": "phone-holder",
-          "name": "پایه نگهدارنده گوشی"
+          "name": "شلوار"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "لباس زیر"
         }
       ]
     },
     {
       "id": 3,
-      "name": "واقعیت مجازی",
+      "name": "کفش مردانه",
       "slug": "vr",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-22T15:11:31.046Z",
       "updatedAt": "2023-02-22T15:11:31.046Z",
       "subCategory": [
         {
-          "id": 409918,
-          "name": "",
-          "slug": "",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کفش روزمره"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کفش رسمی"
         }
       ]
     },
     {
       "id": 4,
-      "name": "مچ بند و ساعت هوشمند",
+      "name": "اکسسوری مردانه",
       "slug": "galaxy-watch",
       "mainCategory": "مد و پوشاک",
-      "thumbnail": "",
       "createdAt": "2023-02-23T11:11:48.928Z",
       "updatedAt": "2023-02-23T11:11:48.928Z",
       "subCategory": [
         {
-          "name": "",
-          "slug": "",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ساعت"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کیف"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کمربند"
         }
       ]
     },
     {
       "id": 5,
-      "name": "تلویزیون",
+      "name": "زنانه",
       "slug": "television",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:15:24.406Z",
       "updatedAt": "2023-02-23T11:15:24.406Z",
       "subCategory": [
         {
-          "id": 674596,
-          "name": "جی پلاس",
-          "slug": "gplus-tv",
+          "id": 644188,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "xvision-tv",
-          "name": "ایکس ویژن"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "devoo-tv",
-          "name": "دوو"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "snova-tv",
-          "name": "اسنوا"
         }
       ]
     },
     {
       "id": 6,
-      "name": "هدفون،هدست،هندزفری",
+      "name": "لباس زنانه",
       "slug": "handsfree-category",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:18:39.889Z",
@@ -3994,47 +3660,89 @@
       "subCategory": [
         {
           "id": "",
-          "name": "",
           "image": "",
-          "slug": ""
+          "slug": "phone-holder",
+          "name": "پالتو و بارانی و کاپشن زنانه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "سوییشرت و هودی زنانه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ژاکت و پلیور زنانه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "شلوار و سرهمی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "لباس زیر"
         }
       ]
     },
     {
       "id": 7,
-      "name": "اسپیکر بلوتوث و با سیم",
+      "name": "کفش مردانه",
       "slug": "blutooth-speaker",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:19:30.069Z",
       "updatedAt": "2023-02-23T11:19:30.069Z",
       "subCategory": [
         {
-          "id": 378537,
-          "name": "",
-          "slug": "",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کفش روزمره"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کفش تخت"
         }
       ]
     },
     {
       "id": 8,
-      "name": "هارد،فلش و ssd",
+      "name": "اکسسوری زنانه",
       "slug": "ssd-hdd",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:20:03.359Z",
       "updatedAt": "2023-02-23T11:20:03.359Z",
       "subCategory": [
         {
-          "id": 135515,
-          "name": "",
-          "slug": "",
-          "image": ""
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ساعت"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کیف"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "شال و روسری"
         }
       ]
     },
     {
       "id": 9,
-      "name": "دوربین",
+      "name": "طلا",
       "slug": "camera",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:20:32.429Z",
@@ -4042,7 +3750,7 @@
       "subCategory": [
         {
           "id": 54835,
-          "name": "دوربین عکاسی دیجیتال",
+          "name": "زیورآلات طلا زنانه",
           "slug": "digital-camera",
           "image": ""
         },
@@ -4050,47 +3758,47 @@
           "id": "",
           "image": "",
           "slug": "sport-camera",
-          "name": "دوربین ورزشی و فیلم برداری"
+          "name": "زیورآلات طلا مردانه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "زیورآلات طلا بچگانه"
         }
       ]
     },
     {
       "id": 10,
-      "name": "لوازم جانبی دوربین",
+      "name": "زیورآلات زنانه",
       "slug": "camera-tools",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:21:48.260Z",
       "updatedAt": "2023-02-23T11:21:48.260Z",
       "subCategory": [
         {
-          "id": 29674,
-          "name": "لنز",
-          "slug": "lenz",
+          "id": 54835,
+          "name": "دستبند",
+          "slug": "digital-camera",
           "image": ""
         },
         {
           "id": "",
           "image": "",
-          "slug": "bag",
-          "name": "کیف"
+          "slug": "sport-camera",
+          "name": "گوشواره"
         },
         {
           "id": "",
           "image": "",
-          "slug": "memmory-card",
-          "name": "کارت حافظه"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "print-image-paper",
-          "name": "کاغذ چاپ عکس"
+          "slug": "sport-camera",
+          "name": "گردنبند"
         }
       ]
     },
     {
       "id": 11,
-      "name": "دوربین دو چشمی و شکاری",
+      "name": "زیورآلات نقره زنانه",
       "slug": "hunting-camera",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:24:32.400Z",
@@ -4106,7 +3814,7 @@
     },
     {
       "id": 12,
-      "name": "تلسکوپ",
+      "name": "عینک آفتابی زنانه",
       "slug": "telescope",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:25:25.854Z",
@@ -4122,7 +3830,7 @@
     },
     {
       "id": 13,
-      "name": "پلی استیشن،ایکس باکس",
+      "name": "عینک آفتابی مردانه",
       "slug": "ps-xbox",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:25:46.934Z",
@@ -4138,53 +3846,23 @@
     },
     {
       "id": 14,
-      "name": "کامپیوتر و تجهیزات جانبی",
+      "name": "پوشاک ورزشی مردانه",
       "slug": "pc",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:26:14.648Z",
       "updatedAt": "2023-02-23T11:26:14.648Z",
       "subCategory": [
         {
-          "id": 259502,
-          "name": "تجهیزات مخصوص بازی",
-          "slug": "computer-tools",
+          "id": 827921,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "monitor",
-          "name": "مانیتور"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "assemble-case",
-          "name": "کیس های اسمبل شده"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "internal-px-tools",
-          "name": "قطعات داخلی کامپیوتر"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "mouse",
-          "name": "موس"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "keyboard",
-          "name": "کیبورد"
         }
       ]
     },
     {
       "id": 15,
-      "name": "لپ تاپ",
+      "name": "پوشاک ورزشی زنانه",
       "slug": "laptop",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:28:22.035Z",
@@ -4200,29 +3878,23 @@
     },
     {
       "id": 16,
-      "name": "لوازم جانبی لپ تاپ",
+      "name": "کفش ورزشی مردانه",
       "slug": "laptop-tools",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:28:45.587Z",
       "updatedAt": "2023-02-23T11:28:45.587Z",
       "subCategory": [
         {
-          "id": 424473,
-          "name": "کیف، کوله و کاور",
-          "slug": "bag-cover",
+          "id": 827921,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "aux",
-          "name": "کابل صدا"
         }
       ]
     },
     {
       "id": 17,
-      "name": "تبلت",
+      "name": "کفش ورزشی زنانه",
       "slug": "tablet",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:31:07.417Z",
@@ -4238,7 +3910,7 @@
     },
     {
       "id": 18,
-      "name": "شارژر تبلت و موبایل",
+      "name": "کفش ورزشی پسرانه",
       "slug": "tablet-charger",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:31:23.896Z",
@@ -4254,9 +3926,9 @@
     },
     {
       "id": 19,
-      "name": "باتری",
+      "name": "کفش ورزشی دخترانه",
       "slug": "battery",
-      "mainCategory": "",
+      "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:31:52.803Z",
       "updatedAt": "2023-02-23T11:31:52.803Z",
       "subCategory": [
@@ -4270,35 +3942,23 @@
     },
     {
       "id": 20,
-      "name": "ماشین های اداری",
+      "name": "پوشاک ورزشی پسرانه",
       "slug": "printers",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:32:11.321Z",
       "updatedAt": "2023-02-23T11:32:11.321Z",
       "subCategory": [
         {
-          "id": 924037,
-          "name": "تلفن،بی سیم",
-          "slug": "phone-p",
+          "id": 827921,
+          "name": "",
+          "slug": "",
           "image": ""
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "fax",
-          "name": "فکس"
-        },
-        {
-          "id": "",
-          "image": "",
-          "slug": "p-printer",
-          "name": "پرینتر"
         }
       ]
     },
     {
       "id": 21,
-      "name": "کارت هدیه",
+      "name": "پوشاک ورزشی دخترانه",
       "slug": "gift-card",
       "mainCategory": "مد و پوشاک",
       "createdAt": "2023-02-23T11:33:19.998Z",
@@ -4312,2379 +3972,1868 @@
         }
       ]
     },
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "id": 1,
-  "name": "گوشی موبایل",
-  "slug": "phone",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-22T15:09:27.093Z",
-  "updatedAt": "2023-02-22T15:09:27.093Z",
-  "subCategory": [
-    {
-      "id": 827503,
-      "name": "اپل",
-      "slug": "phone-apple",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-samsung",
-      "name": "سامسونگ"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "pgone-nokia",
-      "name": "نوکیا"
-    }
-  ]
-},
-{
-  "id": 2,
-  "name": "لوازم جانبی گوشی",
-  "slug": "phone-accessories",
-  "mainCategory": "محصولات بومی",
-  "thumbnail": "",
-  "createdAt": "2023-02-22T15:03:36.403Z",
-  "updatedAt": "2023-02-22T15:03:36.403Z",
-  "subCategory": [
-    {
-      "name": "کیف و کاور گوشی",
-      "slug": "phone-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "powerbank",
-      "name": "پاوربانک (شارژر همراه)"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-holder",
-      "name": "پایه نگهدارنده گوشی"
-    }
-  ]
-},
-{
-  "id": 3,
-  "name": "واقعیت مجازی",
-  "slug": "vr",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-22T15:11:31.046Z",
-  "updatedAt": "2023-02-22T15:11:31.046Z",
-  "subCategory": [
-    {
-      "id": 409918,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 4,
-  "name": "مچ بند و ساعت هوشمند",
-  "slug": "galaxy-watch",
-  "mainCategory": "محصولات بومی",
-  "thumbnail": "",
-  "createdAt": "2023-02-23T11:11:48.928Z",
-  "updatedAt": "2023-02-23T11:11:48.928Z",
-  "subCategory": [
-    {
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 5,
-  "name": "تلویزیون",
-  "slug": "television",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:15:24.406Z",
-  "updatedAt": "2023-02-23T11:15:24.406Z",
-  "subCategory": [
-    {
-      "id": 674596,
-      "name": "جی پلاس",
-      "slug": "gplus-tv",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "xvision-tv",
-      "name": "ایکس ویژن"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "devoo-tv",
-      "name": "دوو"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "snova-tv",
-      "name": "اسنوا"
-    }
-  ]
-},
-{
-  "id": 6,
-  "name": "هدفون،هدست،هندزفری",
-  "slug": "handsfree-category",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:18:39.889Z",
-  "updatedAt": "2023-02-23T11:18:39.889Z",
-  "subCategory": [
-    {
-      "id": "",
-      "name": "",
-      "image": "",
-      "slug": ""
-    }
-  ]
-},
-{
-  "id": 7,
-  "name": "اسپیکر بلوتوث و با سیم",
-  "slug": "blutooth-speaker",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:19:30.069Z",
-  "updatedAt": "2023-02-23T11:19:30.069Z",
-  "subCategory": [
-    {
-      "id": 378537,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 8,
-  "name": "هارد،فلش و ssd",
-  "slug": "ssd-hdd",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:20:03.359Z",
-  "updatedAt": "2023-02-23T11:20:03.359Z",
-  "subCategory": [
-    {
-      "id": 135515,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 9,
-  "name": "دوربین",
-  "slug": "camera",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:20:32.429Z",
-  "updatedAt": "2023-02-23T11:20:32.429Z",
-  "subCategory": [
-    {
-      "id": 54835,
-      "name": "دوربین عکاسی دیجیتال",
-      "slug": "digital-camera",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "sport-camera",
-      "name": "دوربین ورزشی و فیلم برداری"
-    }
-  ]
-},
-{
-  "id": 10,
-  "name": "لوازم جانبی دوربین",
-  "slug": "camera-tools",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:21:48.260Z",
-  "updatedAt": "2023-02-23T11:21:48.260Z",
-  "subCategory": [
-    {
-      "id": 29674,
-      "name": "لنز",
-      "slug": "lenz",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "bag",
-      "name": "کیف"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "memmory-card",
-      "name": "کارت حافظه"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "print-image-paper",
-      "name": "کاغذ چاپ عکس"
-    }
-  ]
-},
-{
-  "id": 11,
-  "name": "دوربین دو چشمی و شکاری",
-  "slug": "hunting-camera",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:24:32.400Z",
-  "updatedAt": "2023-02-23T11:24:32.400Z",
-  "subCategory": [
-    {
-      "id": 827921,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 12,
-  "name": "تلسکوپ",
-  "slug": "telescope",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:25:25.854Z",
-  "updatedAt": "2023-02-23T11:25:25.854Z",
-  "subCategory": [
-    {
-      "id": 101900,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 13,
-  "name": "پلی استیشن،ایکس باکس",
-  "slug": "ps-xbox",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:25:46.934Z",
-  "updatedAt": "2023-02-23T11:25:46.934Z",
-  "subCategory": [
-    {
-      "id": 933929,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 14,
-  "name": "کامپیوتر و تجهیزات جانبی",
-  "slug": "pc",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:26:14.648Z",
-  "updatedAt": "2023-02-23T11:26:14.648Z",
-  "subCategory": [
-    {
-      "id": 259502,
-      "name": "تجهیزات مخصوص بازی",
-      "slug": "computer-tools",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "monitor",
-      "name": "مانیتور"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "assemble-case",
-      "name": "کیس های اسمبل شده"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "internal-px-tools",
-      "name": "قطعات داخلی کامپیوتر"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "mouse",
-      "name": "موس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "keyboard",
-      "name": "کیبورد"
-    }
-  ]
-},
-{
-  "id": 15,
-  "name": "لپ تاپ",
-  "slug": "laptop",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:28:22.035Z",
-  "updatedAt": "2023-02-23T11:28:22.035Z",
-  "subCategory": [
-    {
-      "id": 303709,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 16,
-  "name": "لوازم جانبی لپ تاپ",
-  "slug": "laptop-tools",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:28:45.587Z",
-  "updatedAt": "2023-02-23T11:28:45.587Z",
-  "subCategory": [
-    {
-      "id": 424473,
-      "name": "کیف، کوله و کاور",
-      "slug": "bag-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "aux",
-      "name": "کابل صدا"
-    }
-  ]
-},
-{
-  "id": 17,
-  "name": "تبلت",
-  "slug": "tablet",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:31:07.417Z",
-  "updatedAt": "2023-02-23T11:31:07.417Z",
-  "subCategory": [
-    {
-      "id": 365426,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 18,
-  "name": "شارژر تبلت و موبایل",
-  "slug": "tablet-charger",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:31:23.896Z",
-  "updatedAt": "2023-02-23T11:31:23.896Z",
-  "subCategory": [
-    {
-      "id": 137106,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 19,
-  "name": "باتری",
-  "slug": "battery",
-  "mainCategory": "",
-  "createdAt": "2023-02-23T11:31:52.803Z",
-  "updatedAt": "2023-02-23T11:31:52.803Z",
-  "subCategory": [
-    {
-      "id": 655113,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 20,
-  "name": "ماشین های اداری",
-  "slug": "printers",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:32:11.321Z",
-  "updatedAt": "2023-02-23T11:32:11.321Z",
-  "subCategory": [
-    {
-      "id": 924037,
-      "name": "تلفن،بی سیم",
-      "slug": "phone-p",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "fax",
-      "name": "فکس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "p-printer",
-      "name": "پرینتر"
-    }
-  ]
-},
-{
-  "id": 21,
-  "name": "کارت هدیه",
-  "slug": "gift-card",
-  "mainCategory": "محصولات بومی",
-  "createdAt": "2023-02-23T11:33:19.998Z",
-  "updatedAt": "2023-02-23T11:33:19.998Z",
-  "subCategory": [
-    {
-      "id": 644188,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "id": 1,
-  "name": "گوشی موبایل",
-  "slug": "phone",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-22T15:09:27.093Z",
-  "updatedAt": "2023-02-22T15:09:27.093Z",
-  "subCategory": [
-    {
-      "id": 827503,
-      "name": "اپل",
-      "slug": "phone-apple",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-samsung",
-      "name": "سامسونگ"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "pgone-nokia",
-      "name": "نوکیا"
-    }
-  ]
-},
-{
-  "id": 2,
-  "name": "لوازم جانبی گوشی",
-  "slug": "phone-accessories",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "thumbnail": "",
-  "createdAt": "2023-02-22T15:03:36.403Z",
-  "updatedAt": "2023-02-22T15:03:36.403Z",
-  "subCategory": [
-    {
-      "name": "کیف و کاور گوشی",
-      "slug": "phone-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "powerbank",
-      "name": "پاوربانک (شارژر همراه)"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-holder",
-      "name": "پایه نگهدارنده گوشی"
-    }
-  ]
-},
-{
-  "id": 3,
-  "name": "واقعیت مجازی",
-  "slug": "vr",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-22T15:11:31.046Z",
-  "updatedAt": "2023-02-22T15:11:31.046Z",
-  "subCategory": [
-    {
-      "id": 409918,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 4,
-  "name": "مچ بند و ساعت هوشمند",
-  "slug": "galaxy-watch",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "thumbnail": "",
-  "createdAt": "2023-02-23T11:11:48.928Z",
-  "updatedAt": "2023-02-23T11:11:48.928Z",
-  "subCategory": [
-    {
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 5,
-  "name": "تلویزیون",
-  "slug": "television",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:15:24.406Z",
-  "updatedAt": "2023-02-23T11:15:24.406Z",
-  "subCategory": [
-    {
-      "id": 674596,
-      "name": "جی پلاس",
-      "slug": "gplus-tv",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "xvision-tv",
-      "name": "ایکس ویژن"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "devoo-tv",
-      "name": "دوو"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "snova-tv",
-      "name": "اسنوا"
-    }
-  ]
-},
-{
-  "id": 6,
-  "name": "هدفون،هدست،هندزفری",
-  "slug": "handsfree-category",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:18:39.889Z",
-  "updatedAt": "2023-02-23T11:18:39.889Z",
-  "subCategory": [
-    {
-      "id": "",
-      "name": "",
-      "image": "",
-      "slug": ""
-    }
-  ]
-},
-{
-  "id": 7,
-  "name": "اسپیکر بلوتوث و با سیم",
-  "slug": "blutooth-speaker",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:19:30.069Z",
-  "updatedAt": "2023-02-23T11:19:30.069Z",
-  "subCategory": [
-    {
-      "id": 378537,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 8,
-  "name": "هارد،فلش و ssd",
-  "slug": "ssd-hdd",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:20:03.359Z",
-  "updatedAt": "2023-02-23T11:20:03.359Z",
-  "subCategory": [
-    {
-      "id": 135515,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 9,
-  "name": "دوربین",
-  "slug": "camera",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:20:32.429Z",
-  "updatedAt": "2023-02-23T11:20:32.429Z",
-  "subCategory": [
-    {
-      "id": 54835,
-      "name": "دوربین عکاسی دیجیتال",
-      "slug": "digital-camera",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "sport-camera",
-      "name": "دوربین ورزشی و فیلم برداری"
-    }
-  ]
-},
-{
-  "id": 10,
-  "name": "لوازم جانبی دوربین",
-  "slug": "camera-tools",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:21:48.260Z",
-  "updatedAt": "2023-02-23T11:21:48.260Z",
-  "subCategory": [
-    {
-      "id": 29674,
-      "name": "لنز",
-      "slug": "lenz",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "bag",
-      "name": "کیف"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "memmory-card",
-      "name": "کارت حافظه"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "print-image-paper",
-      "name": "کاغذ چاپ عکس"
-    }
-  ]
-},
-{
-  "id": 11,
-  "name": "دوربین دو چشمی و شکاری",
-  "slug": "hunting-camera",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:24:32.400Z",
-  "updatedAt": "2023-02-23T11:24:32.400Z",
-  "subCategory": [
-    {
-      "id": 827921,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 12,
-  "name": "تلسکوپ",
-  "slug": "telescope",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:25:25.854Z",
-  "updatedAt": "2023-02-23T11:25:25.854Z",
-  "subCategory": [
-    {
-      "id": 101900,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 13,
-  "name": "پلی استیشن،ایکس باکس",
-  "slug": "ps-xbox",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:25:46.934Z",
-  "updatedAt": "2023-02-23T11:25:46.934Z",
-  "subCategory": [
-    {
-      "id": 933929,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 14,
-  "name": "کامپیوتر و تجهیزات جانبی",
-  "slug": "pc",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:26:14.648Z",
-  "updatedAt": "2023-02-23T11:26:14.648Z",
-  "subCategory": [
-    {
-      "id": 259502,
-      "name": "تجهیزات مخصوص بازی",
-      "slug": "computer-tools",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "monitor",
-      "name": "مانیتور"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "assemble-case",
-      "name": "کیس های اسمبل شده"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "internal-px-tools",
-      "name": "قطعات داخلی کامپیوتر"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "mouse",
-      "name": "موس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "keyboard",
-      "name": "کیبورد"
-    }
-  ]
-},
-{
-  "id": 15,
-  "name": "لپ تاپ",
-  "slug": "laptop",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:28:22.035Z",
-  "updatedAt": "2023-02-23T11:28:22.035Z",
-  "subCategory": [
-    {
-      "id": 303709,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 16,
-  "name": "لوازم جانبی لپ تاپ",
-  "slug": "laptop-tools",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:28:45.587Z",
-  "updatedAt": "2023-02-23T11:28:45.587Z",
-  "subCategory": [
-    {
-      "id": 424473,
-      "name": "کیف، کوله و کاور",
-      "slug": "bag-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "aux",
-      "name": "کابل صدا"
-    }
-  ]
-},
-{
-  "id": 17,
-  "name": "تبلت",
-  "slug": "tablet",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:31:07.417Z",
-  "updatedAt": "2023-02-23T11:31:07.417Z",
-  "subCategory": [
-    {
-      "id": 365426,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 18,
-  "name": "شارژر تبلت و موبایل",
-  "slug": "tablet-charger",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:31:23.896Z",
-  "updatedAt": "2023-02-23T11:31:23.896Z",
-  "subCategory": [
-    {
-      "id": 137106,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 19,
-  "name": "باتری",
-  "slug": "battery",
-  "mainCategory": "",
-  "createdAt": "2023-02-23T11:31:52.803Z",
-  "updatedAt": "2023-02-23T11:31:52.803Z",
-  "subCategory": [
-    {
-      "id": 655113,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 20,
-  "name": "ماشین های اداری",
-  "slug": "printers",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:32:11.321Z",
-  "updatedAt": "2023-02-23T11:32:11.321Z",
-  "subCategory": [
-    {
-      "id": 924037,
-      "name": "تلفن،بی سیم",
-      "slug": "phone-p",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "fax",
-      "name": "فکس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "p-printer",
-      "name": "پرینتر"
-    }
-  ]
-},
-{
-  "id": 21,
-  "name": "کارت هدیه",
-  "slug": "gift-card",
-  "mainCategory": "اسباب بازی، کودک و نوزاد",
-  "createdAt": "2023-02-23T11:33:19.998Z",
-  "updatedAt": "2023-02-23T11:33:19.998Z",
-  "subCategory": [
-    {
-      "id": 644188,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "id": 1,
-  "name": "گوشی موبایل",
-  "slug": "phone",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-22T15:09:27.093Z",
-  "updatedAt": "2023-02-22T15:09:27.093Z",
-  "subCategory": [
-    {
-      "id": 827503,
-      "name": "اپل",
-      "slug": "phone-apple",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-samsung",
-      "name": "سامسونگ"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "pgone-nokia",
-      "name": "نوکیا"
-    }
-  ]
-},
-{
-  "id": 2,
-  "name": "لوازم جانبی گوشی",
-  "slug": "phone-accessories",
-  "mainCategory": "زیبایی و سلامت",
-  "thumbnail": "",
-  "createdAt": "2023-02-22T15:03:36.403Z",
-  "updatedAt": "2023-02-22T15:03:36.403Z",
-  "subCategory": [
-    {
-      "name": "کیف و کاور گوشی",
-      "slug": "phone-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "powerbank",
-      "name": "پاوربانک (شارژر همراه)"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-holder",
-      "name": "پایه نگهدارنده گوشی"
-    }
-  ]
-},
-{
-  "id": 3,
-  "name": "واقعیت مجازی",
-  "slug": "vr",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-22T15:11:31.046Z",
-  "updatedAt": "2023-02-22T15:11:31.046Z",
-  "subCategory": [
-    {
-      "id": 409918,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 4,
-  "name": "مچ بند و ساعت هوشمند",
-  "slug": "galaxy-watch",
-  "mainCategory": "زیبایی و سلامت",
-  "thumbnail": "",
-  "createdAt": "2023-02-23T11:11:48.928Z",
-  "updatedAt": "2023-02-23T11:11:48.928Z",
-  "subCategory": [
-    {
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 5,
-  "name": "تلویزیون",
-  "slug": "television",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:15:24.406Z",
-  "updatedAt": "2023-02-23T11:15:24.406Z",
-  "subCategory": [
-    {
-      "id": 674596,
-      "name": "جی پلاس",
-      "slug": "gplus-tv",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "xvision-tv",
-      "name": "ایکس ویژن"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "devoo-tv",
-      "name": "دوو"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "snova-tv",
-      "name": "اسنوا"
-    }
-  ]
-},
-{
-  "id": 6,
-  "name": "هدفون،هدست،هندزفری",
-  "slug": "handsfree-category",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:18:39.889Z",
-  "updatedAt": "2023-02-23T11:18:39.889Z",
-  "subCategory": [
-    {
-      "id": "",
-      "name": "",
-      "image": "",
-      "slug": ""
-    }
-  ]
-},
-{
-  "id": 7,
-  "name": "اسپیکر بلوتوث و با سیم",
-  "slug": "blutooth-speaker",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:19:30.069Z",
-  "updatedAt": "2023-02-23T11:19:30.069Z",
-  "subCategory": [
-    {
-      "id": 378537,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 8,
-  "name": "هارد،فلش و ssd",
-  "slug": "ssd-hdd",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:20:03.359Z",
-  "updatedAt": "2023-02-23T11:20:03.359Z",
-  "subCategory": [
-    {
-      "id": 135515,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 9,
-  "name": "دوربین",
-  "slug": "camera",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:20:32.429Z",
-  "updatedAt": "2023-02-23T11:20:32.429Z",
-  "subCategory": [
-    {
-      "id": 54835,
-      "name": "دوربین عکاسی دیجیتال",
-      "slug": "digital-camera",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "sport-camera",
-      "name": "دوربین ورزشی و فیلم برداری"
-    }
-  ]
-},
-{
-  "id": 10,
-  "name": "لوازم جانبی دوربین",
-  "slug": "camera-tools",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:21:48.260Z",
-  "updatedAt": "2023-02-23T11:21:48.260Z",
-  "subCategory": [
-    {
-      "id": 29674,
-      "name": "لنز",
-      "slug": "lenz",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "bag",
-      "name": "کیف"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "memmory-card",
-      "name": "کارت حافظه"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "print-image-paper",
-      "name": "کاغذ چاپ عکس"
-    }
-  ]
-},
-{
-  "id": 11,
-  "name": "دوربین دو چشمی و شکاری",
-  "slug": "hunting-camera",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:24:32.400Z",
-  "updatedAt": "2023-02-23T11:24:32.400Z",
-  "subCategory": [
-    {
-      "id": 827921,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 12,
-  "name": "تلسکوپ",
-  "slug": "telescope",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:25:25.854Z",
-  "updatedAt": "2023-02-23T11:25:25.854Z",
-  "subCategory": [
-    {
-      "id": 101900,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 13,
-  "name": "پلی استیشن،ایکس باکس",
-  "slug": "ps-xbox",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:25:46.934Z",
-  "updatedAt": "2023-02-23T11:25:46.934Z",
-  "subCategory": [
-    {
-      "id": 933929,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 14,
-  "name": "کامپیوتر و تجهیزات جانبی",
-  "slug": "pc",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:26:14.648Z",
-  "updatedAt": "2023-02-23T11:26:14.648Z",
-  "subCategory": [
-    {
-      "id": 259502,
-      "name": "تجهیزات مخصوص بازی",
-      "slug": "computer-tools",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "monitor",
-      "name": "مانیتور"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "assemble-case",
-      "name": "کیس های اسمبل شده"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "internal-px-tools",
-      "name": "قطعات داخلی کامپیوتر"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "mouse",
-      "name": "موس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "keyboard",
-      "name": "کیبورد"
-    }
-  ]
-},
-{
-  "id": 15,
-  "name": "لپ تاپ",
-  "slug": "laptop",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:28:22.035Z",
-  "updatedAt": "2023-02-23T11:28:22.035Z",
-  "subCategory": [
-    {
-      "id": 303709,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 16,
-  "name": "لوازم جانبی لپ تاپ",
-  "slug": "laptop-tools",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:28:45.587Z",
-  "updatedAt": "2023-02-23T11:28:45.587Z",
-  "subCategory": [
-    {
-      "id": 424473,
-      "name": "کیف، کوله و کاور",
-      "slug": "bag-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "aux",
-      "name": "کابل صدا"
-    }
-  ]
-},
-{
-  "id": 17,
-  "name": "تبلت",
-  "slug": "tablet",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:31:07.417Z",
-  "updatedAt": "2023-02-23T11:31:07.417Z",
-  "subCategory": [
-    {
-      "id": 365426,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 18,
-  "name": "شارژر تبلت و موبایل",
-  "slug": "tablet-charger",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:31:23.896Z",
-  "updatedAt": "2023-02-23T11:31:23.896Z",
-  "subCategory": [
-    {
-      "id": 137106,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 19,
-  "name": "باتری",
-  "slug": "battery",
-  "mainCategory": "",
-  "createdAt": "2023-02-23T11:31:52.803Z",
-  "updatedAt": "2023-02-23T11:31:52.803Z",
-  "subCategory": [
-    {
-      "id": 655113,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 20,
-  "name": "ماشین های اداری",
-  "slug": "printers",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:32:11.321Z",
-  "updatedAt": "2023-02-23T11:32:11.321Z",
-  "subCategory": [
-    {
-      "id": 924037,
-      "name": "تلفن،بی سیم",
-      "slug": "phone-p",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "fax",
-      "name": "فکس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "p-printer",
-      "name": "پرینتر"
-    }
-  ]
-},
-{
-  "id": 21,
-  "name": "کارت هدیه",
-  "slug": "gift-card",
-  "mainCategory": "زیبایی و سلامت",
-  "createdAt": "2023-02-23T11:33:19.998Z",
-  "updatedAt": "2023-02-23T11:33:19.998Z",
-  "subCategory": [
-    {
-      "id": 644188,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "id": 1,
-  "name": "گوشی موبایل",
-  "slug": "phone",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-22T15:09:27.093Z",
-  "updatedAt": "2023-02-22T15:09:27.093Z",
-  "subCategory": [
-    {
-      "id": 827503,
-      "name": "اپل",
-      "slug": "phone-apple",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-samsung",
-      "name": "سامسونگ"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "pgone-nokia",
-      "name": "نوکیا"
-    }
-  ]
-},
-{
-  "id": 2,
-  "name": "لوازم جانبی گوشی",
-  "slug": "phone-accessories",
-  "mainCategory": "خانه و آشپزخانه",
-  "thumbnail": "",
-  "createdAt": "2023-02-22T15:03:36.403Z",
-  "updatedAt": "2023-02-22T15:03:36.403Z",
-  "subCategory": [
-    {
-      "name": "کیف و کاور گوشی",
-      "slug": "phone-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "powerbank",
-      "name": "پاوربانک (شارژر همراه)"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-holder",
-      "name": "پایه نگهدارنده گوشی"
-    }
-  ]
-},
-{
-  "id": 3,
-  "name": "واقعیت مجازی",
-  "slug": "vr",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-22T15:11:31.046Z",
-  "updatedAt": "2023-02-22T15:11:31.046Z",
-  "subCategory": [
-    {
-      "id": 409918,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 4,
-  "name": "مچ بند و ساعت هوشمند",
-  "slug": "galaxy-watch",
-  "mainCategory": "خانه و آشپزخانه",
-  "thumbnail": "",
-  "createdAt": "2023-02-23T11:11:48.928Z",
-  "updatedAt": "2023-02-23T11:11:48.928Z",
-  "subCategory": [
-    {
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 5,
-  "name": "تلویزیون",
-  "slug": "television",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:15:24.406Z",
-  "updatedAt": "2023-02-23T11:15:24.406Z",
-  "subCategory": [
-    {
-      "id": 674596,
-      "name": "جی پلاس",
-      "slug": "gplus-tv",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "xvision-tv",
-      "name": "ایکس ویژن"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "devoo-tv",
-      "name": "دوو"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "snova-tv",
-      "name": "اسنوا"
-    }
-  ]
-},
-{
-  "id": 6,
-  "name": "هدفون،هدست،هندزفری",
-  "slug": "handsfree-category",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:18:39.889Z",
-  "updatedAt": "2023-02-23T11:18:39.889Z",
-  "subCategory": [
-    {
-      "id": "",
-      "name": "",
-      "image": "",
-      "slug": ""
-    }
-  ]
-},
-{
-  "id": 7,
-  "name": "اسپیکر بلوتوث و با سیم",
-  "slug": "blutooth-speaker",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:19:30.069Z",
-  "updatedAt": "2023-02-23T11:19:30.069Z",
-  "subCategory": [
-    {
-      "id": 378537,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 8,
-  "name": "هارد،فلش و ssd",
-  "slug": "ssd-hdd",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:20:03.359Z",
-  "updatedAt": "2023-02-23T11:20:03.359Z",
-  "subCategory": [
-    {
-      "id": 135515,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 9,
-  "name": "دوربین",
-  "slug": "camera",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:20:32.429Z",
-  "updatedAt": "2023-02-23T11:20:32.429Z",
-  "subCategory": [
-    {
-      "id": 54835,
-      "name": "دوربین عکاسی دیجیتال",
-      "slug": "digital-camera",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "sport-camera",
-      "name": "دوربین ورزشی و فیلم برداری"
-    }
-  ]
-},
-{
-  "id": 10,
-  "name": "لوازم جانبی دوربین",
-  "slug": "camera-tools",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:21:48.260Z",
-  "updatedAt": "2023-02-23T11:21:48.260Z",
-  "subCategory": [
-    {
-      "id": 29674,
-      "name": "لنز",
-      "slug": "lenz",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "bag",
-      "name": "کیف"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "memmory-card",
-      "name": "کارت حافظه"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "print-image-paper",
-      "name": "کاغذ چاپ عکس"
-    }
-  ]
-},
-{
-  "id": 11,
-  "name": "دوربین دو چشمی و شکاری",
-  "slug": "hunting-camera",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:24:32.400Z",
-  "updatedAt": "2023-02-23T11:24:32.400Z",
-  "subCategory": [
-    {
-      "id": 827921,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 12,
-  "name": "تلسکوپ",
-  "slug": "telescope",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:25:25.854Z",
-  "updatedAt": "2023-02-23T11:25:25.854Z",
-  "subCategory": [
-    {
-      "id": 101900,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 13,
-  "name": "پلی استیشن،ایکس باکس",
-  "slug": "ps-xbox",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:25:46.934Z",
-  "updatedAt": "2023-02-23T11:25:46.934Z",
-  "subCategory": [
-    {
-      "id": 933929,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 14,
-  "name": "کامپیوتر و تجهیزات جانبی",
-  "slug": "pc",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:26:14.648Z",
-  "updatedAt": "2023-02-23T11:26:14.648Z",
-  "subCategory": [
-    {
-      "id": 259502,
-      "name": "تجهیزات مخصوص بازی",
-      "slug": "computer-tools",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "monitor",
-      "name": "مانیتور"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "assemble-case",
-      "name": "کیس های اسمبل شده"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "internal-px-tools",
-      "name": "قطعات داخلی کامپیوتر"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "mouse",
-      "name": "موس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "keyboard",
-      "name": "کیبورد"
-    }
-  ]
-},
-{
-  "id": 15,
-  "name": "لپ تاپ",
-  "slug": "laptop",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:28:22.035Z",
-  "updatedAt": "2023-02-23T11:28:22.035Z",
-  "subCategory": [
-    {
-      "id": 303709,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 16,
-  "name": "لوازم جانبی لپ تاپ",
-  "slug": "laptop-tools",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:28:45.587Z",
-  "updatedAt": "2023-02-23T11:28:45.587Z",
-  "subCategory": [
-    {
-      "id": 424473,
-      "name": "کیف، کوله و کاور",
-      "slug": "bag-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "aux",
-      "name": "کابل صدا"
-    }
-  ]
-},
-{
-  "id": 17,
-  "name": "تبلت",
-  "slug": "tablet",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:31:07.417Z",
-  "updatedAt": "2023-02-23T11:31:07.417Z",
-  "subCategory": [
-    {
-      "id": 365426,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 18,
-  "name": "شارژر تبلت و موبایل",
-  "slug": "tablet-charger",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:31:23.896Z",
-  "updatedAt": "2023-02-23T11:31:23.896Z",
-  "subCategory": [
-    {
-      "id": 137106,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 19,
-  "name": "باتری",
-  "slug": "battery",
-  "mainCategory": "",
-  "createdAt": "2023-02-23T11:31:52.803Z",
-  "updatedAt": "2023-02-23T11:31:52.803Z",
-  "subCategory": [
-    {
-      "id": 655113,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 20,
-  "name": "ماشین های اداری",
-  "slug": "printers",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:32:11.321Z",
-  "updatedAt": "2023-02-23T11:32:11.321Z",
-  "subCategory": [
-    {
-      "id": 924037,
-      "name": "تلفن،بی سیم",
-      "slug": "phone-p",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "fax",
-      "name": "فکس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "p-printer",
-      "name": "پرینتر"
-    }
-  ]
-},
-{
-  "id": 21,
-  "name": "کارت هدیه",
-  "slug": "gift-card",
-  "mainCategory": "خانه و آشپزخانه",
-  "createdAt": "2023-02-23T11:33:19.998Z",
-  "updatedAt": "2023-02-23T11:33:19.998Z",
-  "subCategory": [
-    {
-      "id": 644188,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-{
-  "id": 1,
-  "name": "گوشی موبایل",
-  "slug": "phone",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-22T15:09:27.093Z",
-  "updatedAt": "2023-02-22T15:09:27.093Z",
-  "subCategory": [
-    {
-      "id": 827503,
-      "name": "اپل",
-      "slug": "phone-apple",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-samsung",
-      "name": "سامسونگ"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "pgone-nokia",
-      "name": "نوکیا"
-    }
-  ]
-},
-{
-  "id": 2,
-  "name": "لوازم جانبی گوشی",
-  "slug": "phone-accessories",
-  "mainCategory": "ورزش و سفر",
-  "thumbnail": "",
-  "createdAt": "2023-02-22T15:03:36.403Z",
-  "updatedAt": "2023-02-22T15:03:36.403Z",
-  "subCategory": [
-    {
-      "name": "کیف و کاور گوشی",
-      "slug": "phone-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "powerbank",
-      "name": "پاوربانک (شارژر همراه)"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "phone-holder",
-      "name": "پایه نگهدارنده گوشی"
-    }
-  ]
-},
-{
-  "id": 3,
-  "name": "واقعیت مجازی",
-  "slug": "vr",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-22T15:11:31.046Z",
-  "updatedAt": "2023-02-22T15:11:31.046Z",
-  "subCategory": [
-    {
-      "id": 409918,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 4,
-  "name": "مچ بند و ساعت هوشمند",
-  "slug": "galaxy-watch",
-  "mainCategory": "ورزش و سفر",
-  "thumbnail": "",
-  "createdAt": "2023-02-23T11:11:48.928Z",
-  "updatedAt": "2023-02-23T11:11:48.928Z",
-  "subCategory": [
-    {
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 5,
-  "name": "تلویزیون",
-  "slug": "television",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:15:24.406Z",
-  "updatedAt": "2023-02-23T11:15:24.406Z",
-  "subCategory": [
-    {
-      "id": 674596,
-      "name": "جی پلاس",
-      "slug": "gplus-tv",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "xvision-tv",
-      "name": "ایکس ویژن"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "devoo-tv",
-      "name": "دوو"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "snova-tv",
-      "name": "اسنوا"
-    }
-  ]
-},
-{
-  "id": 6,
-  "name": "هدفون،هدست،هندزفری",
-  "slug": "handsfree-category",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:18:39.889Z",
-  "updatedAt": "2023-02-23T11:18:39.889Z",
-  "subCategory": [
-    {
-      "id": "",
-      "name": "",
-      "image": "",
-      "slug": ""
-    }
-  ]
-},
-{
-  "id": 7,
-  "name": "اسپیکر بلوتوث و با سیم",
-  "slug": "blutooth-speaker",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:19:30.069Z",
-  "updatedAt": "2023-02-23T11:19:30.069Z",
-  "subCategory": [
-    {
-      "id": 378537,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 8,
-  "name": "هارد،فلش و ssd",
-  "slug": "ssd-hdd",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:20:03.359Z",
-  "updatedAt": "2023-02-23T11:20:03.359Z",
-  "subCategory": [
-    {
-      "id": 135515,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 9,
-  "name": "دوربین",
-  "slug": "camera",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:20:32.429Z",
-  "updatedAt": "2023-02-23T11:20:32.429Z",
-  "subCategory": [
-    {
-      "id": 54835,
-      "name": "دوربین عکاسی دیجیتال",
-      "slug": "digital-camera",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "sport-camera",
-      "name": "دوربین ورزشی و فیلم برداری"
-    }
-  ]
-},
-{
-  "id": 10,
-  "name": "لوازم جانبی دوربین",
-  "slug": "camera-tools",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:21:48.260Z",
-  "updatedAt": "2023-02-23T11:21:48.260Z",
-  "subCategory": [
-    {
-      "id": 29674,
-      "name": "لنز",
-      "slug": "lenz",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "bag",
-      "name": "کیف"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "memmory-card",
-      "name": "کارت حافظه"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "print-image-paper",
-      "name": "کاغذ چاپ عکس"
-    }
-  ]
-},
-{
-  "id": 11,
-  "name": "دوربین دو چشمی و شکاری",
-  "slug": "hunting-camera",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:24:32.400Z",
-  "updatedAt": "2023-02-23T11:24:32.400Z",
-  "subCategory": [
-    {
-      "id": 827921,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 12,
-  "name": "تلسکوپ",
-  "slug": "telescope",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:25:25.854Z",
-  "updatedAt": "2023-02-23T11:25:25.854Z",
-  "subCategory": [
-    {
-      "id": 101900,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 13,
-  "name": "پلی استیشن،ایکس باکس",
-  "slug": "ps-xbox",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:25:46.934Z",
-  "updatedAt": "2023-02-23T11:25:46.934Z",
-  "subCategory": [
-    {
-      "id": 933929,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 14,
-  "name": "کامپیوتر و تجهیزات جانبی",
-  "slug": "pc",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:26:14.648Z",
-  "updatedAt": "2023-02-23T11:26:14.648Z",
-  "subCategory": [
-    {
-      "id": 259502,
-      "name": "تجهیزات مخصوص بازی",
-      "slug": "computer-tools",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "monitor",
-      "name": "مانیتور"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "assemble-case",
-      "name": "کیس های اسمبل شده"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "internal-px-tools",
-      "name": "قطعات داخلی کامپیوتر"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "mouse",
-      "name": "موس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "keyboard",
-      "name": "کیبورد"
-    }
-  ]
-},
-{
-  "id": 15,
-  "name": "لپ تاپ",
-  "slug": "laptop",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:28:22.035Z",
-  "updatedAt": "2023-02-23T11:28:22.035Z",
-  "subCategory": [
-    {
-      "id": 303709,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 16,
-  "name": "لوازم جانبی لپ تاپ",
-  "slug": "laptop-tools",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:28:45.587Z",
-  "updatedAt": "2023-02-23T11:28:45.587Z",
-  "subCategory": [
-    {
-      "id": 424473,
-      "name": "کیف، کوله و کاور",
-      "slug": "bag-cover",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "aux",
-      "name": "کابل صدا"
-    }
-  ]
-},
-{
-  "id": 17,
-  "name": "تبلت",
-  "slug": "tablet",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:31:07.417Z",
-  "updatedAt": "2023-02-23T11:31:07.417Z",
-  "subCategory": [
-    {
-      "id": 365426,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 18,
-  "name": "شارژر تبلت و موبایل",
-  "slug": "tablet-charger",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:31:23.896Z",
-  "updatedAt": "2023-02-23T11:31:23.896Z",
-  "subCategory": [
-    {
-      "id": 137106,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 19,
-  "name": "باتری",
-  "slug": "battery",
-  "mainCategory": "",
-  "createdAt": "2023-02-23T11:31:52.803Z",
-  "updatedAt": "2023-02-23T11:31:52.803Z",
-  "subCategory": [
-    {
-      "id": 655113,
-      "name": "",
-      "slug": "",
-      "image": ""
-    }
-  ]
-},
-{
-  "id": 20,
-  "name": "ماشین های اداری",
-  "slug": "printers",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:32:11.321Z",
-  "updatedAt": "2023-02-23T11:32:11.321Z",
-  "subCategory": [
-    {
-      "id": 924037,
-      "name": "تلفن،بی سیم",
-      "slug": "phone-p",
-      "image": ""
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "fax",
-      "name": "فکس"
-    },
-    {
-      "id": "",
-      "image": "",
-      "slug": "p-printer",
-      "name": "پرینتر"
-    }
-  ]
-},
-{
-  "id": 21,
-  "name": "کارت هدیه",
-  "slug": "gift-card",
-  "mainCategory": "ورزش و سفر",
-  "createdAt": "2023-02-23T11:33:19.998Z",
-  "updatedAt": "2023-02-23T11:33:19.998Z",
-  "subCategory": [
-    {
-      "id": 644188,
-      "name": "",
-      "slug": "",
-      "image": ""
+    {
+      "id": 22,
+      "name": "کوله پشتی مردانه",
+      "slug": "gift-card",
+      "mainCategory": "مد و پوشاک",
+      "createdAt": "2023-02-23T11:33:19.998Z",
+      "updatedAt": "2023-02-23T11:33:19.998Z",
+      "subCategory": [
+        {
+          "id": 644188,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 23,
+      "name": "بچه گانه",
+      "slug": "gift-card",
+      "mainCategory": "مد و پوشاک",
+      "createdAt": "2023-02-23T11:33:19.998Z",
+      "updatedAt": "2023-02-23T11:33:19.998Z",
+      "subCategory": [
+        {
+          "id": 644188,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "خوراکی های بومی و محلی",
+      "slug": "phone",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-22T15:09:27.093Z",
+      "updatedAt": "2023-02-22T15:09:27.093Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "حلواشکری",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "خرمای محلی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "عسل محلی"
+        },
+        {
+          "id": 827503,
+          "name": "عرقیات و گلاب اصیل",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "ادویه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "چای محلی"
+        },
+        {
+          "id": 827503,
+          "name": "زعفران",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "سبزی خشک محلی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "حبوبات"
+        },
+        {
+          "id": 827503,
+          "name": "قند و نبات محلی",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "ماهی تازه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "روغن محلی"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "خانه و کاشانه بومی محلی",
+      "slug": "phone-accessories",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-22T15:03:36.403Z",
+      "updatedAt": "2023-02-22T15:03:36.403Z",
+      "subCategory": [
+        {
+          "id": 409918,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "ظروف سنتی",
+      "slug": "vr",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-22T15:11:31.046Z",
+      "updatedAt": "2023-02-22T15:11:31.046Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "کاسه و کاسه بشقاب سنتی",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "بشقاب سنتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "پارچ سنتی"
+        },
+        {
+          "id": 827503,
+          "name": "لیوان سنتی",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "قندان سنتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "دیگ و قابلمه سنتی"
+        },
+        {
+          "id": 827503,
+          "name": "شکلات خوری دست ساز",
+          "slug": "phone-apple",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "ابزار آشپزخانه سنتی",
+      "slug": "galaxy-watch",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-23T11:11:48.928Z",
+      "updatedAt": "2023-02-23T11:11:48.928Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "دیس و سینی سنتی",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "تخته سرو سنتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "سبد دستباف سنتی"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "دکوراتیو سنتی",
+      "slug": "television",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-23T11:15:24.406Z",
+      "updatedAt": "2023-02-23T11:15:24.406Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "آویز سرپرده سنتی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "کیس و کاور سنتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "گلدان سنتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "مجسمه سنتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "چراغ خواب و آباژور"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "خواب و حمام",
+      "slug": "handsfree-category",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-23T11:18:39.889Z",
+      "updatedAt": "2023-02-23T11:18:39.889Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "کوسن سنتی"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "انواع قالی و قالیچه",
+      "slug": "blutooth-speaker",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-23T11:19:30.069Z",
+      "updatedAt": "2023-02-23T11:19:30.069Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "گلیم"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "پوشیدنی های بومی و محلی",
+      "slug": "ssd-hdd",
+      "mainCategory": "محصولات بومی",
+      "createdAt": "2023-02-23T11:20:03.359Z",
+      "updatedAt": "2023-02-23T11:20:03.359Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "پوشاک بومی و محلی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "اکسسوری بومی و محلی"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "بهداشت و حمام کودک و نوزاد",
+      "slug": "phone",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-22T15:09:27.093Z",
+      "updatedAt": "2023-02-22T15:09:27.093Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "پوشک",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "دستمال مرطوب"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "حوله"
+        },
+        {
+          "id": 827503,
+          "name": "وان حمام نوزاد",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "مینی واش"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "شامپو کودک و نوزاد"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "پوشاک و کفش کودک و نوزاد",
+      "slug": "phone-accessories",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-22T15:03:36.403Z",
+      "updatedAt": "2023-02-22T15:03:36.403Z",
+      "subCategory": [
+        {
+          "name": "لباس کودک و لباس نوزادی",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "کفش"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کفش ورزشی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "جوراب و پاپوش کودک"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "کلاه و پیشبند نوزاد"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "تبلت",
+      "slug": "vr",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-22T15:11:31.046Z",
+      "updatedAt": "2023-02-22T15:11:31.046Z",
+      "subCategory": [
+        {
+          "id": 409918,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "پلی استیشن، ایکس باکس و بازی",
+      "slug": "galaxy-watch",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:11:48.928Z",
+      "updatedAt": "2023-02-23T11:11:48.928Z",
+      "subCategory": [
+        {
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "اسباب بازی",
+      "slug": "television",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:15:24.406Z",
+      "updatedAt": "2023-02-23T11:15:24.406Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "فکری و آموزشی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "پازل، لگو و ساختنی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "عروسک و فیگور"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "اسپینر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "تفنگ و لوازم جنگی"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "بازی و سرگرمی کودک",
+      "slug": "handsfree-category",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:18:39.889Z",
+      "updatedAt": "2023-02-23T11:18:39.889Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "ماشین بازی،موتور، سه چرخه",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "دوچرخه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "تشک بازی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "تاب و سرسره"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "سلامت، ایمنی و مراقبت",
+      "slug": "blutooth-speaker",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:19:30.069Z",
+      "updatedAt": "2023-02-23T11:19:30.069Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "تصفیه هوا",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "ترازو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "دوربین و پیجر اتاق کودک"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "تب سنج و دماسنج"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "محافظ و ابزار ایمنی"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "خواب کودک",
+      "slug": "ssd-hdd",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:20:03.359Z",
+      "updatedAt": "2023-02-23T11:20:03.359Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "مبلمان اتاق کودک",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "چراغ خواب کودک"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "تشک کودک"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "سرویس خواب"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "پتو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "بالش شیردهی"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "ملزومات گردش و سفر",
+      "slug": "camera",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:20:32.429Z",
+      "updatedAt": "2023-02-23T11:20:32.429Z",
+      "subCategory": [
+        {
+          "id": 54835,
+          "name": "کالسکه و کریر",
+          "slug": "digital-camera",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "صندلی خودرو کودک و نوزاد"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "ساک لوازم نوزاد"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "لوازم جانبی گردش"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "آغوشی"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "لوازم شخصی ",
+      "slug": "camera-tools",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:21:48.260Z",
+      "updatedAt": "2023-02-23T11:21:48.260Z",
+      "subCategory": [
+        {
+          "id": 29674,
+          "name": "پستانک و ملزومات",
+          "slug": "lenz",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "bag",
+          "name": "شیردوش"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "memmory-card",
+          "name": "شورت آموزشی"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "غذاخوری",
+      "slug": "hunting-camera",
+      "mainCategory": "اسباب بازی، کودک و نوزاد",
+      "createdAt": "2023-02-23T11:24:32.400Z",
+      "updatedAt": "2023-02-23T11:24:32.400Z",
+      "subCategory": [
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "صندلی غذاخوری"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "شیشه شیر"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "لوازم آرایشی",
+      "slug": "phone",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-22T15:09:27.093Z",
+      "updatedAt": "2023-02-22T15:09:27.093Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "آرایش صورت",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "آرایش چشم"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "آرایش ابرو"
+        },
+        {
+          "id": 827503,
+          "name": "آرایش لب",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "بهداشت و زیبایی ناخن"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "ابزار آرایشی"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "مراقبت پوست",
+      "slug": "phone-accessories",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-22T15:03:36.403Z",
+      "updatedAt": "2023-02-22T15:03:36.403Z",
+      "subCategory": [
+        {
+          "name": "کرم مرطوب کننده",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "powerbank",
+          "name": "ماسک صورت و بدن"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "پاک کننده صورت"
+        },
+        {
+          "id": 827503,
+          "name": "تونر",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "مراقبت بدن"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "ابزار مراقبت پوست"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "مراقبت و زیبایی مو",
+      "slug": "vr",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-22T15:11:31.046Z",
+      "updatedAt": "2023-02-22T15:11:31.046Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "شامپو و مراقبت مو",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "آرایش مو"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "لوازم بهداشتی",
+      "slug": "galaxy-watch",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-23T11:11:48.928Z",
+      "updatedAt": "2023-02-23T11:11:48.928Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "مراقبت دهان و دندان",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "مسواک"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "خمیر دندان"
+        },
+        {
+          "id": 827503,
+          "name": "ضد تعریق",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "محصولات بهداشتی جنسی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "کاندوم"
+        },
+        {
+          "id": 827503,
+          "name": "بهداشت و مراقبت شخصی",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "نوار بهداشتی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "کاپ قاعدگی"
+        },
+        {
+          "id": 827503,
+          "name": "لوازم اصلاح",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "تیغ و یدک اصلاح"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "عطر و ادکلن",
+      "slug": "television",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-23T11:15:24.406Z",
+      "updatedAt": "2023-02-23T11:15:24.406Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "عطر و ادکلن زنانه",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "عطر و ادکلن مردانه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "بادی اسپلش"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "عطر جیبی"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "لوازم شخصی برقی",
+      "slug": "handsfree-category",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-23T11:18:39.889Z",
+      "updatedAt": "2023-02-23T11:18:39.889Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "سشوار",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "اتو و حالت دهنده مو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "اصلاح مو صورت"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "ابزار سلامت",
+      "slug": "blutooth-speaker",
+      "mainCategory": "زیبایی و سلامت",
+      "createdAt": "2023-02-23T11:19:30.069Z",
+      "updatedAt": "2023-02-23T11:19:30.069Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "ماساژور",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "ترازو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "دستگاه بخور و رطوبت ساز"
+        },
+        {
+          "id": 827503,
+          "name": "فشار سنج",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "تست قند"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "ویلچر"
+        },
+        {
+          "id": 827503,
+          "name": "تزریقات",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "مکمل دارویی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "مکمل ورزشی"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "تلویزیون",
+      "slug": "phone",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-22T15:09:27.093Z",
+      "updatedAt": "2023-02-22T15:09:27.093Z",
+      "subCategory": [
+        {
+          "id": 827503,
+          "name": "ایکس ویژن",
+          "slug": "phone-apple",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-samsung",
+          "name": "جی پلاس"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "pgone-nokia",
+          "name": "دوو"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "یخچال و فریزر",
+      "slug": "phone-accessories",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-22T15:03:36.403Z",
+      "updatedAt": "2023-02-22T15:03:36.403Z",
+      "subCategory": [
+        {
+          "name": "الکترواستیل",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "ایستکول"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "دکوراتیو",
+      "slug": "vr",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-22T15:11:31.046Z",
+      "updatedAt": "2023-02-22T15:11:31.046Z",
+      "subCategory": [
+        {
+          "name": "مبلمان خانگی",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "دکوراسیون اداری"
+        },
+        {
+          "name": "آینه",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "پرده"
+        },
+        {
+          "name": "تابلو",
+          "slug": "phone-cover",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "phone-holder",
+          "name": "شمع"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "فرش ماشینی،دستباف",
+      "slug": "galaxy-watch",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:11:48.928Z",
+      "updatedAt": "2023-02-23T11:11:48.928Z",
+      "subCategory": [
+        {
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "لوازم برقی خانگی",
+      "slug": "television",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:15:24.406Z",
+      "updatedAt": "2023-02-23T11:15:24.406Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "ماشین لباسشویی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "ماشین ظرفشویی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "هود"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "گاز صفحه ای"
+        },
+        {
+          "id": 674596,
+          "name": "اجاق گاز",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "ماکروویو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "فر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "جاروبرقی"
+        },
+        {
+          "id": 674596,
+          "name": "جارو شارژی",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "تلفن"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "کولر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "قهوه و چای ساز"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "حیوانات خانگی، لوازم",
+      "slug": "handsfree-category",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:18:39.889Z",
+      "updatedAt": "2023-02-23T11:18:39.889Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "آکواریوم غذا و لوازم آبزیان",
+          "slug": "gplus-tv",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "سرو و پذیرایی",
+      "slug": "blutooth-speaker",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:19:30.069Z",
+      "updatedAt": "2023-02-23T11:19:30.069Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "سرویس غذاخوری",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "قاشق،چنگال و کارد"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "devoo-tv",
+          "name": "پارچ"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "snova-tv",
+          "name": "ظروف پذیرایی"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "نور و روشنایی",
+      "slug": "ssd-hdd",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:20:03.359Z",
+      "updatedAt": "2023-02-23T11:20:03.359Z",
+      "subCategory": [
+        {
+          "id": 674596,
+          "name": "لامپ",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "لوستر"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "آشپزخانه",
+      "slug": "camera",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:20:32.429Z",
+      "updatedAt": "2023-02-23T11:20:32.429Z",
+      "subCategory": [
+        {
+          "id": 54835,
+          "name": "سرویس و ظروف پخت و پز",
+          "slug": "digital-camera",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "فلاسک"
+        },
+        {
+          "id": 674596,
+          "name": "کتری",
+          "slug": "gplus-tv",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "xvision-tv",
+          "name": "ظروف یکبار مصرف"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "مواد شوینده",
+      "slug": "camera-tools",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:21:48.260Z",
+      "updatedAt": "2023-02-23T11:21:48.260Z",
+      "subCategory": [
+        {
+          "id": 29674,
+          "name": "شوینده ظروف",
+          "slug": "lenz",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "bag",
+          "name": "شوینده لباس"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "memmory-card",
+          "name": "تمیزکننده سطوح"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "دستمال کاغذی",
+      "slug": "hunting-camera",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:24:32.400Z",
+      "updatedAt": "2023-02-23T11:24:32.400Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "ملحفه،سرویس،لوازم خواب",
+      "slug": "telescope",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:25:25.854Z",
+      "updatedAt": "2023-02-23T11:25:25.854Z",
+      "subCategory": [
+        {
+          "id": 101900,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "حوله و وسایل حمام",
+      "slug": "ps-xbox",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:25:46.934Z",
+      "updatedAt": "2023-02-23T11:25:46.934Z",
+      "subCategory": [
+        {
+          "id": 933929,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "پادری",
+      "slug": "pc",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:26:14.648Z",
+      "updatedAt": "2023-02-23T11:26:14.648Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "لوازم دستشویی و روشویی",
+      "slug": "laptop",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:28:22.035Z",
+      "updatedAt": "2023-02-23T11:28:22.035Z",
+      "subCategory": [
+        {
+          "id": 303709,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "فندک و لوازم جانبی",
+      "slug": "laptop-tools",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:28:45.587Z",
+      "updatedAt": "2023-02-23T11:28:45.587Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "لوازم باغبانی",
+      "slug": "tablet",
+      "mainCategory": "خانه و آشپزخانه",
+      "createdAt": "2023-02-23T11:31:07.417Z",
+      "updatedAt": "2023-02-23T11:31:07.417Z",
+      "subCategory": [
+        {
+          "id": 365426,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "پوشاک ورزشی و مردانه",
+      "slug": "phone",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-22T15:09:27.093Z",
+      "updatedAt": "2023-02-22T15:09:27.093Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "پوشاک ورزشی زنانه",
+      "slug": "phone-accessories",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-22T15:03:36.403Z",
+      "updatedAt": "2023-02-22T15:03:36.403Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "کفش ورزشی مردانه",
+      "slug": "vr",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-22T15:11:31.046Z",
+      "updatedAt": "2023-02-22T15:11:31.046Z",
+      "subCategory": [
+        {
+          "id": 409918,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "کفش ورزشی زنانه",
+      "slug": "galaxy-watch",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:11:48.928Z",
+      "updatedAt": "2023-02-23T11:11:48.928Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "پوشاک ورزشی پسرانه",
+      "slug": "television",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:15:24.406Z",
+      "updatedAt": "2023-02-23T11:15:24.406Z",
+      "subCategory": [
+        {
+          "id": 827921,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "پوشاک ورزشی دخترانه",
+      "slug": "handsfree-category",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:18:39.889Z",
+      "updatedAt": "2023-02-23T11:18:39.889Z",
+      "subCategory": [
+        {
+          "id": "",
+          "name": "",
+          "image": "",
+          "slug": ""
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "کفش ورزشی پسرانه",
+      "slug": "blutooth-speaker",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:19:30.069Z",
+      "updatedAt": "2023-02-23T11:19:30.069Z",
+      "subCategory": [
+        {
+          "id": 378537,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "name": "کفش ورزشی دخترانه",
+      "slug": "ssd-hdd",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:20:03.359Z",
+      "updatedAt": "2023-02-23T11:20:03.359Z",
+      "subCategory": [
+        {
+          "id": 135515,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "تجهیزات سفر",
+      "slug": "camera",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:20:32.429Z",
+      "updatedAt": "2023-02-23T11:20:32.429Z",
+      "subCategory": [
+        {
+          "id": 54835,
+          "name": "چمدان و ساک",
+          "slug": "digital-camera",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "sport-camera",
+          "name": "کیف و کوله پشتی"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "دوچرخه",
+      "slug": "camera-tools",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:21:48.260Z",
+      "updatedAt": "2023-02-23T11:21:48.260Z",
+      "subCategory": [
+        {
+          "id": 29674,
+          "name": "لوازم جانبی دوچرخه",
+          "slug": "lenz",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "name": "کوهنوردی و کمپینگ",
+      "slug": "hunting-camera",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:24:32.400Z",
+      "updatedAt": "2023-02-23T11:24:32.400Z",
+      "subCategory": [
+        {
+          "id": 259502,
+          "name": "کفش کوهنوردی",
+          "slug": "computer-tools",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "monitor",
+          "name": "عصای کوهنوردی"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "assemble-case",
+          "name": "چراغ قوه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "internal-px-tools",
+          "name": "چاقو"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "mouse",
+          "name": "قمقمه"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "keyboard",
+          "name": "چادر"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "mouse",
+          "name": "کیسه خواب"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "keyboard",
+          "name": "زیرانداز سفری"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "name": "لوازم جانبی کوهنوردی و سفر",
+      "slug": "telescope",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:25:25.854Z",
+      "updatedAt": "2023-02-23T11:25:25.854Z",
+      "subCategory": [
+        {
+          "id": 101900,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "name": "چتر",
+      "slug": "ps-xbox",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:25:46.934Z",
+      "updatedAt": "2023-02-23T11:25:46.934Z",
+      "subCategory": [
+        {
+          "id": 933929,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "name": "ساک ورزشی",
+      "slug": "pc",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:26:14.648Z",
+      "updatedAt": "2023-02-23T11:26:14.648Z",
+      "subCategory": [
+        {
+          "id": 101900,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "name": "قمقمه و شیکر",
+      "slug": "laptop",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:28:22.035Z",
+      "updatedAt": "2023-02-23T11:28:22.035Z",
+      "subCategory": [
+        {
+          "id": 303709,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "name": "لوازم ورزشی",
+      "slug": "laptop-tools",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:28:45.587Z",
+      "updatedAt": "2023-02-23T11:28:45.587Z",
+      "subCategory": [
+        {
+          "id": 101900,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "name": "ورزش های هوازی و بدنسازی",
+      "slug": "tablet",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:31:07.417Z",
+      "updatedAt": "2023-02-23T11:31:07.417Z",
+      "subCategory": [
+        {
+          "id": 924037,
+          "name": "تجهیزات جانبی ایروبیک",
+          "slug": "phone-p",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "fax",
+          "name": "دمبل"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "p-printer",
+          "name": "طناب"
+        },
+        {
+          "id": 924037,
+          "name": "بارفیکس",
+          "slug": "phone-p",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "fax",
+          "name": "تردمیل"
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "p-printer",
+          "name": "لوازم پوششی"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "name": "ورزش های توپی",
+      "slug": "tablet-charger",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:31:23.896Z",
+      "updatedAt": "2023-02-23T11:31:23.896Z",
+      "subCategory": [
+        {
+          "id": 924037,
+          "name": "توپ",
+          "slug": "phone-p",
+          "image": ""
+        },
+        {
+          "id": "",
+          "image": "",
+          "slug": "fax",
+          "name": "راکت"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "name": "ورزش های آبی",
+      "slug": "battery",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:31:52.803Z",
+      "updatedAt": "2023-02-23T11:31:52.803Z",
+      "subCategory": [
+        {
+          "id": 655113,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "name": "ورزش های رزمی",
+      "slug": "printers",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:32:11.321Z",
+      "updatedAt": "2023-02-23T11:32:11.321Z",
+      "subCategory": [
+        {
+          "id": 655113,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 21,
+      "name": "اسکوتر برقی",
+      "slug": "gift-card",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:33:19.998Z",
+      "updatedAt": "2023-02-23T11:33:19.998Z",
+      "subCategory": [
+        {
+          "id": 644188,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
+    },
+    {
+      "id": 22,
+      "name": "اسکیت و اسکوتر",
+      "slug": "gift-card",
+      "mainCategory": "ورزش و سفر",
+      "createdAt": "2023-02-23T11:33:19.998Z",
+      "updatedAt": "2023-02-23T11:33:19.998Z",
+      "subCategory": [
+        {
+          "id": 644188,
+          "name": "",
+          "slug": "",
+          "image": ""
+        }
+      ]
     }
-  ]
-}
-
   ],
   "brand": [
     {
       "id": 1,
       "name": "اپل",
+      "checkbox": false,
       "image": "https://dkstatics-public.digikala.com/digikala-static/d31d399022c6b65094bbeb93cc34e5ab38a967d1_1656485401.png",
       "description": "",
       "createdAt": "2023-02-23T14:25:22.335Z",
@@ -6693,6 +5842,7 @@
     {
       "id": 2,
       "name": "سامسونگ",
+      "checkbox": false,
       "image": "https://dkstatics-public.digikala.com/digikala-static/29b540363843f131d878b66d6914a0b71c3b84f9_1656485435.png",
       "description": "",
       "createdAt": "2023-02-23T14:27:52.983Z",
@@ -6701,6 +5851,7 @@
     {
       "id": 3,
       "name": "شیائومی",
+      "checkbox": false,
       "image": "https://dkstatics-public.digikala.com/digikala-static/f2f4f79392d7951d660b2f809c8c6f2a7f3a183f_1656485388.png",
       "description": "",
       "createdAt": "2023-02-23T14:27:57.063Z",
@@ -6709,6 +5860,7 @@
     {
       "id": 4,
       "name": "نوکیا",
+      "checkbox": false,
       "image": "https://dkstatics-public.digikala.com/digikala-static/184d8d92aafcb365ed8945f541d6e9429baa9c95_1665869031.png",
       "description": "",
       "createdAt": "2023-02-23T14:27:57.063Z",
@@ -6720,15 +5872,15 @@
       "carousel": [
         {
           "id": "1",
-          "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/078dc37373dd2cb72192242c885979fdfae5a77a_1658558095.jpg?x-oss-process=image/quality,q_95"
+          "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/c296920c35fb68669afb40cbc0c40c995237139b_1677792568.jpg?x-oss-process=image/quality,q_95"
         },
         {
-          "id": "1",
-          "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/b0723811b7e0f8673d8df95dcd2bc23a24f712ad_1644436769.jpg?x-oss-process=image/quality,q_95"
+          "id": "2",
+          "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/2d31af1a8a07dc2d46661b5b564477c07768f0f2_1677661973.jpg?x-oss-process=image/quality,q_95"
         },
         {
-          "id": "1",
-          "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/9148c14683f4a547f544bfc45fb17dd97b22cb21_1644680123.jpg?x-oss-process=image/quality,q_95"
+          "id": "3",
+          "image": "https://dkstatics-public.digikala.com/digikala-adservice-banners/bcd8f0d09b2755e97fd42f4cb1795581b940f456_1677914756.jpg?x-oss-process=image/quality,q_95"
         }
       ],
       "banner": [
@@ -6864,10 +6016,18 @@
       "updatedAt": "2023-02-23T14:28:31.906Z",
       "productValues": [
         {
-          "value": "یک عدد"
+          "id": 5569,
+          "value": "یک عدد",
+          "specifications": "تعداد سیم کارت",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "دو عدد"
+          "id": 6430,
+          "value": "دو عدد",
+          "specifications": "تعداد سیم کارت",
+          "subCategory": "اپل",
+          "isChecked": false
         }
       ],
       "showFilter": true
@@ -6884,16 +6044,32 @@
       "updatedAt": "2023-02-23T14:36:55.304Z",
       "productValues": [
         {
-          "value": "2G"
+          "id": 6354,
+          "value": "2G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "3G"
+          "id": 7756,
+          "value": "3G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "4G"
+          "id": 7755,
+          "value": "4G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "5G"
+          "id": 8842,
+          "value": "5G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "اپل",
+          "isChecked": false
         }
       ],
       "showFilter": true
@@ -6910,16 +6086,32 @@
       "updatedAt": "2023-02-23T14:38:56.107Z",
       "productValues": [
         {
-          "value": "دو گیگابایت"
+          "id": 8822,
+          "value": "دو گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "چهار گیگابایت"
+          "id": 8833,
+          "value": "چهار گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "شش گیگابایت"
+          "id": 8844,
+          "value": "شش گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "اپل",
+          "isChecked": false
         },
         {
-          "value": "شانزده گیگابایت"
+          "id": 8855,
+          "value": "شانزده گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "اپل",
+          "isChecked": false
         }
       ],
       "showFilter": true
@@ -6936,10 +6128,18 @@
       "updatedAt": "2023-02-23T14:28:31.906Z",
       "productValues": [
         {
-          "value": "یک عدد"
+          "id": 8887,
+          "value": "یک عدد",
+          "specifications": "تعداد سیم کارت",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "دو عدد"
+          "id": 8888,
+          "value": "دو عدد",
+          "specifications": "تعداد سیم کارت",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         }
       ],
       "showFilter": true
@@ -6956,16 +6156,32 @@
       "updatedAt": "2023-02-23T14:36:55.304Z",
       "productValues": [
         {
-          "value": "2G"
+          "id": 9678,
+          "value": "2G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "3G"
+          "id": 9674,
+          "value": "3G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "4G"
+          "id": 9675,
+          "value": "4G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "5G"
+          "id": 9644,
+          "value": "5G",
+          "specifications": "شبکه های ارتباطی",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         }
       ],
       "showFilter": true
@@ -6982,16 +6198,32 @@
       "updatedAt": "2023-02-23T14:38:56.107Z",
       "productValues": [
         {
-          "value": "دو گیگابایت"
+          "id": 9623,
+          "value": "دو گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "چهار گیگابایت"
+          "id": 9613,
+          "value": "چهار گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "شش گیگابایت"
+          "id": 9612,
+          "value": "شش گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         },
         {
-          "value": "شانزده گیگابایت"
+          "id": 9615,
+          "value": "شانزده گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "سامسونگ",
+          "isChecked": false
         }
       ],
       "showFilter": true
@@ -7006,13 +6238,25 @@
       "updatedAt": "2023-02-24T08:57:06.858Z",
       "productValues": [
         {
-          "value": "مات"
+          "id": 9872,
+          "value": "مات",
+          "specifications": "ساختار",
+          "subCategory": "کیف و کاور گوشی",
+          "isChecked": false
         },
         {
-          "value": "شفاف"
+          "id": 9852,
+          "value": "شفاف",
+          "specifications": "ساختار",
+          "subCategory": "کیف و کاور گوشی",
+          "isChecked": false
         },
         {
-          "value": "نیمه شفاف"
+          "id": 9853,
+          "value": "نیمه شفاف",
+          "specifications": "ساختار",
+          "subCategory": "کیف و کاور گوشی",
+          "isChecked": false
         }
       ],
       "showFilter": true,
@@ -7029,17 +6273,32 @@
       "updatedAt": "2023-02-24T09:18:18.465Z",
       "productValues": [
         {
+          "id": 1030,
           "value": "یک گیگابایت",
-          "specifications": false
+          "specifications": "مقدار RAM",
+          "subCategory": "نوکیا",
+          "isChecked": false
         },
         {
-          "value": "دو گیگابایت"
+          "id": 1020,
+          "value": "دو گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "نوکیا",
+          "isChecked": false
         },
         {
-          "value": "سه گیگابایت"
+          "id": 1010,
+          "value": "سه گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "نوکیا",
+          "isChecked": false
         },
         {
-          "value": "چهار گیگابایت"
+          "id": 2930,
+          "value": "چهار گیگابایت",
+          "specifications": "مقدار RAM",
+          "subCategory": "نوکیا",
+          "isChecked": false
         }
       ],
       "showFilter": true,
@@ -7056,16 +6315,32 @@
       "updatedAt": "2023-02-24T09:43:29.011Z",
       "productValues": [
         {
-          "value": "8 گیگابایت"
+          "id": 2540,
+          "value": "8 گیگابایت",
+          "specifications": "حافظه داخلی",
+          "subCategory": "نوکیا",
+          "isChecked": false
         },
         {
-          "value": "32 گیگابایت"
+          "id": 2340,
+          "value": "32 گیگابایت",
+          "specifications": "حافظه داخلی",
+          "subCategory": "نوکیا",
+          "isChecked": false
         },
         {
-          "value": "64 گیگابایت"
+          "id": 1320,
+          "value": "64 گیگابایت",
+          "specifications": "حافظه داخلی",
+          "subCategory": "نوکیا",
+          "isChecked": false
         },
         {
-          "value": "128 گیگابایت"
+          "id": 1478,
+          "value": "128 گیگابایت",
+          "specifications": "حافظه داخلی",
+          "subCategory": "نوکیا",
+          "isChecked": false
         }
       ],
       "showFilter": true,

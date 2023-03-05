@@ -479,7 +479,7 @@ const Navbar = ({ mainCategory, category }) => {
                           </div>
 
                           <div className="flex items-center text-base text-[#23254e] font-bold mr-5">
-                            {product.price.toLocaleString()} تومان
+                            {Number(product.price).toLocaleString()} تومان
                           </div>
                         </div>
                       </>
@@ -718,7 +718,9 @@ const Navbar = ({ mainCategory, category }) => {
                 .map((category) => {
                   return (
                     <>
-                      <li>
+                      <li
+                      //  onClick={()=>sethover(false)}
+                       >
                         <Link href={`/search/${category.slug}`}>
                           <a className="text-[#0c0c0c] !leading-[2.15rem] text-sm h-auto w-auto ml-12 hover:text-[#ef394e]">
                             {category.name}
@@ -729,7 +731,9 @@ const Navbar = ({ mainCategory, category }) => {
                         return (
                           subCategory.name != "" && <li>
                             <Link href={`/search/${subCategory.slug}`}>
-                              <a className="text-[#81858b] !leading-[2.17rem] text-xs h-auto w-auto ml-12 hover:text-[#ef394e]">
+                              <a 
+                              // onClick={()=>sethover(false)}
+                               className="text-[#81858b] !leading-[2.17rem] text-xs h-auto w-auto ml-12 hover:text-[#ef394e]">
                                 {subCategory.name}
                               </a>
                             </Link>
@@ -760,4 +764,4 @@ const Navbar = ({ mainCategory, category }) => {
   );
 };
 
-export default memo(Navbar);
+export default Navbar;
