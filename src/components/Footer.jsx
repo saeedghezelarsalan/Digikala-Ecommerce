@@ -51,6 +51,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/express-delivery.svg"
               width={56}
               height={56}
+              alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">
               امکان تحویل اکسپرس
@@ -62,6 +63,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/cash-on-delivery.svg"
               width={56}
               height={56}
+              alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">
               امکان تحویل در محل
@@ -73,6 +75,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/support.svg"
               width={56}
               height={56}
+              alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">
               هفت روز هفته، 24 ساعته
@@ -84,6 +87,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/days-return.svg"
               width={56}
               height={56}
+              alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">
               هفت روز ضمانت بازگشت کالا
@@ -95,6 +99,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/original-products.svg"
               width={56}
               height={56}
+              alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">
               ضمانت اصل بودن کالا

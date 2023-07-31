@@ -532,7 +532,7 @@ export default function HomePage() {
               value={timeStartOffer}
               onChange={setTimeStartOffer}
               format="MM/DD/YYYY HH:mm:ss"
-              plugins={[<TimePicker position="left" />]}
+              plugins={[<TimePicker key={''} position="left" />]}
               calendar={persian}
               locale={persian_fa}
               calendarPosition="bottom-right"
@@ -544,7 +544,7 @@ export default function HomePage() {
               value={timeEndOffer}
               onChange={setTimeEndOffer}
               format="MM/DD/YYYY HH:mm:ss"
-              plugins={[<TimePicker position="left" />]}
+              plugins={[<TimePicker key={''} position="left" />]}
               calendar={persian}
               locale={persian_fa}
               calendarPosition="bottom-right"

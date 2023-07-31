@@ -194,6 +194,7 @@ const Navbar = ({ mainCategory, category }) => {
             src="https://www.digikala.com/statics/img/svg/logo.svg"
             width={80}
             height={80}
+            alt={''}
           />
 
           <QuestionMarkIcon className="border-[2px] rounded-lg border-black  h-5 " />
@@ -303,7 +304,7 @@ const Navbar = ({ mainCategory, category }) => {
               {/* <MobileNavbar /> */}
               <ul className="text-[13px] font-bold">
                   {mainCategory.map((mainCategory,index) => (
-                    <SidebarCategoryNav mainCategory={mainCategory} index={index} category={category}/>
+                    <SidebarCategoryNav mainCategory={mainCategory} key={index} category={category}/>
                   ))}
               </ul>
             </div>
@@ -405,6 +406,7 @@ const Navbar = ({ mainCategory, category }) => {
                               src={product.thumbnail}
                               layout="fill"
                               objectFit="contain"
+                              alt={''}
                             />
                           </div>
 
@@ -524,6 +526,7 @@ const Navbar = ({ mainCategory, category }) => {
                       src="https://www.digikala.com/statics/img/svg/empty-cart.svg"
                       width={200}
                       height={150}
+                      alt={''}
                     />
                     <p
                       className="text-[19px] font-semibold mt-6 mb-4
@@ -657,9 +660,9 @@ const Navbar = ({ mainCategory, category }) => {
           onMouseLeave={pak}
         >
           <div className="w-[12%] h-full flex flex-col border border-t-0 ">
-            {mainCategory.map((mainCategory) => {
+            {mainCategory.map((mainCategory, index) => {
               return (
-                <Link href={`/main/${mainCategory.slug}`}>
+                <Link key={index} href={`/main/${mainCategory.slug}`}>
                   <a
                     className="h-full flex  items-center py-3 px-2 text-xs font-bold text-[#424750] hover:text-[#ef394e] hover:bg-[#f0f0f180] cursor-pointer"
                     onMouseEnter={(e) => hoverHandler(e)}

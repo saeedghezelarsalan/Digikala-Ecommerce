@@ -125,8 +125,8 @@ export default function HomePage() {
                 {users &&
                   users
                     .slice(-4)
-                    .map((item) => (
-                      <div className="flex  items-center border border-black border-r-0 border-l-0 border-b-0 py-1">
+                    .map((item,index) => (
+                      <div key={index} className="flex  items-center border border-black border-r-0 border-l-0 border-b-0 py-1">
                         <div>{item.name}</div>
                         <div className="mr-auto">
                           {new Date(item.createdAt).toLocaleDateString("fa-IR")}
@@ -143,8 +143,8 @@ export default function HomePage() {
               <h1 className="text-center py-2">آخرین نظرات کاربران</h1>
               <ul>
                 {comments &&
-                  comments.slice(0, 5).map((item) => (
-                    <div className="">
+                  comments.slice(0, 5).map((item, index) => (
+                    <div key={index} className="">
                       <div className="flex items-start flex-col border border-black border-r-0 border-l-0 border-b-0 pt-2">
                         <div className="mr-2">{item.name}</div>
                         <div className="mr-2">

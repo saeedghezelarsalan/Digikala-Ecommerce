@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, Fragment } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
@@ -14,7 +14,7 @@ export default function AmazingOfferSlider({ color, product, key }) {
 
   useEffect(() => {
     swiperColor.current.style.background = color;
-  }, []);
+  }, [color]);
 
   return (
     product && (
@@ -48,11 +48,12 @@ export default function AmazingOfferSlider({ color, product, key }) {
         >
           <SwiperSlide>
             <div className="h-full text-center text-lg bg-transparent flex flex-col justify-evenly items-center cursor-pointer">
-              <Image src={aks} width={92} height={77} />
+              <Image src={aks} width={92} height={77} alt={''}/>
               <Image
                 src="https://www.digikala.com/statics/img/png/specialCarousel/box.png"
                 width={75}
                 height={75}
+                alt={''}
               />
               <div>
                 <span className="text-base text-white">مشاهده همه</span>
@@ -61,8 +62,9 @@ export default function AmazingOfferSlider({ color, product, key }) {
             </div>
           </SwiperSlide>
 
-          {product.slice(0, 8).map((offerProduct) => {
+          {product.slice(0, 8).map((offerProduct, index) => {
             return (
+              <Fragment key={index}>
               <SwiperSlide>
                 <Link href={`/product/${offerProduct.slug}`}>
                   <a>
@@ -105,6 +107,7 @@ export default function AmazingOfferSlider({ color, product, key }) {
                   </a>
                 </Link>
               </SwiperSlide>
+              </Fragment>
             );
           })}
           <SwiperSlide>

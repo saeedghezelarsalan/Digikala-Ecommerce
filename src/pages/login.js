@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 import Navbar from '../components/Navbar'
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
+import Image from 'next/image'
 
 export default function HomePage({ mainCategory, category }) {
   const router = useRouter()
@@ -45,7 +46,7 @@ export default function HomePage({ mainCategory, category }) {
         <div className='w-full px-8 xl:px-auto h-auto  xl:mx-auto xl:w-1/4 flex flex-col bg-white xl:h-auto border border-[#e0e0e2] py-8 max-w-lg rounded-lg'>
           <Link href="/">
             <div className='w-36 h-12 self-center'>
-              <img className='w-full h-full object-contain' src="https://www.digikala.com/statics/img/svg/logo.svg" alt="" />
+              <Image className='w-full h-full object-contain' src="https://www.digikala.com/statics/img/svg/logo.svg" alt="" />
             </div>
           </Link>
           <h2 className='text-xl mt-2 mb-4 font-semibold text-[#424750]'>ورود | ثبت نام</h2>
