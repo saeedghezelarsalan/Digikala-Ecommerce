@@ -17,7 +17,7 @@ const SearchedProducts = ({ products }) => {
 
   useEffect(() => {
     setProduct(products);
-  });
+  },[products]);
 
   const { cart } = useSelector((item) => item.cart);
   const dispatch = useDispatch();
@@ -75,7 +75,7 @@ const SearchedProducts = ({ products }) => {
           layout
           // onDurationChange={{duration:2}}
           transition={{
-            duration:0.4
+            duration: 0.4,
           }}
         >
           <div className="flex flex-col cursor-pointer border border-[#f0f0f1] border-x-0 border-b-[1px] border-t-0 sm:border-r-0 sm:border-t-0 md:border-0 ">
@@ -87,8 +87,12 @@ const SearchedProducts = ({ products }) => {
                     key={product.id}
                     passHref
                   >
-                    <motion.a animate={{scale:1}} whileHover={{scale:1.1}} transition={{duration:5}}
-                    layoutId={product.id}>
+                    <motion.a
+                      animate={{ scale: 1 }}
+                      whileHover={{ scale: 1.1 }}
+                      transition={{ duration: 5 }}
+                      layoutId={product.id}
+                    >
                       {!isImageReady && (
                         <ContentLoader
                           viewBox="0 0 500 500"

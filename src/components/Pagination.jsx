@@ -23,7 +23,7 @@ const Pagination = ({
 
   useEffect(() => {
     setTotalPageCount(Math.ceil(data.length / contentPerPage));
-  }, [data, totalPageCount]);
+  }, [data, totalPageCount, contentPerPage]);
 
   const paginationRange = usePaginationRange({
     totalPageCount,
@@ -68,7 +68,7 @@ const Pagination = ({
           >
             <AnimatePresence>
               {getPaginatedData().map((product, index) => {
-                return <RenderComponent products={product} />;
+                return <RenderComponent key={index} products={product} />;
               })}
             </AnimatePresence>
           </motion.div>
@@ -136,6 +136,7 @@ const Pagination = ({
         src="https://www.digikala.com/statics/img/svg/empty-cart.svg"
         width={200}
         height={150}
+        alt={''}
       />
       <h2
         className="font-bold break-w

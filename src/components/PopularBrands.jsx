@@ -44,6 +44,7 @@ export default function PopularBrands({ brands }) {
                     src={brand.image}
                     layout="fill"
                     objectFit="contain"
+                    alt={''}
                   />
                 </div>
               </SwiperSlide>

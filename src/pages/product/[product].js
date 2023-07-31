@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React, { useState, useEffect, useRef, useCallback, Fragment } from "react";
 import dynamic from "next/dynamic";
 import Navbar from "../../components/Navbar";
 import Head from "next/head";
@@ -60,6 +60,7 @@ import SingleProductThumbnailModalImage from "../../components/singleProductPage
 import YellowStar from "../../components/YellowStar";
 import WhiteStar from "../../components/WhiteStar";
 import SingleProductSlider from "../../components/singleProductPage/MobileThumbnailSlider";
+import { IndeterminateCheckBoxOutlined } from "@mui/icons-material";
 
 function HomePage({
   product,
@@ -260,7 +261,7 @@ function HomePage({
     let countCart = cart?.map(a => a).filter(item => item.slug == product.slug).map(a => a).map(a => a.quantity)
     countCart = countCart[0]
     setQuantityReduxProduct(countCart)
-  })
+  }, [product, cart])
 
   // users comments rates border
   useEffect(() => {
@@ -299,24 +300,20 @@ function HomePage({
     setShowMoreDescription(!showMoreDescription);
   };
 
-
-
-  const controllNavbar = () => {
-    setShowSticky(true);
-    if (window.scrollY > nav.current?.getBoundingClientRect().top) {
-      setScrollPos(document.body.getBoundingClientRect().top);
-      if (document.body.getBoundingClientRect().top < scrollPos) {
-        setShowSticky(false);
-      } else {
-        setShowSticky(true);
-      }
-    } else {
-      setShowSticky(false);
-    }
-
-  };
-
   useEffect(() => {
+    const controllNavbar = () => {
+      setShowSticky(true);
+      if (window.scrollY > nav.current?.getBoundingClientRect().top) {
+        setScrollPos(document.body.getBoundingClientRect().top);
+        if (document.body.getBoundingClientRect().top < scrollPos) {
+          setShowSticky(false);
+        } else {
+          setShowSticky(true);
+        }
+      } else {
+        setShowSticky(false);
+      }
+    };
     window.addEventListener("scroll", controllNavbar);
     return () => {
       window.removeEventListener("scroll", controllNavbar);
@@ -347,7 +344,7 @@ function HomePage({
     } else {
       setSpecificationsDisplayCount(5);
     }
-  }, [showMoreSpecifications]);
+  }, [showMoreSpecifications, specificationsLength]);
 
 
   // section nav scroll indicator
@@ -587,7 +584,7 @@ function HomePage({
 
   // when go to the clicked related product page url with smoothy scroll to top
   useEffect(() => {
-    smoothScrollToTopRef?.current?.childNodes.forEach(items =>{
+    smoothScrollToTopRef?.current?.childNodes.forEach(items => {
       items.addEventListener('click', (e) => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
       })
@@ -608,15 +605,15 @@ function HomePage({
           </Link>
           <div>/</div>
           <Link href={`/main/${product.mainCategorySlug}`}>
-            <a>{product.mainCategory.replace("-"," ")}</a>
+            <a>{product.mainCategory.replace("-", " ")}</a>
           </Link>
           <div>/</div>
           <Link href={`/search/${product.categorySlug}`}>
-            <a>{product.category.replace("-"," ")}</a>
+            <a>{product.category.replace("-", " ")}</a>
           </Link>
           <div>/</div>
           <Link href={`/search/${product.subCategorySlug}`}>
-            <a>{product.subCategory.replace("-"," ")}</a>
+            <a>{product.subCategory.replace("-", " ")}</a>
           </Link>
         </div>
         {/* product Header*/}
@@ -637,8 +634,8 @@ function HomePage({
                       onMouseEnter={() => setHoverHeart(true)}
                       onMouseLeave={() => setHoverHeart(false)}
                       className={`${tabHeart
-                          ? "fill-red-500  "
-                          : "fill-white stroke-black stroke-2"
+                        ? "fill-red-500  "
+                        : "fill-white stroke-black stroke-2"
                         }`}
                     />
                     <div
@@ -802,7 +799,7 @@ function HomePage({
                     <ErrorOutlineOutlinedIcon className="stroke-[#81858b] mr-1 w-4 h-4" />
                     <span className="break-word text-xs leading-6 mr-3 text-[#424750]">
                       درخواست مرجوع کردن کالا در گروه لپ تاپ و الترابوک با دلیل
-                      "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در
+                      &ldquo;انصراف از خرید&rdquo; تنها در صورتی قابل تایید است که کالا در
                       شرایط اولیه باشد (در صورت پلمپ بودن، کالا نباید باز شده
                       باشد).
                     </span>
@@ -822,6 +819,7 @@ function HomePage({
                       width={140}
                       height="70%"
                       objectFit="cover"
+                      alt={''}
                     />
                   </div>
 
@@ -861,6 +859,7 @@ function HomePage({
                       width={24}
                       height={24}
                       objectFit="contain"
+                      alt={''}
                     />
                     <div className="flex flex-col mr-3">
                       <p className="font-[15px] text-[#424750] font-normal">
@@ -952,8 +951,8 @@ function HomePage({
                       <div className="hidden lg:flex flex-col justify-start text-sm">
                         <p>در سبد شما</p>
                         <Link href="/cart/checkout" passHref>
-                        <p className="cursor-pointer text-blue-400">مشاهده سبد خرید</p>
-                      
+                          <p className="cursor-pointer text-blue-400">مشاهده سبد خرید</p>
+
                         </Link>
                       </div>
                     </div>
@@ -1026,7 +1025,7 @@ function HomePage({
                   <ErrorOutlineOutlinedIcon className="stroke-[#81858b] mr-1 w-4 h-4" />
                   <span className="break-word text-xs leading-6 mr-3 text-[#424750]">
                     درخواست مرجوع کردن کالا در گروه لپ تاپ و الترابوک با دلیل
-                    "انصراف از خرید" تنها در صورتی قابل تایید است که کالا در
+                    &ldquo;انصراف از خرید&rdquo; تنها در صورتی قابل تایید است که کالا در
                     شرایط اولیه باشد (در صورت پلمپ بودن، کالا نباید باز شده
                     باشد).
                   </span>
@@ -1049,6 +1048,7 @@ function HomePage({
                     height="70%"
                     // layout="responsive"
                     objectFit="cover"
+                    alt={''}
                   />
                 </div>
 
@@ -1086,6 +1086,7 @@ function HomePage({
                 src="https://www.digikala.com/statics/img/svg/infosection/express-delivery.svg"
                 width={40}
                 height={40}
+                alt={''}
               />
             </div>
             <p>امکان تحویل اکسپرس</p>
@@ -1096,6 +1097,7 @@ function HomePage({
                 src="https://www.digikala.com/statics/img/svg/infosection/support.svg"
                 width={40}
                 height={40}
+                alt={''}
               />
             </div>
             <p>24 ساعته، 7 روز هفته</p>
@@ -1106,6 +1108,7 @@ function HomePage({
                 src="https://www.digikala.com/statics/img/svg/infosection/cash-on-delivery.svg"
                 width={40}
                 height={40}
+                alt={''}
               />
             </div>
 
@@ -1117,6 +1120,7 @@ function HomePage({
                 src="https://www.digikala.com/statics/img/svg/infosection/days-return.svg"
                 width={40}
                 height={40}
+                alt={''}
               />
             </div>
 
@@ -1128,6 +1132,7 @@ function HomePage({
                 src="https://www.digikala.com/statics/img/svg/infosection/original-products.svg"
                 width={40}
                 height={40}
+                alt={''}
               />
             </div>
 
@@ -1162,49 +1167,51 @@ function HomePage({
                 className="!h-full w-full cursor-pointer"
               >
                 <div className="w-fit border-4 bg-green-700">
-                {relatedProducts.slice(0, 10).map((relatedProduct) => {
-                  return (
-                    <SwiperSlide>
-                      {/* <Link href={`/product/${relatedProduct.slug}`}>
+                  {relatedProducts.slice(0, 10).map((relatedProduct, index) => {
+                    return (
+                      <Fragment key={index}>
+                        <SwiperSlide>
+                          {/* <Link href={`/product/${relatedProduct.slug}`}>
                       <a> */}
-                      <div ref={smoothScrollToTopRef} onClick={(e) => relatedProductLink(relatedProduct.slug)} className=" flex flex-col border border-t-0 border-r-0 border-b-0 px-2 cursor-pointer">
-                        <Image
-                          src={relatedProduct.thumbnail}
-                          alt=""
-                          width="100%"
-                          height="100%"
-                          layout="responsive"
-                          objectFit="contain"
-                        />
+                          <div ref={smoothScrollToTopRef} onClick={(e) => relatedProductLink(relatedProduct.slug)} className=" flex flex-col border border-t-0 border-r-0 border-b-0 px-2 cursor-pointer">
+                            <Image
+                              src={relatedProduct.thumbnail}
+                              alt=""
+                              width="100%"
+                              height="100%"
+                              layout="responsive"
+                              objectFit="contain"
+                            />
 
-                        <h4 className="font-bold text-sm lg:text-sm mt-2 line-clamp-2 mb-3">
-                          {relatedProduct.name}
-                        </h4>
-                        <div className="flex flex-col gap-y-3 items-end mb-2">
-                          <div className="w-full mt-3 flex items-center justify-between">
-                            <span className="bg-[#ef394e] text-xs text-white rounded-xl  py-0 px-1">
-                              {relatedProduct.offer}%
-                            </span>
-                            <span className="text-xs lg:text-sm">
-                            {Math.round(
-                                (Number(relatedProduct.price) *
-                                  (100 - Number(relatedProduct.offer))) /
-                                100
-                              ).toLocaleString()} تومان
-                            </span>
+                            <h4 className="font-bold text-sm lg:text-sm mt-2 line-clamp-2 mb-3">
+                              {relatedProduct.name}
+                            </h4>
+                            <div className="flex flex-col gap-y-3 items-end mb-2">
+                              <div className="w-full mt-3 flex items-center justify-between">
+                                <span className="bg-[#ef394e] text-xs text-white rounded-xl  py-0 px-1">
+                                  {relatedProduct.offer}%
+                                </span>
+                                <span className="text-xs lg:text-sm">
+                                  {Math.round(
+                                    (Number(relatedProduct.price) *
+                                      (100 - Number(relatedProduct.offer))) /
+                                    100
+                                  ).toLocaleString()} تومان
+                                </span>
+                              </div>
+                              <div>
+                                <del
+                                  className="text-xs lg:text-sm text-gray-400 ml-2 mt-1"
+                                >
+                                  {relatedProduct.price}
+                                </del>
+                              </div>
+                            </div>
                           </div>
-                          <div>
-                            <del
-                              className="text-xs lg:text-sm text-gray-400 ml-2 mt-1"
-                            >
-                              {relatedProduct.price}
-                            </del>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
+                        </SwiperSlide>
+                      </Fragment>
+                    );
+                  })}
                 </div>
               </Swiper>
             </div>
@@ -1410,7 +1417,7 @@ function HomePage({
                       <div ref={rateRef}>
                         {product.sellerView.map((sellerView, index) => {
                           return (
-                            <div className="flex flex-col pt-5">
+                            <div key={index} className="flex flex-col pt-5">
                               <p className="text-[#424750] text-xs mb-2">
                                 {sellerView.property}
                               </p>
@@ -1443,7 +1450,7 @@ function HomePage({
                         comments
                           .map((comment, index) => {
                             return (
-                              <div className="flex flex-row mt-6">
+                              <div key={index} className="flex flex-row mt-6">
                                 <div className="text-[11px] text-white font-bold max-h-[20px] bg-[#00a049] px-2 py-1 flex items-center justify-center rounded-sm min-w-[32px] ml-2 mt-1 ">
                                   {comment.rate}.0
                                 </div>
@@ -1477,7 +1484,7 @@ function HomePage({
                                     {comment.positiveComments.map(
                                       (positive, index) => {
                                         return (
-                                          <div className="flex flex-row items-end py-1">
+                                          <div key={index} className="flex flex-row items-end py-1">
                                             <div className="flex items-end ml-1">
                                               <AddIcon className="w-4 h-4 fill-[#00a049]" />
                                             </div>
@@ -1497,7 +1504,7 @@ function HomePage({
                                     {comment.negativeComments.map(
                                       (negative, index) => {
                                         return (
-                                          <div className="flex flex-row items-end py-1">
+                                          <div key={index} className="flex flex-row items-end py-1">
                                             <div className="flex items-end ml-1">
                                               <RemoveIcon className="w-4 h-4 fill-[#00a049]" />
                                             </div>
@@ -1540,8 +1547,8 @@ function HomePage({
 
                         <div className="flex justify-center items-center w-full h-full">
                           <h2 className="w-full text-center">
-                          هنوز دیدگاهی ثبت نشده است
-                        </h2>
+                            هنوز دیدگاهی ثبت نشده است
+                          </h2>
                         </div>
 
                       )}
@@ -1570,48 +1577,51 @@ function HomePage({
                   {comment.map((comments) => comments).length > 0 ? (
                     <div className="h-[210px] mb-20">
                       <Swiper
-                      breakpoints={{
-                        0: {
-                          slidesPerView: 2,
-                        },
-                        510:{
-                          slidesPerView: 3,
-                        },
-                        700: {
-                          slidesPerView: 4,
-                        },
-                        850: {
-                          slidesPerView: 5,
-                        },
-                      }}
+                        breakpoints={{
+                          0: {
+                            slidesPerView: 2,
+                          },
+                          510: {
+                            slidesPerView: 3,
+                          },
+                          700: {
+                            slidesPerView: 4,
+                          },
+                          850: {
+                            slidesPerView: 5,
+                          },
+                        }}
                         slidesPerView={2}
                         spaceBetween={10}
                         className="!h-full w-full mt-4"
                       >
                         {comment.slice(0, 10).map((comment) => {
                           return (
-                            <SwiperSlide>
-                              <div key={comment.id} className="flex flex-col border h-full w-full px-4 py-4 rounded-lg">
-                                <p className="text-sm font-bold line-clamp-2">
-                                  {comment.title}
-                                </p>
-                                {/* <div className="w-full pt-6"></div> */}
-                                <p className="text-xs mt-4 line-clamp-5">
-                                  {comment.description}
-                                </p>
-                                <div className="flex items-center gap-x-1 py-2 w-full mt-auto">
-                                  <p className="text-[11px] text-[#a1a3a8]">
-                                    12 مرداد
+                            <Fragment key={comment.id}>
+                              <SwiperSlide>
+                                <div className="flex flex-col border h-full w-full px-4 py-4 rounded-lg">
+                                  <p className="text-sm font-bold line-clamp-2">
+                                    {comment.title}
                                   </p>
-                                  <NoiseControlOffIcon className="fill-[#e0e0e2] w-3 h-3" />
-                                  <p className="text-[11px] text-[#a1a3a8]">
-                                    {comment.unknown
-                                      ? "کاربر دیجی کالا"
-                                      : comment.name}
+                                  {/* <div className="w-full pt-6"></div> */}
+                                  <p className="text-xs mt-4 line-clamp-5">
+                                    {comment.description}
                                   </p>
+                                  <div className="flex items-center gap-x-1 py-2 w-full mt-auto">
+                                    <p className="text-[11px] text-[#a1a3a8]">
+                                      12 مرداد
+                                    </p>
+                                    <NoiseControlOffIcon className="fill-[#e0e0e2] w-3 h-3" />
+                                    <p className="text-[11px] text-[#a1a3a8]">
+                                      {comment.unknown
+                                        ? "کاربر دیجی کالا"
+                                        : comment.name}
+                                    </p>
+                                  </div>
                                 </div>
-                              </div>
-                            </SwiperSlide>
+                              </SwiperSlide>
+                            </Fragment>
+
                           );
                         })}
                       </Swiper>
@@ -1741,9 +1751,9 @@ function HomePage({
                             </div>
 
                             <div className="mt-2 w-full">
-                              {allPositive.map((positive) => {
+                              {allPositive.map((positive, index) => {
                                 return (
-                                  <div className="flex items-center py-1">
+                                  <div key={index} className="flex items-center py-1">
                                     <AddIcon className="h-4 w-4 ml-1 cursor-pointer" />
                                     <div className="break-all text-xs">
                                       {positive.description}
@@ -1775,9 +1785,9 @@ function HomePage({
                             </div>
 
                             <div className="mt-2 w-full">
-                              {allNegative.map((negative) => {
+                              {allNegative.map((negative, index) => {
                                 return (
-                                  <div className="flex items-center py-1">
+                                  <div key={IndeterminateCheckBoxOutlined} className="flex items-center py-1">
                                     <AddIcon className="h-4 w-4 ml-1 cursor-pointer" />
                                     <div className="break-all text-xs">
                                       {negative.description}
@@ -1924,9 +1934,9 @@ function HomePage({
                     <div className="flex flex-row lg:flex-col w-full gap-y-4 gap-x-6 lg:gap-x-0">
                       {/* users questions */}
                       {questions.length > 0 ? (
-                        questions.map((question) => {
+                        questions.map((question, index) => {
                           return (
-                            <div className="flex flex-row items-start lg:w-full  mb-4 lg:border-0 border-2 border-[#e0e0e2] h-full ">
+                            <div key={index} className="flex flex-row items-start lg:w-full  mb-4 lg:border-0 border-2 border-[#e0e0e2] h-full ">
                               <div className="text-[11px] text-white font-bold max-h-[20px]  px-2 py-1 flex items-center justify-center min-w-[32px] ml-2  w-full ">
                                 <div className="pb-2 ml-1">
                                   <HelpCenterOutlinedIcon className="w-6 h-6 fill-[#19bfd3] " />
@@ -1953,60 +1963,62 @@ function HomePage({
                 </div>
 
                 {/* product Questions mobile device */}
-                {questions.map(question=>question).length > 0 ? (
-                <div className="flex lg:py-2 lg:hidden flex-col w-full">
-                  <div className="flex ">
-                    <h4 className="text-[#0c0c0c] text-sm">پرسش ها</h4>
-                    <span className="mr-auto text-[#19bfd3] text-[11px]">
-                      {questions.map(question=>question).length} پرسش
-                    </span>
-                  </div>
+                {questions.map(question => question).length > 0 ? (
+                  <div className="flex lg:py-2 lg:hidden flex-col w-full">
+                    <div className="flex ">
+                      <h4 className="text-[#0c0c0c] text-sm">پرسش ها</h4>
+                      <span className="mr-auto text-[#19bfd3] text-[11px]">
+                        {questions.map(question => question).length} پرسش
+                      </span>
+                    </div>
 
-                  {/* fixed onclick comments user */}
-                  <div
-                    className={`hidden h-full w-full transition-all duration-500 translate-y-full `}
-                  >
-                    fe
-                  </div>
-
-                  <div className="h-[150px] lg:mb-4">
-                    <Swiper
-                      breakpoints={{
-                        0: {
-                          slidesPerView: 2,
-                        },
-                        510:{
-                          slidesPerView: 3,
-                        },
-                        700: {
-                          slidesPerView: 4,
-                        },
-                        850: {
-                          slidesPerView: 5,
-                        },
-                      }}
-                      spaceBetween={5}
-                      className="!h-full w-full mt-4 "
+                    {/* fixed onclick comments user */}
+                    <div
+                      className={`hidden h-full w-full transition-all duration-500 translate-y-full `}
                     >
-                        {questions.map(question=>(
-                      <SwiperSlide>
-                          <div className="flex flex-col border h-full w-full px-4 py-4 rounded-lg cursor-pointer">
-                          <h4 className="text-sm font-bold line-clamp-6 leading-6">
-                            {question.questionsBox}
-                          </h4>
-                          
-                        </div>
-                      </SwiperSlide>
+                      fe
+                    </div>
+
+                    <div className="h-[150px] lg:mb-4">
+                      <Swiper
+                        breakpoints={{
+                          0: {
+                            slidesPerView: 2,
+                          },
+                          510: {
+                            slidesPerView: 3,
+                          },
+                          700: {
+                            slidesPerView: 4,
+                          },
+                          850: {
+                            slidesPerView: 5,
+                          },
+                        }}
+                        spaceBetween={5}
+                        className="!h-full w-full mt-4 "
+                      >
+                        {questions.map((question, index) => (
+                          <Fragment key={index}>
+                            <SwiperSlide>
+                              <div className="flex flex-col border h-full w-full px-4 py-4 rounded-lg cursor-pointer">
+                                <h4 className="text-sm font-bold line-clamp-6 leading-6">
+                                  {question.questionsBox}
+                                </h4>
+
+                              </div>
+                            </SwiperSlide>
+                          </Fragment>
                         ))}
-                    </Swiper>
+                      </Swiper>
+                    </div>
                   </div>
-                </div>
-                ):(
+                ) : (
                   <div className="flex justify-center items-center py-2 lg:hidden">
                     <h2 className="font-bold ">
-هیچ سوالی موجود نمی باشد
+                      هیچ سوالی موجود نمی باشد
                     </h2>
-                    </div>
+                  </div>
                 )}
 
                 {/* modal questions */}
@@ -2090,6 +2102,7 @@ function HomePage({
                       width={24}
                       height={24}
                       objectFit="contain"
+                      alt={''}
                     />
                     <div className="flex flex-col mr-3">
                       <p className="font-[15px] text-[#424750] font-normal">
@@ -2180,7 +2193,7 @@ function HomePage({
                       <div className="flex flex-col justify-start text-sm">
                         <p>در سبد شما</p>
                         <Link href="/cart/checkout" passHref>
-                        <p className="cursor-pointer text-blue-400">مشاهده سبد خرید</p>
+                          <p className="cursor-pointer text-blue-400">مشاهده سبد خرید</p>
                         </Link>
                       </div>
                     </div>

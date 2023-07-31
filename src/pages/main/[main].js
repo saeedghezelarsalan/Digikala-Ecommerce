@@ -93,18 +93,19 @@ export default function Home({ product, mainCategory, category, mainCategories, 
             />
           </div>
         </div>
-
-        <img
+        <div className="relative rounded-lg h-16 lg:h-36">
+        <Image
           className="rounded-lg"
           src="https://dkstatics-public.digikala.com/digikala-adservice-banners/abede523b20e3c6fd5addcae68a54e454cb95a5e_1654948996.jpg?x-oss-process=image/quality,q_95"
           alt=""
+          layout={'fill'}
         />
-
+        </div>
 
         {/* blog post */}
         <div className='grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-x-2 my-4 gap-y-4'>
-          {blogData.map(post => (
-            <BlogPost post={post} />
+          {blogData.map((post, index) => (
+            <BlogPost key={index} post={post} />
           ))}
         </div>
 

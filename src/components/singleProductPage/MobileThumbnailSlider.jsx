@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, Fragment } from "react";
 import "swiper/css";
 import dynamic from "next/dynamic";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
@@ -64,21 +64,22 @@ export default function MobileThumbnailSlider({
       >
         {product.productImage.map((image, index) => {
           return (
-            <SwiperSlide onClick={modalImageHandler}>
-              <div key={index} className="aspect-w-16 aspect-h-1 bg-white">
-                <Image
-                  src={image.image}
-                  alt=""
-                  width="100%"
-                  height="100%"
-                  layout="responsive"
-                  objectFit="contain"
-                />
-              </div>
-            </SwiperSlide>
+            <Fragment key={index}>
+              <SwiperSlide onClick={modalImageHandler}>
+                <div key={index} className="aspect-w-16 aspect-h-1 bg-white">
+                  <Image
+                    src={image.image}
+                    alt=""
+                    width="100%"
+                    height="100%"
+                    layout="responsive"
+                    objectFit="contain"
+                  />
+                </div>
+              </SwiperSlide>
+            </Fragment>
           );
         })}
-
       </Swiper>
 
       <div
@@ -132,6 +133,7 @@ export default function MobileThumbnailSlider({
             {productVideoLength > 0 &&
               product.productVideo.map((video, index) => {
                 return (
+                  <Fragment key={index}>
                   <SwiperSlide>
                     <video
                       ref={videoRef}
@@ -145,13 +147,18 @@ export default function MobileThumbnailSlider({
                       />
                     </video>
                   </SwiperSlide>
+                  </Fragment>
                 );
               })}
 
             {product?.productImage?.map((image, index) => {
               return (
+                <Fragment key={index}>
                 <SwiperSlide onClick={modalImageHandler}>
-                  <div key={index} className="relative bg-white cursor-pointer w-full h-[360px]">
+                  <div
+                    key={index}
+                    className="relative bg-white cursor-pointer w-full h-[360px]"
+                  >
                     <Image
                       src={image.image}
                       alt=""
@@ -160,6 +167,7 @@ export default function MobileThumbnailSlider({
                     />
                   </div>
                 </SwiperSlide>
+                </Fragment>
               );
             })}
           </Swiper>
@@ -181,6 +189,7 @@ export default function MobileThumbnailSlider({
               {productVideoLength > 0 &&
                 product.productVideo.map((video, index) => {
                   return (
+                    <Fragment key={index}>
                     <SwiperSlide>
                       <div className="relative bg-white cursor-pointer rounded-lg">
                         <div className=" rounded-md overflow-hidden blur-[1px]">
@@ -198,11 +207,13 @@ export default function MobileThumbnailSlider({
                         </div>
                       </div>
                     </SwiperSlide>
+                    </Fragment>
                   );
                 })}
 
               {product?.productImage?.map((image, index) => {
                 return (
+                  <Fragment key={index}>
                   <SwiperSlide onClick={modalImageHandler}>
                     <div className=" rounded-md overflow-hidden cursor-pointer ">
                       <Image
@@ -215,6 +226,7 @@ export default function MobileThumbnailSlider({
                       />
                     </div>
                   </SwiperSlide>
+                  </Fragment>
                 );
               })}
             </Swiper>
