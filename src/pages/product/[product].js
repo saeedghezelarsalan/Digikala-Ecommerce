@@ -601,19 +601,19 @@ function HomePage({
         {/* breadcamp */}
         <div className="py-8 px-4 h-auto w-full items-center hidden lg:flex text-xs text-[#81858b] gap-x-4">
           <Link href="/">
-            <a>دیجی کالا</a>
+            دیجی کالا
           </Link>
           <div>/</div>
           <Link href={`/main/${product.mainCategorySlug}`}>
-            <a>{product.mainCategory.replace("-", " ")}</a>
+            {product.mainCategory.replace("-", " ")}
           </Link>
           <div>/</div>
           <Link href={`/search/${product.categorySlug}`}>
-            <a>{product.category.replace("-", " ")}</a>
+           {product.category.replace("-", " ")}
           </Link>
           <div>/</div>
           <Link href={`/search/${product.subCategorySlug}`}>
-            <a>{product.subCategory.replace("-", " ")}</a>
+            <p>{product.subCategory.replace("-", " ")}</p>
           </Link>
         </div>
         {/* product Header*/}
@@ -1171,8 +1171,6 @@ function HomePage({
                     return (
                       <Fragment key={index}>
                         <SwiperSlide>
-                          {/* <Link href={`/product/${relatedProduct.slug}`}>
-                      <a> */}
                           <div ref={smoothScrollToTopRef} onClick={(e) => relatedProductLink(relatedProduct.slug)} className=" flex flex-col border border-t-0 border-r-0 border-b-0 px-2 cursor-pointer">
                             <Image
                               src={relatedProduct.thumbnail}

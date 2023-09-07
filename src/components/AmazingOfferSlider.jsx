@@ -1,15 +1,15 @@
-import { useRef, useEffect, Fragment } from "react";
+import {useRef, useEffect, Fragment} from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/lazy";
-import { Navigation, Lazy } from "swiper";
+import {Navigation, Lazy} from "swiper";
 import Link from "next/link";
 import aks from "../../public/assets/svg/aks.svg";
 
-export default function AmazingOfferSlider({ color, product, key }) {
+export default function AmazingOfferSlider({color, product, key}) {
   const swiperColor = useRef();
 
   useEffect(() => {
@@ -47,7 +47,8 @@ export default function AmazingOfferSlider({ color, product, key }) {
           className={`w-full h-auto bg-transparent amazingOffer`}
         >
           <SwiperSlide>
-            <div className="h-full text-center text-lg bg-transparent flex flex-col justify-evenly items-center cursor-pointer">
+            <div
+              className="h-full text-center text-lg bg-transparent flex flex-col justify-evenly items-center cursor-pointer">
               <Image src={aks} width={92} height={77} alt={''}/>
               <Image
                 src="https://www.digikala.com/statics/img/png/specialCarousel/box.png"
@@ -57,7 +58,7 @@ export default function AmazingOfferSlider({ color, product, key }) {
               />
               <div>
                 <span className="text-base text-white">مشاهده همه</span>
-                <ArrowBackIosNewIcon className="fill-white h-3 w-3" />
+                <ArrowBackIosNewIcon className="fill-white h-3 w-3"/>
               </div>
             </div>
           </SwiperSlide>
@@ -65,9 +66,8 @@ export default function AmazingOfferSlider({ color, product, key }) {
           {product.slice(0, 8).map((offerProduct, index) => {
             return (
               <Fragment key={index}>
-              <SwiperSlide>
-                <Link href={`/product/${offerProduct.slug}`}>
-                  <a>
+                <SwiperSlide>
+                  <Link href={`/product/${offerProduct.slug}`}>
                     <div className="bg-white h-full flex flex-col justify-between px-2 py-6 cursor-pointer">
                       <Image
                         src={offerProduct.thumbnail}
@@ -88,7 +88,7 @@ export default function AmazingOfferSlider({ color, product, key }) {
                               {Math.round(
                                 (Number(offerProduct.price) *
                                   (100 - Number(offerProduct.offer))) /
-                                  100
+                                100
                               ).toLocaleString("fa-IR")}
                             </span>
 
@@ -104,24 +104,22 @@ export default function AmazingOfferSlider({ color, product, key }) {
                         </div>
                       </div>
                     </div>
-                  </a>
-                </Link>
-              </SwiperSlide>
+                  </Link>
+                </SwiperSlide>
               </Fragment>
             );
           })}
           <SwiperSlide>
             <Link href="/">
-              <a>
-                <div className="h-full text-center text-lg bg-white rounded-tl-lg rounded-bl-lg w-full flex flex-col justify-center items-center cursor-pointer">
-                  <div className="w-12 h-12 border rounded-full mt-6 mb-4  flex justify-center items-center">
-                    <ArrowBackIosNewIcon className="w-6 h-6 fill-[#19bfd3]" />
-                  </div>
-                  <span className="text-xs lg:text-sm text-[#424750]">
+              <div
+                className="h-full text-center text-lg bg-white rounded-tl-lg rounded-bl-lg w-full flex flex-col justify-center items-center cursor-pointer">
+                <div className="w-12 h-12 border rounded-full mt-6 mb-4  flex justify-center items-center">
+                  <ArrowBackIosNewIcon className="w-6 h-6 fill-[#19bfd3]"/>
+                </div>
+                <span className="text-xs lg:text-sm text-[#424750]">
                     مشاهده همه
                   </span>
-                </div>
-              </a>
+              </div>
             </Link>
           </SwiperSlide>
         </Swiper>

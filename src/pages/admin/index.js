@@ -149,9 +149,7 @@ export default function HomePage() {
                         <div className="mr-2">{item.name}</div>
                         <div className="mr-2">
                           <Link href={`/product/${item.slug}`}>
-                            <a>
                               <h1>لینک : {item.productName}</h1>
-                            </a>
                           </Link>
                         </div>
                       </div>

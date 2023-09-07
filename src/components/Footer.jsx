@@ -114,26 +114,26 @@ const Footer = () => {
                 با دیجی کالا
               </p>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">
+                <p className="text-[#81858b] text-sm mb-2">
                   اتاق خبر دیجی کالا
-                </a>
+                </p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">فروش در دیجی کالا</a>
+                <p className="text-[#81858b] text-sm mb-2">فروش در دیجی کالا</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">فرصت های شغلی</a>
+                <p className="text-[#81858b] text-sm mb-2">فرصت های شغلی</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">
+                <p className="text-[#81858b] text-sm mb-2">
                   گزارش تخلف در دیجی کالا
-                </a>
+                </p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">تماس با دیجی کالا</a>
+                <p className="text-[#81858b] text-sm mb-2">تماس با دیجی کالا</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">درباره دیجی کالا</a>
+                <p className="text-[#81858b] text-sm mb-2">درباره دیجی کالا</p>
               </Link>
             </div>
             <div className="flex flex-col">
@@ -141,23 +141,23 @@ const Footer = () => {
                 خدمات مشتریان
               </p>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">
+                <p className="text-[#81858b] text-sm mb-2">
                   پاسخ به پرسش های متداول
-                </a>
+                </p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">
+                <p className="text-[#81858b] text-sm mb-2">
                   رویه های بازگرداندن کالا
-                </a>
+                </p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">شرایط استفاده</a>
+                <p className="text-[#81858b] text-sm mb-2">شرایط استفاده</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">حریم خصوصی</a>
+                <p className="text-[#81858b] text-sm mb-2">حریم خصوصی</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">گزارش باگ</a>
+                <p className="text-[#81858b] text-sm mb-2">گزارش باگ</p>
               </Link>
             </div>
             <div className="hidden sm:flex flex-col">
@@ -165,13 +165,13 @@ const Footer = () => {
                 راهنمایی خرید از دیجی کالا
               </p>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">نحوه ثبت سفارش</a>
+                <p className="text-[#81858b] text-sm mb-2">نحوه ثبت سفارش</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">رویه ارسال سفارش</a>
+                <p className="text-[#81858b] text-sm mb-2">رویه ارسال سفارش</p>
               </Link>
               <Link href="/">
-                <a className="text-[#81858b] text-sm mb-2">شیوه های پرداخت</a>
+                <p className="text-[#81858b] text-sm mb-2">شیوه های پرداخت</p>
               </Link>
             </div>
           </div>
