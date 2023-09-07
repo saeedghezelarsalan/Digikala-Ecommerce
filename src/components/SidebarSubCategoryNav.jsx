@@ -31,10 +31,10 @@ const SidebarSubCategoryNav = ({ category, indexs, mainCategorySlug }) => {
         }`}
       >
         <Link href={`/main/${category.slug}`}>
-          <a className="py-4 flex items-center">
+          <div className="py-4 flex items-center">
             <span className="text-xs text-[#9e9fb1]">همه موارد این دسته</span>
             <KeyboardArrowLeftIcon className="fill-[#9e9fb1] w-4 h-4" />
-          </a>
+          </div>
         </Link>
         {category.subCategory.map((subCategory, inde) => (
           <div key={inde} className="h-[52px] flex items-center">

@@ -27,7 +27,6 @@ const ProductsBasedOnViews = ({ product, category }) => {
                     .map((product, index) => {
                       return (
                         <Link key={index} href={`/product/${product.slug}`}>
-                          <a>
                             <div className="block w-full px-5 lg:p-5 bg-white relative">
                               <Image
                                 src={product.thumbnail}
@@ -38,17 +37,14 @@ const ProductsBasedOnViews = ({ product, category }) => {
                                 alt=""
                               />
                             </div>
-                          </a>
                         </Link>
                       );
                     })}
                 </div>
                 <Link href={`/search/${category.name}`}>
-                  <a>
                     <h5 className="text-center py-2 text-xs text-blue-300">
                       مشاهده
                     </h5>
-                  </a>
                 </Link>
               </div>
             );

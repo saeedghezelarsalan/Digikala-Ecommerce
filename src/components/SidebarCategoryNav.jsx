@@ -28,10 +28,10 @@ const SidebarCategoryNav = ({ mainCategory, key, category }) => {
 
       {openMobileNavbarCategory &&(
       <Link href={`/main/${mainCategory.slug}`}>
-          <a className="py-4 flex items-center px-8 mx-8">
+          <div className="py-4 flex items-center px-8 mx-8">
             <span className="text-xs text-[#9e9fb1]">همه موارد این دسته</span>
             <KeyboardArrowLeftIcon className="fill-[#9e9fb1] w-4 h-4" />
-          </a>
+          </div>
         </Link>)}
       <div className={`${openMobileNavbarCategory ? "block" : "hidden"}`}>
         {category
