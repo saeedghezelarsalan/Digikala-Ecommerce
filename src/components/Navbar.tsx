@@ -107,7 +107,7 @@ const Navbar = ({mainCategory, category}: any) => {
   });
 
 
-  const firstMainCategoryName = mainCategory.map(
+  const firstMainCategoryName = mainCategory?.map(
     (mainCategory: any) => mainCategory.name
   )[0];
 
@@ -296,7 +296,7 @@ const Navbar = ({mainCategory, category}: any) => {
               <h5 className="text-sm font-bold py-6 pr-8">دسته بندی کالاها</h5>
               {/* <MobileNavbar /> */}
               <ul className="text-[13px] font-bold">
-                {mainCategory.map((mainCategory: any, index: number) => (
+                {mainCategory?.map((mainCategory: any, index: number) => (
                   <SidebarCategoryNav mainCategory={mainCategory} key={index} category={category}/>
                 ))}
               </ul>
@@ -658,7 +658,7 @@ const Navbar = ({mainCategory, category}: any) => {
           onMouseLeave={pak}
         >
           <div className="w-[12%] h-full flex flex-col border border-t-0 ">
-            {mainCategory.map((mainCategory: any, index: number) => {
+            {mainCategory?.map((mainCategory: any, index: number) => {
               return (
                 <Link key={index} href={`/main/${mainCategory.slug}`}>
                   <div
@@ -711,7 +711,7 @@ const Navbar = ({mainCategory, category}: any) => {
 
             ) : (
               category
-              .filter(
+              ?.filter(
                 (category:any) => category.mainCategory == hoverMainCategory
               )
               .map((category:any) => {

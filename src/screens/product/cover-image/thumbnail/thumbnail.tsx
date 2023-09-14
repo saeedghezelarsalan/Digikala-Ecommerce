@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/image";
 import React, {useState, useRef, Fragment} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -16,7 +16,7 @@ import {EffectFade, Pagination, Navigation, Lazy} from "swiper";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
-const ThumbnailAndModalImage = ({product}: any) => {
+const Thumbnail = ({product}: any) => {
   // ref
   const swiperRef = useRef();
 
@@ -385,4 +385,4 @@ const ThumbnailAndModalImage = ({product}: any) => {
   );
 };
 
-export default ThumbnailAndModalImage;
+export default Thumbnail;

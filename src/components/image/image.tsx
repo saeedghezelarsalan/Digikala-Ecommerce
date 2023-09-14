@@ -33,7 +33,7 @@ const Image = (props: ImageProps) => {
     <NewNextImage
       id={id}
       itemProp={itemProp}
-      placeholder={placeholder || 'blur'}
+      // placeholder={placeholder || 'blur'}
       sizes={sizes}
       fill={fill}
       priority={priority}

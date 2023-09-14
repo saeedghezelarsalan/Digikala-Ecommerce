@@ -12,9 +12,9 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 //@ts-ignore
 import {EffectFade, Pagination, FreeMode, Navigation, Thumbs, Lazy,} from "swiper";
-import Image from "next/image";
+import Image from "@/components/image";
 
-export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobileSwiper, product}: any) {
+const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const [activeSlider, setActiveSlider] = useState<any>(0);
   const productImageLength = product.productImage.length;
@@ -184,6 +184,7 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
                               alt=""
                               height={64}
                               width={64}
+                              fill={false}
                               layout="responsive"
                               objectFit="contain"
                             />
@@ -207,6 +208,7 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
                           alt=""
                           height={64}
                           width={64}
+                          fill={false}
                           layout="responsive"
                           objectFit="contain"
                         />
@@ -222,3 +224,5 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
     </div>
   );
 }
+
+export default MobileCarousel;

@@ -14,13 +14,8 @@
     "@mui/icons-material": "5.8.2",
     "@mui/material": "5.8.2",
     "@reduxjs/toolkit": "1.9.1",
-    "@tailwindcss/line-clamp": "0.4.0",
     "axios": "0.27.2",
     "formik": "2.2.9",
-    "framer-motion": "10.0.1",
-    "gsap": "3.11.4",
-    "heroicons": "1.0.6",
-    "moment-jalaali": "0.9.6",
     "next": "13.4.19",
     "next-redux-wrapper": "8.1.0",
     "react": "18.2.0",
@@ -33,7 +28,6 @@
     "recharts": "2.1.12",
     "redux": "4.2.0",
     "redux-saga": "1.2.1",
-    "redux-thunk": "2.4.1",
     "swiper": "8.0.5",
     "yup": "1.0.2"
   },
@@ -42,11 +36,11 @@
     "@types/node": "20.5.9",
     "@types/react": "18.2.0",
     "@types/react-dom": "18.2.0",
-    "autoprefixer": "10.4.7",
+    "autoprefixer": "10.4.15",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
-    "postcss": "8.4.14",
-    "tailwindcss": "3.0.24",
+    "postcss": "8.4.29",
+    "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
   }
 }

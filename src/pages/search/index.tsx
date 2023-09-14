@@ -7,7 +7,6 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from "../../components/Navbar";
 import {useRouter} from "next/router";
-import {LayoutGroup} from "framer-motion";
 
 const Search = (
   {
@@ -51,9 +50,9 @@ const Search = (
     setOpenModalFilter(false)
   }
 
-
-  const filtersData = filterProducts && filterProducts?.map((filter:any) => filter)
-
+// @ts-ignore
+  const filtersData = filterProducts && filterProducts?.map((filter: any) => filter)
+// @ts-ignore
   const filters = filtersData?.reduce((acc, current) => {
     const x = acc.find((item: any) => item.filterProduct === current.filterProduct);
     if (!x) {
@@ -64,17 +63,19 @@ const Search = (
   }, []);
 
   useEffect(() => {
-    setFilterProducts(filterProduct.filter(filter => filter.showFilter == true))
+    setFilterProducts(filterProduct.filter((filter: any) => filter.showFilter == true))
   }, [filterProduct])
 
-  const searchHandler = (e) => {
+  const searchHandler = (e: any) => {
+    // @ts-ignore
     setSearchFilter([e.target.value])
   }
   useEffect(() => {
   }, [searchFilter, filterProducts])
 
-  const openValueHandler = (e) => {
+  const openValueHandler = (e: any) => {
     if (openValue == e) {
+      // @ts-ignore
       return setOpenValue(null)
     }
     setOpenValue(e)
@@ -94,11 +95,13 @@ const Search = (
     setIsOffer(!isOffer)
   }
 
-  const changeBrandHandler = (id) => {
+  const changeBrandHandler = (id: any) => {
+    // @ts-ignore
     const currentIndex = checked.indexOf(id);
     const newChecked = [...checked];
 
     if (currentIndex === -1) {
+      // @ts-ignore
       newChecked.push(id);
     } else {
       newChecked.splice(currentIndex, 1);
@@ -106,11 +109,13 @@ const Search = (
     setChecked(newChecked);
   };
 
-  const changeValueHandler = (id) => {
+  const changeValueHandler = (id: any) => {
+    // @ts-ignore
     const currentIndex = checkedValue.indexOf(id);
     const newChecked = [...checkedValue];
 
     if (currentIndex === -1) {
+      // @ts-ignore
       newChecked.push(id);
     } else {
       newChecked.splice(currentIndex, 1);
@@ -138,29 +143,31 @@ const Search = (
     let filteredArray = products.slice()
     if (checked.length != 0) {
       filteredArray = filteredArray
-      .filter((data) => checked.includes(data.brand))
-      .map((filteredName) => {
+      // @ts-ignore
+      .filter((data: any) => checked.includes(data.brand))
+      .map((filteredName: any) => {
         return filteredName;
       });
       setFilteredProducts(filteredArray);
     }
     if (checkedValue.length != 0) {
       filteredArray = filteredArray
-      .filter(data => data.productsValues.some(elemet => checkedValue.includes(elemet.value))).map((filteredName) => {
+      // @ts-ignore
+      .filter((data: any) => data.productsValues.some((elemet: any) => checkedValue.includes(elemet.value))).map((filteredName) => {
         return filteredName;
       });
       setFilteredProducts(filteredArray);
     }
     if (querySearch) {
-      filteredArray = filteredArray.filter((product) => product.name.includes(querySearch));
+      filteredArray = filteredArray.filter((product: any) => product.name.includes(querySearch));
       setFilteredProducts(filteredArray)
     }
     if (isAvailable) {
-      filteredArray = filteredArray.filter(data => data.stock > 0)
+      filteredArray = filteredArray.filter((data: any) => data.stock > 0)
       setFilteredProducts(filteredArray)
     }
     if (isOffer) {
-      filteredArray = filteredArray.filter(data => data.offer > 0)
+      filteredArray = filteredArray.filter((data: any) => data.offer > 0)
       setFilteredProducts(filteredArray)
     }
 
@@ -169,11 +176,12 @@ const Search = (
   }, [checked, isOffer, checkedValue, isAvailable, querySearch, products]);
 
   useEffect(() => {
-    let filterBrands = products.map((product) => product.brand);
+    let filterBrands = products.map((product: any) => product.brand);
+    // @ts-ignore
     const newFilter = (filterBrands = [...new Set(filterBrands)]);
     const data = brands
-    .filter((data) => newFilter.includes(data.name))
-    .map((filterBrand) => filterBrand);
+    .filter((data: any) => newFilter.includes(data.name))
+    .map((filterBrand: any) => filterBrand);
     setNewBrands(data);
   }, [brands, products]);
 
@@ -181,13 +189,14 @@ const Search = (
     <div className="flex flex-col w-full h-auto ">
       <Navbar mainCategory={mainCategories} category={category}/>
       <div className="pt-4 w-full h-auto pb-8">
-        {category.filter(cate => cate.subCategory.some(sub => sub.name == query)).map((datas, index) => {
+
+        {category.filter((cate: any) => cate.subCategory.some((sub: any) => sub.name == query)).map((datas: any, index: number) => {
           return (
             <ul key={index} className="flex gap-x-3 mx-3 text-sm font-bold mb-5 mt-2">
               <li>دیجیکالا /</li>
               <li>{datas.mainCategory} /</li>
               <li>{datas.name} /</li>
-              {datas.subCategory.filter(sub => sub.name == query).map((subs, index) => {
+              {datas.subCategory.filter((sub: any) => sub.name == query).map((subs: any, index: number) => {
                 return (
                   <li key={index}>{subs.name}</li>
                 )
@@ -209,7 +218,7 @@ const Search = (
                 </div>
 
                 <div>
-                  {newBrands.map((brand) => {
+                  {newBrands.map((brand: any) => {
                     return (
                       <div key={brand.id}
                            className={`w-full border border-x-0 border-t-0 flex items-center ${openBrand ? "max-h-auto visible" : "h-0 max-h-0 invisible"} `}
@@ -254,7 +263,7 @@ const Search = (
               </div>
 
               {/* فیلتر اصلی */}
-              {filters?.map((filter, index) => {
+              {filters?.map((filter: any, index: number) => {
                 return (
                   <div key={index} className="border border-x-0 border-t-0 last:border-b-0">
                     {/* let filterValues = filterProduct && filterProduct.map(data => data.productValues.filter(el => searchFilter.includes(el.value)).map(dats=>dats)) */}
@@ -274,7 +283,7 @@ const Search = (
                           type="text"
                           placeholder={`جستجو در ${filter.filterProduct}`}/>
                       }
-                      {filter.productValues && filter.productValues.filter(el => el.value.includes(searchFilter)).map((value, index) => {
+                      {filter.productValues && filter.productValues.filter((el: any) => el.value.includes(searchFilter)).map((value: any, index: number) => {
                         return (
                           // <div onChange={() => changeBrandHandler(filter.value)}>{value.value}</div>
                           <div key={index}
@@ -316,18 +325,16 @@ const Search = (
             </div>
 
             {/* products */}
-            <LayoutGroup>
-              <Pagination
-                data={filteredProducts}
-                RenderComponent={Product}
-                title="Posts"
-                buttonConst={3}
-                contentPerPage={10}
-                siblingCount={1}
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-              />
-            </LayoutGroup>
+            <Pagination
+              data={filteredProducts}
+              RenderComponent={Product}
+              title="Posts"
+              buttonConst={3}
+              contentPerPage={10}
+              siblingCount={1}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
           </div>
         </div>
       </div>
@@ -352,7 +359,7 @@ const Search = (
             </div>
 
             <div>
-              {newBrands.map((brand) => {
+              {newBrands.map((brand: any) => {
                 return (
                   <div key={brand.id}
                        className={`w-full border border-x-0 border-t-0 flex items-center ${openBrand ? "max-h-auto visible" : "h-0 max-h-0 invisible"} `}
@@ -398,7 +405,7 @@ const Search = (
 
 
           {/* فیلتر اصلی */}
-          {filters?.map((filter, index) => {
+          {filters?.map((filter: any, index: number) => {
             return (
               <div key={index} className="border border-x-0 border-t-0 last:border-b-0">
                 <div onClick={() => openValueHandler(filter.id)} key={filter.id} className="flex justify-between items-center w-full cursor-pointer">
@@ -417,7 +424,7 @@ const Search = (
                           type="text"
                           placeholder={`جستجو در ${filter.filterProduct}`} />
                       } */}
-                  {filter.productValues && filter.productValues.filter(el => el.value.includes(searchFilter)).map((value, index) => {
+                  {filter.productValues && filter.productValues.filter((el: any) => el.value.includes(searchFilter)).map((value: any, index: number) => {
                     return (
                       // <div onChange={() => changeBrandHandler(filter.value)}>{value.value}</div>
                       <div key={index}
@@ -448,6 +455,7 @@ const Search = (
   );
 }
 
+// @ts-ignore
 export async function getServerSideProps(contex) {
   let {query} = contex;
   const {data} = await axios.get(`http://localhost:3001/product`);
@@ -455,7 +463,7 @@ export async function getServerSideProps(contex) {
   let category = await axios.get("http://localhost:3001/category");
   category = category.data
 
-  let productss = data.map(a => a)
+  let productss = data.map((a: any) => a)
 
   let brand = await axios.get("http://localhost:3001/brand");
   brand = brand.data;

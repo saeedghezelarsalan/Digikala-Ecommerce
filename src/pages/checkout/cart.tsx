@@ -12,16 +12,14 @@ import {
   removeProductFromCart,
   removeAllFromCart
 } from "@/feature/AddToCart";
-//@ts-ignore
-import {ToastContainer, toast} from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import Link from "next/link";
 import VerifiedUserOutlinedIcon from "@mui/icons-material/VerifiedUserOutlined";
 import LibraryAddCheckOutlinedIcon from "@mui/icons-material/LibraryAddCheckOutlined";
 import VerticalAlignBottomOutlinedIcon from "@mui/icons-material/VerticalAlignBottomOutlined";
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
-import {useSelect} from "@mui/base";
+//@ts-ignore
+import {toast} from 'react-toastify';
 
 const HomePage = ({mainCategories, category}: any) => {
   const [showSticky, setShowSticky] = useState(false);
@@ -67,7 +65,7 @@ const HomePage = ({mainCategories, category}: any) => {
 
   const totalShoppingCartDiscount = cartBasketItem?.cart
   ?.map((item:any) => (Number(item.price) * (Number(item.offer) / 100)) * Number(item.quantity))
-  .reduce(function (previous, current:any) {
+  .reduce(function (previous:any, current:any) {
     return previous + current;
   }, 0);
 
@@ -76,16 +74,15 @@ const HomePage = ({mainCategories, category}: any) => {
 
   let discountPercent = Math.round((totalShoppingCart * 100) / itemsPrice)
 
-  const addRedux = (product) => {
+  const addRedux = (product:any) => {
     dispatch(addProductToCart(product));
   };
 
-  const removeRedux = (product) => {
+  const removeRedux = (product:any) => {
     dispatch(removeProductFromCart(product));
   };
 
   const removeAllCart = () => {
-
     toast.success('خرید شما با موفقیت ثبت شد !', {
       position: "bottom-right",
       autoClose: 5000,
@@ -95,15 +92,21 @@ const HomePage = ({mainCategories, category}: any) => {
       draggable: true,
       progress: undefined,
     })
+    // @ts-ignore
     dispatch(removeAllFromCart())
   }
 
-  const scrollToTopRef = useRef()
+  const scrollToTopRef = useRef<any>(null)
 
   useEffect(() => {
     scrollToTopRef?.current?.addEventListener('click', () => {
       window.scrollTo({top: 0, behavior: 'smooth'})
     })
+    return () =>{
+      scrollToTopRef?.current?.addEventListener('click', () => {
+        window.scrollTo({top: 0, behavior: 'smooth'})
+      })
+    }
   })
   return (
     <>
@@ -127,7 +130,7 @@ const HomePage = ({mainCategories, category}: any) => {
                 {/* total item */}
                 <div className=" px-12">
                   {cartBasketItem.cart &&
-                    cartBasketItem.cart.map((product) => (
+                    cartBasketItem.cart.map((product:any) => (
                       <>
                         <div className="grid  grid-cols-[118px_minmax(auto,_1fr)] border border-t-0 border-x-0 last:border-0 py-4">
 
@@ -188,7 +191,7 @@ const HomePage = ({mainCategories, category}: any) => {
                             className="flex justify-between items-center bg-white w-[102px] max-w-[102px] h-11 max-h-11 ml-2 shadow-[0_1px_5px_1px_rgb(0,0,0,0.2),0_1px_5px_-2px_rgb(0,0,0,0.2)] rounded-sm px-2">
                             <button
                               onClick={() => addRedux(product)}
-                              disabled={product.quantity == product.stock ? true : false}
+                              disabled={product.quantity == product.stock}
                               className={`${product.quantity == product.stock ? 'cursor-not-allowed' : 'cursor-pointer'}  select-none`}
                             >
                               <AddCircleOutlinedIcon className="fill-[#ef4056]"/>
@@ -286,26 +289,13 @@ const HomePage = ({mainCategories, category}: any) => {
         </div>
 
       </div>
-      <ToastContainer position="bottom-right"
-                      autoClose={3000}
-                      style={{width: "280px"}}
-
-                      hideProgressBar={false}
-                      newestOnTop={false}
-                      closeOnClick
-                      rtl={false}
-                      pauseOnFocusLoss
-                      draggable
-                      pauseOnHover
-                      toastStyle={{backgroundColor: "#32cd32", color: "white", fontSize: "16px"}}
-      />
     </>
   );
 };
 
 export default HomePage;
 
-export async function getServerSideProps({params}) {
+export async function getServerSideProps() {
   let mainCategory = await axios.get("http://localhost:3001/mainCategory");
   const mainCategories = mainCategory.data;
 

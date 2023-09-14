@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import Image from "@/components/image";
 import HomeSwiper from "../components/HomeSwiper";
 import Navbar from "../components/Navbar";
 import axios from "axios";
@@ -52,7 +52,7 @@ export default function Home(
     setClick(false);
   };
 
-  const flightDropDowns = (e:any) => {
+  const flightDropDowns = (e: any) => {
     if (modal?.current && modal?.current?.contains(e.target)) {
       return;
     }
@@ -83,13 +83,13 @@ export default function Home(
 
       {/* carousel */}
 
-      {homePageDetail.map((homePage, index) => {
+      {homePageDetail.map((homePage: any, index: number) => {
         return <HomeSwiper key={index} carousel={homePage.carousel}/>;
       })}
 
       {/* digikala subCategories */}
       <div className="grid grid-cols-4 grid-rows-2 sm:grid-cols-4 sm:grid-rows-2 lg:grid-cols-8 lg:grid-rows-1 mt-2 mb-1 mx-2 lg:mx-36 ">
-        {DigikalaSubCategories?.slice(0, 7).map((subCategories) => {
+        {DigikalaSubCategories?.slice(0, 7).map((subCategories: any) => {
           return (
             <figure
               key={subCategories.id}
@@ -142,7 +142,7 @@ export default function Home(
 
         {/* <Digi Quadruple Banner /> */}
 
-        {homePageDetail.map((homePage, index) => {
+        {homePageDetail.map((homePage: any, index: number) => {
           return (
             <QuadrupleBanner key={index} QuardrupleBanners={homePage}/>
           );
@@ -216,7 +216,7 @@ export default function Home(
         {/* blog post */}
         <div className='grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-x-2 my-4 gap-y-4'>
 
-          {blogData.map((post, index) => (
+          {blogData.map((post: any, index: number) => (
             <BlogPost key={index} post={post}/>
           ))}
         </div>
@@ -261,8 +261,8 @@ export default function Home(
             <div className="flex flex-col mx-6">
               <div className="flex flex-wrap my-8 gap-x-1">
                 {DigikalaSubCategories.filter(
-                  (subCategories) => subCategories.group == false
-                ).map((subCategories) => {
+                  (subCategories: any) => subCategories.group == false
+                ).map((subCategories: any) => {
                   return (
                     <figure
                       key={subCategories.id}
@@ -288,8 +288,8 @@ export default function Home(
               </h5>
               <div className="grid grid-cols-2 gap-x-2 gap-y-4 mt-5 pb-8">
                 {DigikalaSubCategories.filter(
-                  (subCategories) => subCategories.group != false
-                ).map((subCategories) => {
+                  (subCategories: any) => subCategories.group != false
+                ).map((subCategories: any) => {
                   return (
                     <figure
                       key={subCategories.id}
@@ -327,7 +327,7 @@ export default function Home(
   );
 }
 
-export async function getServerSideProps({params}) {
+export async function getServerSideProps() {
   let product = await axios.get(`http://localhost:3001/product`);
   product = product.data;
   let mainCategory = await axios.get("http://localhost:3001/mainCategory");

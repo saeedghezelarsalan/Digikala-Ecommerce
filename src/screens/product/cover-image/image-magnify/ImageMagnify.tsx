@@ -1,6 +1,5 @@
-import Image from "next/image";
+import Image from "@/components/image";
 import React, {useState, useEffect, useRef} from "react";
-import {motion} from "framer-motion";
 
 const ImageMagnify = ({product}: any) => {
   const magnify = useRef<any>(null);
@@ -72,23 +71,22 @@ const ImageMagnify = ({product}: any) => {
 
       <div
         ref={magnify}
-        className="hidden w-full cursor-crosshair
-h-auto lg:!block relative"
+        className="hidden w-full cursor-crosshair h-auto lg:!block relative"
       >
         <div className="relative ">
           <div
             ref={large}
             className="w-11/12 h-40 absolute z-[1] hidden bg-[#860f0f] opacity-25"
-          ></div>
+          />
           <div className="relative aspect-w-12 aspect-h-14">
-            <motion.div ref={small}>
+            <div ref={small}>
               <Image
                 src={product.thumbnail}
                 alt=""
                 layout="responsive"
                 objectFit="contain"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>
