@@ -95,9 +95,9 @@ const SearchedProducts = ({products}: any) => {
                       <Image
                         onLoadingComplete={onLoadCallBack}
                         src={product.thumbnail}
-                        alt=""
-                        layout="fill"
+                        fill={true}
                         objectFit="contain"
+                        alt=""
                       />
                     </a>
                   </Link>

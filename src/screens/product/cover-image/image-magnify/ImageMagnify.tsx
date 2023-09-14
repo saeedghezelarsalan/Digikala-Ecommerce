@@ -78,13 +78,13 @@ const ImageMagnify = ({product}: any) => {
             ref={large}
             className="w-11/12 h-40 absolute z-[1] hidden bg-[#860f0f] opacity-25"
           />
-          <div className="relative aspect-w-12 aspect-h-14">
-            <div ref={small}>
+          <div className="relative aspect-w-12 aspect-h-1">
+            <div className="relative aspect-w-12 aspect-h-14" ref={small}>
               <Image
                 src={product.thumbnail}
-                alt=""
-                layout="responsive"
                 objectFit="contain"
+                fill={true}
+                alt=""
               />
             </div>
           </div>

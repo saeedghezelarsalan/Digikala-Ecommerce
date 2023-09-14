@@ -30,7 +30,7 @@ const ProductsBasedOnViews = ({product, category}: any) => {
                       <div className="block w-full px-5 lg:p-5 bg-white relative">
                         <Image
                           src={product.thumbnail}
-                          layout="responsive"
+                          fill={true}
                           objectFit="fill"
                           alt=""
                         />

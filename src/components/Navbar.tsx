@@ -400,7 +400,7 @@ const Navbar = ({mainCategory, category}: any) => {
                           <div className="relative block mb-2 lg:px-1 w-[118px] h-[118px] ">
                             <Image
                               src={product.thumbnail}
-                              layout="fill"
+                              fill={true}
                               objectFit="contain"
                               alt={''}
                             />

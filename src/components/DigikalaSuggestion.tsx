@@ -54,6 +54,7 @@ export default function DigiSuggestion({product}:any) {
                           src={product.thumbnail}
                           width={80}
                           height={80}
+                          fill={false}
                           objectFit="cover"
                           alt={''}
                         />

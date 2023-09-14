@@ -63,7 +63,7 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
         <div className="lg:mx-4 lg:grid lg:grid-cols-3 ">
           <CoverImage product={product}/>
           <Details
-            setQuantityReduxProduct={setQuantityReduxProduct} quantityReduxProduct={quantityReduxProduct} questions={questions} comment={comment} rateReduce={rateReduce}
+            setQuantityReduxProduct={setQuantityReduxProduct} quantityReduxProduct={quantityReduxProduct} questions={questions} comment={comment} rateReduce={rateReduce} product={product}
             // @ts-ignore
             ref={{secondCommentsCount, firstCommentsCount, questionsCount}}/>
         </div>
@@ -73,14 +73,14 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
           <ProductNavbar
             ref={{
               // @ts-ignore
-            sectionFirst,
-            sectionSecond,
-            sectionThird,
-            sectionFour,
-            firstCommentsCount,
-            secondCommentsCount,
-            questionsCount,
-          }}
+              sectionFirst,
+              sectionSecond,
+              sectionThird,
+              sectionFour,
+              firstCommentsCount,
+              secondCommentsCount,
+              questionsCount,
+            }}
           />
           <section className="lg:flex xl:grid grid-cols-12 pb-16">
             <div className="xl:col-span-9 xl:mx-5 px-4 lg:px-0">
@@ -89,9 +89,9 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
               <Comment
                 product={product} comment={comment} comments={comments} rateCustomers={rateCustomers}
                 ref={{sectionThird, rateRef} as any}/>
-              <Question questions={questions}
-                // @ts-ignore
-                        ref={{sectionFour}}/>
+              <Question
+                questions={questions}
+                ref={{sectionFour} as any}/>
             </div>
             <ProductPrice product={product} quantityReduxProduct={quantityReduxProduct} setQuantityReduxProduct={setQuantityReduxProduct}/>
           </section>
@@ -101,28 +101,29 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
   );
 }
 
-export const getServerSideProps = store.getServerSideProps(() => async ({params}: any) => {
+export const getServerSideProps = store.getServerSideProps(() => async ({params}:any) => {
   const query = params.product;
+  console.log(params)
   const {data} = await axios.get(`http://localhost:3001/product`);
   const customerComment = await axios.get(
     `http://localhost:3001/customersComment`
   );
   let comments = customerComment.data;
-  comments = comments.filter((comment: any) => comment.slug == query);
+  comments = comments.filter((comment:any) => comment.slug == query);
 
   const customerQuestion = await axios.get(
     `http://localhost:3001/customersQuestion`
   );
   let questions = customerQuestion.data;
-  questions = questions.filter((questions: any) => questions.slug == query);
+  questions = questions.filter((questions:any) => questions.slug == query);
 
   let mainCategory = await axios.get("http://localhost:3001/mainCategory");
   mainCategory = mainCategory.data;
   let category = await axios.get("http://localhost:3001/category");
   category = category.data;
 
-  let product = data.filter((product: any) => product.slug == query)[0];
-  const relatedProducts = data.filter((products: any) =>
+  let product = data.filter((product:any) => product.slug == query)[0];
+  const relatedProducts = data.filter((products:any) =>
     product && products.subCategory == product.subCategory
       ? products.slug != product.slug
       : null

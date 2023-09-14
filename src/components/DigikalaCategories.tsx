@@ -14,9 +14,9 @@ export default function DigikalaCategoris({category}:any) {
               <Link href={`search/${category.slug}`} passHref>
                 <Image
                   src={category.thumbnail}
-                  alt=""
-                  layout="fill"
+                  fill={true}
                   objectFit="cover"
+                  alt=""
                 />
               </Link>
             </div>

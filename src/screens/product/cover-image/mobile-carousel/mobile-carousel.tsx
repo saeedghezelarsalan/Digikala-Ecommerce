@@ -56,9 +56,9 @@ const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any)
                 <div key={index} className="relative aspect-w-16 aspect-h-1 bg-white">
                   <Image
                     src={image.image}
-                    alt=""
-                    layout="responsive"
+                    fill={true}
                     objectFit="contain"
+                    alt=""
                   />
                 </div>
               </SwiperSlide>
@@ -147,9 +147,9 @@ const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any)
                     >
                       <Image
                         src={image.image}
-                        alt=""
-                        layout="fill"
+                        fill={true}
                         objectFit="contain"
+                        alt=""
                       />
                     </div>
                   </SwiperSlide>
@@ -181,12 +181,10 @@ const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any)
                           <div className=" rounded-md overflow-hidden blur-[1px]">
                             <Image
                               src={product.thumbnail}
-                              alt=""
                               height={64}
                               width={64}
-                              fill={false}
-                              layout="responsive"
                               objectFit="contain"
+                              alt=""
                             />
                           </div>
                           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50">
@@ -205,12 +203,11 @@ const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any)
                       <div className=" rounded-md overflow-hidden cursor-pointer ">
                         <Image
                           src={image.image}
-                          alt=""
                           height={64}
                           width={64}
-                          fill={false}
                           layout="responsive"
                           objectFit="contain"
+                          alt=""
                         />
                       </div>
                     </SwiperSlide>

@@ -1,5 +1,5 @@
 import React, {Fragment, useEffect, useRef} from "react";
-import Image from "@/components/image";
+import Image from "next/image";
 import {useRouter} from "next/router";
 //@ts-ignore
 // Import Swiper styles
@@ -17,7 +17,9 @@ import {Swiper, SwiperSlide} from "swiper/react";
 const SimilarProduct = ({products}: any) => {
   const router = useRouter();
   const smoothScrollToTopRef = useRef<HTMLDivElement>(null)
-
+  useEffect(() => {
+    console.log(products)
+  }, []);
   // when go to the clicked related product page url with smoothy scroll to top
   useEffect(() => {
     smoothScrollToTopRef?.current?.childNodes.forEach((items: ChildNode) => {
@@ -65,24 +67,25 @@ const SimilarProduct = ({products}: any) => {
             preloadImages={false}
             // onLazyImageLoad={true}
             modules={[Pagination, Navigation, Lazy]}
-            className="!h-full w-full cursor-pointer"
+            className="!h-auto w-full cursor-pointer"
           >
             <div className="w-fit border-4 bg-green-700">
-              {products.slice(0, 10).map((relatedProduct: any, index: number) => {
+              {products.map((relatedProduct: any, index: number) => {
                 return (
                   <Fragment key={index}>
                     <SwiperSlide>
                       <div
                         ref={smoothScrollToTopRef}
                         onClick={() => relatedProductLink(relatedProduct.slug)}
-                        className=" flex flex-col border border-t-0 border-r-0 border-b-0 px-2 cursor-pointer"
+                        className=" flex w-full h-full !flex-col border border-t-0 border-r-0 border-b-0 px-2 cursor-pointer"
                       >
-                        <Image
-                          src={relatedProduct.thumbnail}
-                          layout="responsive"
-                          objectFit="contain"
-                          alt=""
-                        />
+                        <div className={'relative w-40 h-40'}>
+                          <Image
+                            src={relatedProduct.thumbnail}
+                            fill={true}
+                            alt=""
+                          />
+                        </div>
 
                         <h4 className="font-bold text-sm lg:text-sm mt-2 line-clamp-2 mb-3">
                           {relatedProduct.name}

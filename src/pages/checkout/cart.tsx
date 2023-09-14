@@ -140,7 +140,7 @@ const HomePage = ({mainCategories, category}: any) => {
                           <div className="relative block mb-2 lg:px-8 w-[118px] h-[118px] ">
                             <Image
                               src={product.thumbnail}
-                              layout="fill"
+                              fill={true}
                               objectFit="contain"
                               alt={''}
                             />

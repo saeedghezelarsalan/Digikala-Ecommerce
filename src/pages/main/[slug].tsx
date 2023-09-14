@@ -50,18 +50,18 @@ export default function Home({product, mainCategory, category, mainCategories, A
           <div className="relative w-full h-52 lg:h-64 rounded-lg overflow-hidden">
             <Image
               src="https://dkstatics-public.digikala.com/digikala-adservice-banners/25ba855e4369204f419f06eb89eb3b8335d68f5e_1672493058.jpg?x-oss-process=image/quality,q_95"
-              alt=""
-              layout="fill"
+              fill={true}
               objectFit="fill"
+              alt=""
             />
           </div>
 
           <div className="relative w-full h-52 lg:h-64 rounded-lg overflow-hidden">
             <Image
               src="https://dkstatics-public.digikala.com/digikala-adservice-banners/a2388bca514ab5ec462a7c811253ebe33b3f13ba_1645096153.jpg"
-              alt=""
-              layout="fill"
+              fill={true}
               objectFit="fill"
+              alt=""
             />
           </div>
         </div>
@@ -76,18 +76,18 @@ export default function Home({product, mainCategory, category, mainCategories, A
           <div className="relative w-full h-52 lg:h-64 rounded-lg overflow-hidden">
             <Image
               src="https://dkstatics-public.digikala.com/digikala-adservice-banners/ccf429b44cea826989f5cda8a614d8ac0f94d772_1672227248.jpg?x-oss-process=image/quality,q_95"
-              alt=""
-              layout="fill"
+              fill={true}
               objectFit="fill"
+              alt=""
             />
           </div>
 
           <div className="relative w-full h-52 lg:h-64 rounded-lg overflow-hidden">
             <Image
               src="https://dkstatics-public.digikala.com/digikala-adservice-banners/d5186195d5cfbde723226735a1077019e20ed9a3_1672223742.jpg?x-oss-process=image/quality,q_95"
-              alt=""
-              layout="fill"
+              fill={true}
               objectFit="fill"
+              alt=""
             />
           </div>
         </div>
@@ -95,8 +95,8 @@ export default function Home({product, mainCategory, category, mainCategories, A
           <Image
             className="rounded-lg"
             src="https://dkstatics-public.digikala.com/digikala-adservice-banners/abede523b20e3c6fd5addcae68a54e454cb95a5e_1654948996.jpg?x-oss-process=image/quality,q_95"
+            fill={true}
             alt=""
-            layout={'fill'}
           />
         </div>
 

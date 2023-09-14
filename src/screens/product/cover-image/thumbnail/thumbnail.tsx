@@ -93,9 +93,9 @@ const Thumbnail = ({product}: any) => {
             <div className="relative opacity-50 blur-sm">
               <Image
                 src={product.thumbnail}
-                alt=""
-                layout="responsive"
+                fill={true}
                 objectFit="contain"
+                alt=""
               />
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -113,9 +113,9 @@ const Thumbnail = ({product}: any) => {
           >
             <Image
               src={firstImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -129,9 +129,9 @@ const Thumbnail = ({product}: any) => {
           >
             <Image
               src={secondImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -147,9 +147,9 @@ const Thumbnail = ({product}: any) => {
           >
             <Image
               src={thirdImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -165,9 +165,9 @@ const Thumbnail = ({product}: any) => {
           >
             <Image
               src={fourImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -183,9 +183,9 @@ const Thumbnail = ({product}: any) => {
           >
             <Image
               src={fiveImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -199,9 +199,9 @@ const Thumbnail = ({product}: any) => {
           <div className="opacity-50 blur-sm">
             <Image
               src={product.thumbnail}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -310,9 +310,9 @@ const Thumbnail = ({product}: any) => {
                       <SwiperSlide>
                         <Image
                           src={image.image}
-                          alt=""
-                          layout="responsive"
+                          fill={true}
                           objectFit="contain"
+                          alt=""
                         />
                       </SwiperSlide>
                     </Fragment>
@@ -345,7 +345,7 @@ const Thumbnail = ({product}: any) => {
                         <div className="relative rounded-lg cursor-pointer overflow-hidden">
                           <Image
                             src={product.thumbnail}
-                            layout="responsive"
+                            fill={true}
                             objectFit="contain"
                             alt={''}
                           />
@@ -368,7 +368,7 @@ const Thumbnail = ({product}: any) => {
                       <div className="relative rounded-lg cursor-pointer overflow-hidden">
                         <Image
                           src={image.image}
-                          layout="responsive"
+                          fill={true}
                           objectFit="contain"
                           alt={''}
                         />
