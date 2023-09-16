@@ -72,8 +72,8 @@ export default function AmazingOfferSlider({color, product, key}: any) {
                     <div className="relative bg-white h-full flex flex-col justify-between px-2 py-6 cursor-pointer">
                       <Image
                         src={offerProduct.thumbnail}
+                        fill={true}
                         alt=""
-                        layout="responsive"
                         objectFit="contain"
                       />
 

@@ -9,7 +9,7 @@ export default function QuadrupleBanner({QuardrupleBanners}: any) {
             key={index}
             className="relative h-52 w-full rounded-lg overflow-hidden"
           >
-            <Image src={banner.image} alt="" layout="fill" objectFit="fill"/>
+            <Image src={banner.image} fill={true} objectFit="fill" alt=""/>
           </div>
         );
       })}

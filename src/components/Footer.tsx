@@ -30,9 +30,9 @@ const Footer = () => {
           <div className="h-[30px] w-28 relative">
             <Image
               src="https://www.digikala.com/statics/img/svg/digi.svg"
-              alt="digikala"
-              layout="fill"
+              fill={true}
               objectFit="contain"
+              alt="digikala"
             />
           </div>
           <div
@@ -57,6 +57,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/express-delivery.svg"
               width={56}
               height={56}
+              fill={false}
               alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">
@@ -69,6 +70,7 @@ const Footer = () => {
               src="https://www.digikala.com/statics/img/svg/footer/cash-on-delivery.svg"
               width={56}
               height={56}
+              fill={false}
               alt={''}
             />
             <span className="text-xs text-[#a1a3a8] mb-8">

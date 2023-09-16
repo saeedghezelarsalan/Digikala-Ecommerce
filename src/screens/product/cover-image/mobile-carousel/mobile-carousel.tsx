@@ -1,4 +1,5 @@
 import React, {useState, useRef, Fragment} from "react";
+import Image from "next/image";
 import "swiper/css";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -12,9 +13,8 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 //@ts-ignore
 import {EffectFade, Pagination, FreeMode, Navigation, Thumbs, Lazy,} from "swiper";
-import Image from "next/image";
 
-export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobileSwiper, product}: any) {
+const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
   const [activeSlider, setActiveSlider] = useState<any>(0);
   const productImageLength = product.productImage.length;
@@ -56,9 +56,9 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
                 <div key={index} className="relative aspect-w-16 aspect-h-1 bg-white">
                   <Image
                     src={image.image}
-                    alt=""
-                    layout="responsive"
+                    fill={true}
                     objectFit="contain"
+                    alt=""
                   />
                 </div>
               </SwiperSlide>
@@ -147,9 +147,9 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
                     >
                       <Image
                         src={image.image}
-                        alt=""
-                        layout="fill"
+                        fill={true}
                         objectFit="contain"
+                        alt=""
                       />
                     </div>
                   </SwiperSlide>
@@ -181,11 +181,10 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
                           <div className=" rounded-md overflow-hidden blur-[1px]">
                             <Image
                               src={product.thumbnail}
-                              alt=""
                               height={64}
                               width={64}
-                              layout="responsive"
                               objectFit="contain"
+                              alt=""
                             />
                           </div>
                           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 opacity-50">
@@ -204,11 +203,11 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
                       <div className=" rounded-md overflow-hidden cursor-pointer ">
                         <Image
                           src={image.image}
-                          alt=""
                           height={64}
                           width={64}
                           layout="responsive"
                           objectFit="contain"
+                          alt=""
                         />
                       </div>
                     </SwiperSlide>
@@ -222,3 +221,5 @@ export default function MobileThumbnailSlider({modalMobileSwiper, setModalMobile
     </div>
   );
 }
+
+export default MobileCarousel;

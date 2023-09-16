@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from "@/components/image";
 import React, {useState, useRef, Fragment} from "react";
 import {Swiper, SwiperSlide} from "swiper/react";
 
@@ -16,7 +16,7 @@ import {EffectFade, Pagination, Navigation, Lazy} from "swiper";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 
-const ThumbnailAndModalImage = ({product}: any) => {
+const Thumbnail = ({product}: any) => {
   // ref
   const swiperRef = useRef();
 
@@ -93,9 +93,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
             <div className="relative opacity-50 blur-sm">
               <Image
                 src={product.thumbnail}
-                alt=""
-                layout="responsive"
+                fill={true}
                 objectFit="contain"
+                alt=""
               />
             </div>
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -113,9 +113,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
           >
             <Image
               src={firstImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -129,9 +129,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
           >
             <Image
               src={secondImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -147,9 +147,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
           >
             <Image
               src={thirdImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -165,9 +165,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
           >
             <Image
               src={fourImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -183,9 +183,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
           >
             <Image
               src={fiveImage.image}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
         )}
@@ -199,9 +199,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
           <div className="opacity-50 blur-sm">
             <Image
               src={product.thumbnail}
-              alt=""
-              layout="responsive"
+              fill={true}
               objectFit="contain"
+              alt=""
             />
           </div>
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -310,9 +310,9 @@ const ThumbnailAndModalImage = ({product}: any) => {
                       <SwiperSlide>
                         <Image
                           src={image.image}
-                          alt=""
-                          layout="responsive"
+                          fill={true}
                           objectFit="contain"
+                          alt=""
                         />
                       </SwiperSlide>
                     </Fragment>
@@ -345,7 +345,7 @@ const ThumbnailAndModalImage = ({product}: any) => {
                         <div className="relative rounded-lg cursor-pointer overflow-hidden">
                           <Image
                             src={product.thumbnail}
-                            layout="responsive"
+                            fill={true}
                             objectFit="contain"
                             alt={''}
                           />
@@ -368,7 +368,7 @@ const ThumbnailAndModalImage = ({product}: any) => {
                       <div className="relative rounded-lg cursor-pointer overflow-hidden">
                         <Image
                           src={image.image}
-                          layout="responsive"
+                          fill={true}
                           objectFit="contain"
                           alt={''}
                         />
@@ -385,4 +385,4 @@ const ThumbnailAndModalImage = ({product}: any) => {
   );
 };
 
-export default ThumbnailAndModalImage;
+export default Thumbnail;

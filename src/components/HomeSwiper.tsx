@@ -80,9 +80,9 @@ export default function HomeSlider({carousel}:any) {
                   >
                     <Image
                       src={carousel.image}
-                      alt=""
-                      layout="fill"
+                      fill={true}
                       objectFit="cover"
+                      alt=""
                     />
                   </div>
                 </Link>

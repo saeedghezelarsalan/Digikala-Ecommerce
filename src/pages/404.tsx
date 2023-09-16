@@ -18,9 +18,10 @@ export default function NotFound() {
         <div className='relative block'>
         <Image 
         src="https://www.digikala.com/statics/img/png/page-not-found.png"
-        layout='fill' 
+        fill={true}
         objectFit='fill'
-        alt="" />
+        alt=""
+        />
         </div>
       </div>
     </>

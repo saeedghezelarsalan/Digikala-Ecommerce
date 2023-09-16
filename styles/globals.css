@@ -79,7 +79,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .homeSlider > .mySwiper .swiper-pagination-bullets {
-  position: absoulute !important;
+  position: absolute !important;
   top: 84% !important;
   right: 45px !important;
   width: max-content !important;
@@ -503,7 +503,7 @@ small {
   justify-content: center;
   font-size: 40px;
   color: white;
-  background-color: gray;
+  background-color: grey;
   position: relative;
   transition: left 1s;
 }

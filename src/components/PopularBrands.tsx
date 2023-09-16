@@ -42,7 +42,7 @@ export default function PopularBrands({brands}: any) {
                 >
                   <Image
                     src={brand.image}
-                    layout="fill"
+                    fill={true}
                     objectFit="contain"
                     alt={''}
                   />

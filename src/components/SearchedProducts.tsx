@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {useDispatch, useSelector} from "react-redux";
 import {useEffect, useState} from "react";
-import {addProductToCart, removeProductFromCart} from "../feature/AddToCart";
+import {addProductToCart, removeProductFromCart} from "@/feature/AddToCart";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
@@ -10,7 +10,6 @@ import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
 import {ToastContainer, toast} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ContentLoader from "react-content-loader";
-import {motion} from "framer-motion";
 
 const SearchedProducts = ({products}: any) => {
   const [showCountBtn, setShowCountBtn] = useState<any>(false);
@@ -70,16 +69,6 @@ const SearchedProducts = ({products}: any) => {
         key={product.id}
         className="bg-white w-full h-full lg:p-2 hover:lg:shadow-2xl hover:lg:z-10 hover:lg:border-0 select-none"
       >
-        <motion.div
-          animate={{opacity: 1}}
-          initial={{opacity: 0}}
-          exit={{opacity: 0}}
-          layout
-          // onDurationChange={{duration:2}}
-          transition={{
-            duration: 0.4,
-          }}
-        >
           <div className="flex flex-col cursor-pointer border border-[#f0f0f1] border-x-0 border-b-[1px] border-t-0 sm:border-r-0 sm:border-t-0 md:border-0 ">
             <div className="flex flex-row sm:flex-col md:flex-row lg:flex-col justify-evenly w-full h-full relative items-center  lg:items-start lg:mb-3">
               <div className="flex flex-col w-[118px] sm:w-full md:w-[118px] h-auto lg:w-full lg:h-auto">
@@ -89,12 +78,7 @@ const SearchedProducts = ({products}: any) => {
                     key={product.id}
                     passHref
                   >
-                    <motion.a
-                      animate={{scale: 1}}
-                      whileHover={{scale: 1.1}}
-                      transition={{duration: 5}}
-                      layoutId={product.id}
-                    >
+                    <a>
                       {!isImageReady && (
                         <ContentLoader
                           viewBox="0 0 500 500"
@@ -111,11 +95,11 @@ const SearchedProducts = ({products}: any) => {
                       <Image
                         onLoadingComplete={onLoadCallBack}
                         src={product.thumbnail}
-                        alt=""
-                        layout="fill"
+                        fill={true}
                         objectFit="contain"
+                        alt=""
                       />
-                    </motion.a>
+                    </a>
                   </Link>
                 </div>
                 <div className="block absolute bottom-0 right-0 sm:px-4  md:px-8 lg:px-0">
@@ -131,11 +115,7 @@ const SearchedProducts = ({products}: any) => {
                         >
                           <button
                             onClick={() => addRedux(product)}
-                            disabled={
-                              products.quantity == products.stock
-                                ? true
-                                : false
-                            }
+                            disabled={products.quantity == products.stock}
                             className={`${
                               products.quantity == products.stock
                                 ? "cursor-not-allowed"
@@ -233,7 +213,6 @@ const SearchedProducts = ({products}: any) => {
               </div>
             </div>
           </div>
-        </motion.div>
         <ToastContainer
           position="bottom-right"
           autoClose={1000}
