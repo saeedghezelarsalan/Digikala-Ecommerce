@@ -3,21 +3,21 @@ import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import axios from "axios";
 import SimilarProduct from "@/screens/product/similar-product";
-import ProductPrice from "@/screens/product/product-price/product-price";
 import Breadcrumb from "@/components/breadcrumb";
 import CoverImage from "@/screens/product/cover-image";
-
 import Comment from "@/screens/product/comment";
-import Question from "@/screens/product/question/question";
-import Specifications from "@/screens/product/Specifications/Specifications";
+import Question from "@/screens/product/question";
+import Specifications from "@/screens/product/Specifications";
 import Details from "@/screens/product/details";
 import Introduction from "@/screens/product/introduction";
 import ProductNavbar from "@/screens/product/product-navbar";
 import ProductWarranty from "@/screens/product/product-warranty";
+import StickyProductPrice from "@/screens/product/sticky-product-price";
 import {store} from "@/feature/store";
 
 const Product = ({product, comments, relatedProducts, mainCategory, category, questions,}: any) => {
   const [quantityReduxProduct, setQuantityReduxProduct] = useState(0)
+  const [scrollPos, setScrollPos] = useState(0);
 
   const comment = comments.map((comment: any) => comment);
 
@@ -30,7 +30,7 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
   const secondCommentsCount = useRef<any>(null);
   const questionsCount = useRef<any>(null);
   const rateRef = useRef<any>(null);
-
+  const nav = useRef<any>(null)
   // users comments rates border
   useEffect(() => {
     const rates = product?.sellerView.map((item: any) => item.rate);
@@ -63,7 +63,8 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
         <div className="lg:mx-4 lg:grid lg:grid-cols-3 ">
           <CoverImage product={product}/>
           <Details
-            setQuantityReduxProduct={setQuantityReduxProduct} quantityReduxProduct={quantityReduxProduct} questions={questions} comment={comment} rateReduce={rateReduce} product={product}
+            setQuantityReduxProduct={setQuantityReduxProduct} quantityReduxProduct={quantityReduxProduct} questions={questions} comment={comment} rateReduce={rateReduce}
+            product={product}
             // @ts-ignore
             ref={{secondCommentsCount, firstCommentsCount, questionsCount}}/>
         </div>
@@ -71,8 +72,11 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
         <SimilarProduct products={relatedProducts}/>
         <div className="w-auto h-auto bg-white">
           <ProductNavbar
+            scrollPos={scrollPos}
+            setScrollPos={setScrollPos}
             ref={{
               // @ts-ignore
+              nav,
               sectionFirst,
               sectionSecond,
               sectionThird,
@@ -93,7 +97,14 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
                 questions={questions}
                 ref={{sectionFour} as any}/>
             </div>
-            <ProductPrice product={product} quantityReduxProduct={quantityReduxProduct} setQuantityReduxProduct={setQuantityReduxProduct}/>
+            <StickyProductPrice
+              ref={nav}
+              scrollPos={scrollPos}
+              setScrollPos={setScrollPos}
+              product={product}
+              quantityReduxProduct={quantityReduxProduct}
+              setQuantityReduxProduct={setQuantityReduxProduct}
+            />
           </section>
         </div>
       </div>
@@ -101,7 +112,7 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
   );
 }
 
-export const getServerSideProps = store.getServerSideProps(() => async ({params}:any) => {
+export const getServerSideProps = store.getServerSideProps(() => async ({params}: any) => {
   const query = params.product;
   console.log(params)
   const {data} = await axios.get(`http://localhost:3001/product`);
@@ -109,21 +120,21 @@ export const getServerSideProps = store.getServerSideProps(() => async ({params}
     `http://localhost:3001/customersComment`
   );
   let comments = customerComment.data;
-  comments = comments.filter((comment:any) => comment.slug == query);
+  comments = comments.filter((comment: any) => comment.slug == query);
 
   const customerQuestion = await axios.get(
     `http://localhost:3001/customersQuestion`
   );
   let questions = customerQuestion.data;
-  questions = questions.filter((questions:any) => questions.slug == query);
+  questions = questions.filter((questions: any) => questions.slug == query);
 
   let mainCategory = await axios.get("http://localhost:3001/mainCategory");
   mainCategory = mainCategory.data;
   let category = await axios.get("http://localhost:3001/category");
   category = category.data;
 
-  let product = data.filter((product:any) => product.slug == query)[0];
-  const relatedProducts = data.filter((products:any) =>
+  let product = data.filter((product: any) => product.slug == query)[0];
+  const relatedProducts = data.filter((products: any) =>
     product && products.subCategory == product.subCategory
       ? products.slug != product.slug
       : null

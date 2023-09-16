@@ -1,4 +1,5 @@
 import React, {useState, useRef, Fragment} from "react";
+import Image from "next/image";
 import "swiper/css";
 import SlideshowIcon from "@mui/icons-material/Slideshow";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -12,7 +13,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 //@ts-ignore
 import {EffectFade, Pagination, FreeMode, Navigation, Thumbs, Lazy,} from "swiper";
-import Image from "@/components/image";
 
 const MobileCarousel = ({modalMobileSwiper, setModalMobileSwiper, product}: any) => {
   const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);

@@ -2,11 +2,9 @@ import React, {forwardRef, useEffect, useRef, useState} from "react";
 
 const ProductNavbar = forwardRef((props: any, ref: any) => {
   const [showSticky, setShowSticky] = useState(false);
-  const [scrollPos, setScrollPos] = useState(0);
   const [userScroll, setuserScroll] = useState(true);
   const [scrolled, setScrolled] = useState(1);
-
-  const nav = useRef<any>(null);
+  const {scrollPos, setScrollPos} = props;
   const menu = useRef<any>(null);
   const activeLine = useRef<any>(null);
   const moarefi = useRef<any>(null);
@@ -20,7 +18,8 @@ const ProductNavbar = forwardRef((props: any, ref: any) => {
     sectionThird,
     sectionFour, firstCommentsCount,
     secondCommentsCount,
-    questionsCount
+    questionsCount,
+    nav,
   } = ref;
 
   // menu move indicator

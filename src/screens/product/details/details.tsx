@@ -1,7 +1,7 @@
 import React, {forwardRef, useState} from "react";
 import YellowStar from "@/icons/yellow-star";
 import Image from "@/components/image";
-import ProductPrice from "@/screens/product/product-price/product-price";
+import ProductPriceCard from "@/screens/product/product-price-card";
 import NoiseControlOffIcon from "@mui/icons-material/NoiseControlOff";
 import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeftOutlined";
 import ErrorOutlineOutlinedIcon from "@mui/icons-material/ErrorOutlineOutlined";
@@ -155,7 +155,7 @@ const Details = forwardRef((props: any, ref: any) => {
           </div>
         </div>
 
-        <ProductPrice product={product} quantityReduxProduct={quantityReduxProduct} setQuantityReduxProduct={setQuantityReduxProduct}/>
+        <ProductPriceCard product={product} quantityReduxProduct={quantityReduxProduct} setQuantityReduxProduct={setQuantityReduxProduct}/>
         <div className="flex lg:hidden flex-col px-4 border-4 border-b-0 border-l-0 border-r-0 border-[#e0e0e2] ">
           <div className="flex flex-col mt-2 py-3 text-black break-word">
             <h5 className="text-base font-bold">ویژگی ها</h5>
