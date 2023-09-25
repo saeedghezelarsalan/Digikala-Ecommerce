@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useRef} from "react";
 import Navbar from "@/components/Navbar";
 import Head from "next/head";
-import axios from "axios";
 import SimilarProduct from "@/screens/product/similar-product";
 import Breadcrumb from "@/components/breadcrumb";
 import CoverImage from "@/screens/product/cover-image";
@@ -14,8 +13,21 @@ import ProductNavbar from "@/screens/product/product-navbar";
 import ProductWarranty from "@/screens/product/product-warranty";
 import StickyProductPrice from "@/screens/product/sticky-product-price";
 import {store} from "@/feature/store";
+import getProductItemApi from "@/api/product/get-product-item";
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import getUsersComment from "@/api/users/get-users-comment";
+import getUsersQuestion from "@/api/users/get-users-question";
 
-const Product = ({product, comments, relatedProducts, mainCategory, category, questions,}: any) => {
+const Product = (
+  {
+    product,
+    comments,
+    relatedProducts,
+    mainCategory,
+    category,
+    questions,
+  }: any) => {
   const [quantityReduxProduct, setQuantityReduxProduct] = useState(0)
   const [scrollPos, setScrollPos] = useState(0);
 
@@ -50,6 +62,9 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
       : "0";
   const rateCustomers = Math.ceil(rateReduce / comment.length);
 
+  // useEffect(() => {
+  //   console.log(productList)
+  // });
 
   return (
     <>
@@ -114,24 +129,13 @@ const Product = ({product, comments, relatedProducts, mainCategory, category, qu
 
 export const getServerSideProps = store.getServerSideProps(() => async ({params}: any) => {
   const query = params.product;
-  console.log(params)
-  const {data} = await axios.get(`http://localhost:3001/product`);
-  const customerComment = await axios.get(
-    `http://localhost:3001/customersComment`
-  );
-  let comments = customerComment.data;
-  comments = comments.filter((comment: any) => comment.slug == query);
-
-  const customerQuestion = await axios.get(
-    `http://localhost:3001/customersQuestion`
-  );
-  let questions = customerQuestion.data;
-  questions = questions.filter((questions: any) => questions.slug == query);
-
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
-  mainCategory = mainCategory.data;
-  let category = await axios.get("http://localhost:3001/category");
-  category = category.data;
+  const data = await getProductItemApi()
+  const customerComment = await getUsersComment();
+  const comments = customerComment.filter((comment: any) => comment.slug == query);
+  const customerQuestion = await getUsersQuestion();
+  const questions = customerQuestion.filter((questions: any) => questions.slug == query);
+  let mainCategory = await getMainCategoryItemApi();
+  let category = await getCategoryItemApi();
 
   let product = data.filter((product: any) => product.slug == query)[0];
   const relatedProducts = data.filter((products: any) =>

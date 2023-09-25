@@ -14,7 +14,6 @@
     "@mui/icons-material": "5.8.2",
     "@mui/material": "5.8.2",
     "@reduxjs/toolkit": "1.9.1",
-    "axios": "0.27.2",
     "formik": "2.2.9",
     "next": "13.4.19",
     "next-redux-wrapper": "8.1.0",

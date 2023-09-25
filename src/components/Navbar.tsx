@@ -342,7 +342,7 @@ const Navbar = ({mainCategory, category}: any) => {
           <SearchOutlined className="absolute right-4 w-6 h-6 fill-[#a1a3a8] text-sm cursor-pointer font-normal"/>
         </form>
 
-        <Link href="/index">
+        <Link href="/admin">
           <div
             className="flex items-center mr-2 xl:mr-0 xl:gap-x-1 xl:border xl:bg-[#ef394e] xl:px-3 xl:rounded-lg font-bold xl:py-1">
             <span className="hidden xl:block">پنل مدیریت</span>

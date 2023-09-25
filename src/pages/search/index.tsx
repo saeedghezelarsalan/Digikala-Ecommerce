@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
 import Pagination from "../../components/Pagination";
 import Product from "../../components/SearchedProducts"
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -7,6 +6,11 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from "../../components/Navbar";
 import {useRouter} from "next/router";
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getFilterProductApi from "@/api/product/get-filter-product";
+import getProductItemApi from "@/api/product/get-product-item";
+import getBrandItemApi from "@/api/product/get-brand-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
 
 const Search = (
   {
@@ -268,14 +272,13 @@ const Search = (
                   <div key={index} className="border border-x-0 border-t-0 last:border-b-0">
                     {/* let filterValues = filterProduct && filterProduct.map(data => data.productValues.filter(el => searchFilter.includes(el.value)).map(dats=>dats)) */}
                     <div onClick={() => openValueHandler(filter.id)} key={filter.id} className="flex justify-between items-center w-full cursor-pointer">
-
                       <div
                         className={` py-3 font-bold text-[15px] text-[#424750]`}
                       >{filter.filterProduct}</div>
                       <KeyboardArrowDownIcon className="w-6 h-6"/>
                     </div>
                     <div
-                      className={`flex flex-col w-full h-auto items-center border border-x-0 border-t-0 ${openValue == filter.id ? "max-h-[200px] scrollCustomer overflow-y-scroll visible" : "invisible h-0"} `}>
+                      className={`flex flex-col w-full h-auto items-center border border-x-0 border-t-0 ${openValue == filter.id ? "max-h-[200px] scrollCustomer overflow-y-scroll visible" : "hidden h-0"} `}>
                       {filter.productValues.length > 5 &&
                         <input
                           onChange={searchHandler}
@@ -443,14 +446,11 @@ const Search = (
                     )
                   })}
                 </div>
-
               </div>
             )
           })}
         </div>
       </div>
-
-
     </div>
   );
 }
@@ -458,20 +458,13 @@ const Search = (
 // @ts-ignore
 export async function getServerSideProps(contex) {
   let {query} = contex;
-  const {data} = await axios.get(`http://localhost:3001/product`);
-
-  let category = await axios.get("http://localhost:3001/category");
-  category = category.data
-
+  const data = await getProductItemApi();
+  let category = await getCategoryItemApi();
   let productss = data.map((a: any) => a)
+  let brand = await getBrandItemApi();
+  let filterProduct = await getFilterProductApi();
+  let mainCategories = await getMainCategoryItemApi();
 
-  let brand = await axios.get("http://localhost:3001/brand");
-  brand = brand.data;
-
-  let filterProduct = await axios.get("http://localhost:3001/filterProduct");
-  filterProduct = filterProduct.data;
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory")
-  const mainCategories = mainCategory.data
   if (!productss) {
     return {
       notFound: true,

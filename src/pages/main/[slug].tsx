@@ -2,18 +2,26 @@ import Head from "next/head";
 import Image from "next/image";
 import HomeSwiper from "../../components/HomeSwiper";
 import Navbar from "../../components/Navbar";
-import axios from "axios";
 import AmazingOfferSlider from "../../components/AmazingOfferSlider";
 import QuadrupleBanner from "../../components/QuadrupleBanner";
 import DigikalaCategories from "../../components/DigikalaCategories";
 import DigikalaSuggestion from "../../components/DigikalaSuggestion";
 import PopularBrands from "../../components/PopularBrands";
-import ProductsBasedOnViews from "../../components/ProductsBasedOnViews";
 import BlogPost from "../../components/BlogPost";
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getProductItemApi from "@/api/product/get-product-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import getBrandItemApi from "@/api/product/get-brand-item";
+import {useEffect} from "react";
 
-export default function Home({product, mainCategory, category, mainCategories, AmazingOfferSliderColor, brands, blogData, categories}: any) {
+export default function Home({query,product, mainCategory, category, mainCategories, AmazingOfferSliderColor, brands, blogData, categories}: any) {
 
-  const productLength = product.map((products: any) => products).length
+  const productLength = product.map((products: any) => products).length;
+
+  useEffect(()=>{
+    console.log(mainCategory)
+    console.log(query)
+  })
 
   return (
     <>
@@ -25,22 +33,15 @@ export default function Home({product, mainCategory, category, mainCategories, A
       </Head>
       <Navbar mainCategory={mainCategories} category={categories}/>
 
-      <main
-        className=" h-auto w-full max-w-screen-xl px-12   !pt-4 mx-auto
-    "
-      >
-
+      <main className=" h-auto w-full max-w-screen-xl px-12   !pt-4 mx-auto">
         <div className='rounded-xl overflow-hidden h-[400px]'>
-
           <HomeSwiper carousel={mainCategory.slider}/>
-
-
         </div>
 
         {productLength > 0 && <AmazingOfferSlider key={mainCategory.id} product={product} color={AmazingOfferSliderColor}/>}
 
 
-        <QuadrupleBanner QuardrupleBanners={mainCategory}/>
+        {/*<QuadrupleBanner QuardrupleBanners={mainCategory}/>*/}
 
         {/* <h5 className="text-center py-5 text-xl font-semibold">دسته‌بندی‌های دیجی‌کالا</h5> */}
 
@@ -113,27 +114,21 @@ export default function Home({product, mainCategory, category, mainCategories, A
 }
 
 export async function getServerSideProps({params}: any) {
-  const query = params.main;
+  const query = params?.slug;
 
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory")
-  const mainCategories = mainCategory.data
-  mainCategory = mainCategory.data.filter((mainCategory: any) => mainCategory.slug == query)[0]
-  let category = await axios.get("http://localhost:3001/category");
-  let categories = category.data
+  let mainCategory = await getMainCategoryItemApi();
+  const mainCategories = mainCategory
+  mainCategory = mainCategory.filter((mainCategory: any) => mainCategory.slug == query)[0]
+  let category = await getCategoryItemApi();
+  const categories = category
   // @ts-ignore
-  category = category.data.filter((category: any) => category.mainCategory == mainCategory.name).filter(category => category.thumbnail != "")
-
-  let product = await axios.get(`http://localhost:3001/product`);
+  category = category.filter((category: any) => category.mainCategory == mainCategory.name).filter(category => category.thumbnail != "");
+  let product = await getProductItemApi();
   // @ts-ignore
-  product = product.data.filter((product: any) => mainCategory && product.mainCategory == mainCategory.name)
-
-  let blogData = await axios.get("http://localhost:3001/blog")
-  blogData = blogData.data
-// @ts-ignore
+  product = product.filter((product: any) => mainCategory && product.mainCategory == mainCategory.name)
+  let blogData = await getBrandItemApi();
   const AmazingOfferSliderColor = mainCategory && mainCategory.AmazingOfferSliderColor
-
-  let brands = await axios.get("http://localhost:3001/brand")
-  brands = brands.data
+  let brands = await getBrandItemApi();
   if (!mainCategory) {
     return {
       redirect: {
@@ -144,6 +139,7 @@ export async function getServerSideProps({params}: any) {
   }
   return {
     props: {
+      query,
       product,
       mainCategory,
       category,
@@ -155,4 +151,3 @@ export async function getServerSideProps({params}: any) {
     },
   };
 }
-

@@ -11,8 +11,8 @@ import "swiper/css/lazy";
 import {Pagination, Navigation, Lazy} from "swiper";
 //@ts-ignore
 import {Swiper, SwiperSlide} from "swiper/react";
-import axios from "axios";
 import {useRouter} from "next/router";
+import postUsersQuestionApi from "@/api/users/post-users-question";
 
 const Question = forwardRef(({
                                questions,
@@ -34,8 +34,7 @@ const Question = forwardRef(({
 
   const clickCustomersQuestions = async (e: any) => {
     e.preventDefault();
-    await axios
-    .post(`http://localhost:3001/customersQuestion`, {
+    await postUsersQuestionApi({
       id: "",
       questionsBox: questionsBox,
       slug: router.query.product,

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import axios from 'axios'
 import {AdminSidebar} from '@/components/AdminSidebar'
 import MenuIcon from "@mui/icons-material/Menu";
+import postUsersMainCategoryApi from "@/api/category/post-main-category-item";
 
 export default function HomePage() {
   const [showSidebar, setShowSidebar] = useState<any>(false);
@@ -32,10 +32,12 @@ export default function HomePage() {
   }
 
   const submitHandler = async (e: any) => {
-    e.preventDefault()
-    await axios.post('http://localhost:3001/mainCategory', {...mainCategory, slider, banner}, {headers: {"Content-Type": "application/json"}})
-    .then(res => {
-        console.log(res)
+    e.preventDefault();
+    await postUsersMainCategoryApi({
+      ...mainCategory,
+      slider,
+      banner,
+    }).then(() => {
         setMainCategory({
           id: "",
           name: "",

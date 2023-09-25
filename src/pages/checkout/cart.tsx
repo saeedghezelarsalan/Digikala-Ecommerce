@@ -1,7 +1,6 @@
-import axios from "axios";
+import React, {useEffect, useRef, useState} from "react";
 import Head from "next/head";
 import Image from "next/image";
-import React, {useEffect, useRef, useState} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import Navbar from "../../components/Navbar";
 import AddCircleOutlinedIcon from "@mui/icons-material/AddCircleOutlined";
@@ -20,6 +19,8 @@ import KeyboardArrowLeftOutlinedIcon from "@mui/icons-material/KeyboardArrowLeft
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 //@ts-ignore
 import {toast} from 'react-toastify';
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
 
 const HomePage = ({mainCategories, category}: any) => {
   const [showSticky, setShowSticky] = useState(false);
@@ -48,24 +49,24 @@ const HomePage = ({mainCategories, category}: any) => {
     };
   }, [scrollPos]);
 
-  const cartBasketItem = useSelector((item:any) => item.cart);
-  const totalBasketCart = useSelector((item:any) => item.cart.total);
+  const cartBasketItem = useSelector((item: any) => item.cart);
+  const totalBasketCart = useSelector((item: any) => item.cart.total);
   const dispatch = useDispatch();
 
 
   const cartBasketLength = cartBasketItem?.cart
-  ?.map((item:any) => item).length
+  ?.map((item: any) => item).length
 
   const itemsPrice = cartBasketItem?.cart
-  ?.map((item:any) => Number(item.price) * Number(item.quantity))
-  .reduce(function (previous:any, current:any) {
+  ?.map((item: any) => Number(item.price) * Number(item.quantity))
+  .reduce(function (previous: any, current: any) {
     return previous + current;
   }, 0);
 
 
   const totalShoppingCartDiscount = cartBasketItem?.cart
-  ?.map((item:any) => (Number(item.price) * (Number(item.offer) / 100)) * Number(item.quantity))
-  .reduce(function (previous:any, current:any) {
+  ?.map((item: any) => (Number(item.price) * (Number(item.offer) / 100)) * Number(item.quantity))
+  .reduce(function (previous: any, current: any) {
     return previous + current;
   }, 0);
 
@@ -74,11 +75,11 @@ const HomePage = ({mainCategories, category}: any) => {
 
   let discountPercent = Math.round((totalShoppingCart * 100) / itemsPrice)
 
-  const addRedux = (product:any) => {
+  const addRedux = (product: any) => {
     dispatch(addProductToCart(product));
   };
 
-  const removeRedux = (product:any) => {
+  const removeRedux = (product: any) => {
     dispatch(removeProductFromCart(product));
   };
 
@@ -102,7 +103,7 @@ const HomePage = ({mainCategories, category}: any) => {
     scrollToTopRef?.current?.addEventListener('click', () => {
       window.scrollTo({top: 0, behavior: 'smooth'})
     })
-    return () =>{
+    return () => {
       scrollToTopRef?.current?.addEventListener('click', () => {
         window.scrollTo({top: 0, behavior: 'smooth'})
       })
@@ -130,7 +131,7 @@ const HomePage = ({mainCategories, category}: any) => {
                 {/* total item */}
                 <div className=" px-12">
                   {cartBasketItem.cart &&
-                    cartBasketItem.cart.map((product:any) => (
+                    cartBasketItem.cart.map((product: any) => (
                       <>
                         <div className="grid  grid-cols-[118px_minmax(auto,_1fr)] border border-t-0 border-x-0 last:border-0 py-4">
 
@@ -287,7 +288,6 @@ const HomePage = ({mainCategories, category}: any) => {
             </div>
           )}
         </div>
-
       </div>
     </>
   );
@@ -296,11 +296,8 @@ const HomePage = ({mainCategories, category}: any) => {
 export default HomePage;
 
 export async function getServerSideProps() {
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
-  const mainCategories = mainCategory.data;
-
-  let category = await axios.get("http://localhost:3001/category");
-  category = category.data;
+  let mainCategories = await getMainCategoryItemApi();
+  let category = await getCategoryItemApi();
 
   return {
     props: {

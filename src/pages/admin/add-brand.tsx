@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {AdminSidebar} from "@/components/AdminSidebar";
-import axios from "axios";
 import MenuIcon from "@mui/icons-material/Menu";
+import postBrandItemApi from "@/api/product/post-brand-item";
 
 export default function HomePage() {
   const [showSidebar, setShowSidebar] = useState(false);
@@ -23,8 +23,7 @@ export default function HomePage() {
   };
   const submitHandler = async (e: any) => {
     e.preventDefault();
-    await axios
-    .post("http://localhost:3001/brand", brand)
+    await postBrandItemApi({brand: brand})
     .then((res) => {
       setBrand({
         id: "",

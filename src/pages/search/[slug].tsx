@@ -1,5 +1,4 @@
 import React, {useEffect, useRef, useState} from "react";
-import axios from "axios";
 import Pagination from "../../components/Pagination";
 import Product from "../../components/SearchedProducts"
 import FilterListIcon from '@mui/icons-material/FilterList';
@@ -7,6 +6,11 @@ import ImportExportIcon from '@mui/icons-material/ImportExport';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import Navbar from "../../components/Navbar";
 import {useRouter} from "next/router";
+import getProductItemApi from "@/api/product/get-product-item";
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getBrandItemApi from "@/api/product/get-brand-item";
+import getFilterProductApi from "@/api/product/get-filter-product";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
 
 export default function HomePage({productss, brand, query, filterProduct, category, mainCategories, data, productsSubCategorySlug, productsCategorySlug}: any) {
 
@@ -236,7 +240,7 @@ export default function HomePage({productss, brand, query, filterProduct, catego
                           type="checkbox"
                           name=""
                           id={brand.name}
-                          checked={brand.checkbox ? true : false}
+                          checked={brand.checkbox}
                         />
                         <label className="select-none text-[#424750] text-[15px]font-bold py-2 cursor-pointer" htmlFor={brand.name}>
                           {brand.name}
@@ -421,10 +425,7 @@ export default function HomePage({productss, brand, query, filterProduct, catego
             return (
               <div key={index} className="border border-x-0 border-t-0 last:border-b-0">
                 <div onClick={() => openValueHandler(filter.id)} key={filter.id} className="flex justify-between items-center w-full cursor-pointer">
-
-                  <div
-                    className={` py-3 font-bold text-[15px] text-[#424750]`}
-                  >{filter.filterProduct}</div>
+                  <div className={` py-3 font-bold text-[15px] text-[#424750]`}>{filter.filterProduct}</div>
                   <KeyboardArrowDownIcon className="w-6 h-6"/>
                 </div>
                 <div
@@ -455,7 +456,6 @@ export default function HomePage({productss, brand, query, filterProduct, catego
                     )
                   })}
                 </div>
-
               </div>
             )
           })}
@@ -467,25 +467,17 @@ export default function HomePage({productss, brand, query, filterProduct, catego
 }
 
 export async function getServerSideProps({params}: any) {
-  const query = params.search;
-  const {data} = await axios.get(`http://localhost:3001/product`);
-
-  let category = await axios.get("http://localhost:3001/category");
-  category = category.data
-
+  const query = params?.slug;
+  const data = await getProductItemApi();
+  let category = await getCategoryItemApi();
   let productss = data.map((a: any) => a).filter((product: any) => product.subCategorySlug == query ? product.subCategorySlug == query : product.categorySlug == query ? product.categorySlug == query : null);
-
   const productsSubCategorySlug = data.map((a: any) => a).filter((product: any) => product.subCategorySlug == query)
-
   const productsCategorySlug = data.map((a: any) => a).filter((product: any) => product.CategorySlug == query)
+  let brand = await getBrandItemApi();
 
-  let brand = await axios.get("http://localhost:3001/brand");
-  brand = brand.data;
+  let filterProduct = await getFilterProductApi();
+  let mainCategories = await getMainCategoryItemApi();
 
-  let filterProduct = await axios.get("http://localhost:3001/filterProduct");
-  filterProduct = filterProduct.data;
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory")
-  const mainCategories = mainCategory.data
   if (!productss) {
     return {
       notFound: true,
