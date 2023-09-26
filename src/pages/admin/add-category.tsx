@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import {AdminSidebar} from '@/components/AdminSidebar'
-import axios from 'axios'
 import MenuIcon from "@mui/icons-material/Menu";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import postCategoryItem from "@/api/category/post-category-item";
 
 export default function HomePage() {
   const [mainCategory, setMainCategory] = useState<any>(null)
@@ -30,8 +31,10 @@ export default function HomePage() {
 
   const submitHandler = async (e: any) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/category', {...category, subCategory}, {headers: {"Content-Type": "application/json"}})
-    .then(res => {
+    await postCategoryItem({
+      category: {...category},
+      subCategory
+    }).then(() => {
         setCategory({
           id: "",
           name: "",
@@ -58,7 +61,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchMainCategory = async () => {
-      const result = await axios.get('http://localhost:3001/mainCategory')
+      const result = await getMainCategoryItemApi();
       setMainCategory(result.data)
     }
     fetchMainCategory()

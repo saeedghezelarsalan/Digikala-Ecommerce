@@ -1,11 +1,16 @@
 import React, {useState, useEffect} from "react";
 import {AdminSidebar} from "@/components/AdminSidebar";
-import axios from "axios";
 import DatePicker from "react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/analog_time_picker";
 import persian from "react-date-object/calendars/persian";
 import persian_fa from "react-date-object/locales/persian_fa";
 import MenuIcon from "@mui/icons-material/Menu";
+import addProductItemApi from "@/api/product/add-product-item";
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getFilterValueProductApi from "@/api/product/get-filter-value-product";
+import getBrandItemApi from "@/api/product/get-brand-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import getFilterProductApi from "@/api/product/get-filter-product";
 
 export default function HomePage() {
 
@@ -60,10 +65,10 @@ export default function HomePage() {
 
 
   // remove duplicate product features
-  const productFeatures = filterProducts?.map((a:any) => a.productValues).flatMap((a:any) => a).filter((b:any) => b.specifications == productsFilters.filter).filter((c:any) => c.subCategory == product.subCategory)
+  const productFeatures = filterProducts?.map((a: any) => a.productValues).flatMap((a: any) => a).filter((b: any) => b.specifications == productsFilters.filter).filter((c: any) => c.subCategory == product.subCategory)
 
-  const features = productFeatures?.reduce((acc:any, current:any) => {
-    const x = acc.find((item:any) => item.value === current.value);
+  const features = productFeatures?.reduce((acc: any, current: any) => {
+    const x = acc.find((item: any) => item.value === current.value);
     if (!x) {
       return acc.concat([current]);
     } else {
@@ -71,31 +76,30 @@ export default function HomePage() {
     }
   }, []);
 
-  const productsValuesLength = productsValues.map((a:any) => a).length
+  const productsValuesLength = productsValues.map((a: any) => a).length
 
 
   // get category
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const result = await axios.get("http://localhost:3001/category");
-      setCategory(result.data);
-      setSubCategory(result.data.map((category:any) => category.subCategory));
+      const result = await getCategoryItemApi();
+      setCategory(result);
+      setSubCategory(result.map((category: any) => category.subCategory));
     };
-    //@ts-ignore
     fetchCategory();
   }, []);
 
 
-  const changeHandler = (e:any) => {
+  const changeHandler = (e: any) => {
     setProduct({...product, [e.target.name]: e.target.value});
   };
 
-  const changeFilterHandler = (e:any) => {
+  const changeFilterHandler = (e: any) => {
     setProductsFilters({...productsFilters, [e.target.name]: e.target.value});
   };
 
-  const submitFilterHandler = (e:any) => {
+  const submitFilterHandler = (e: any) => {
     e.preventDefault();
     setProductsValues([
       ...productsValues,
@@ -108,21 +112,21 @@ export default function HomePage() {
     ]);
   };
 
-  const deleteProductsValue = (id:any) => {
-    setProductsValues(productsValues.filter((filter:any) => filter.id != id));
+  const deleteProductsValue = (id: any) => {
+    setProductsValues(productsValues.filter((filter: any) => filter.id != id));
   };
 
 
   // دیدگاه مشتری
 
-  const handleSellerViewChange = (e:any, index:number) => {
+  const handleSellerViewChange = (e: any, index: number) => {
     const {name, value} = e.target;
     const list = [...sellerView];
     list[index][name] = value;
     setSellerView(list);
   };
 
-  const handleSellerViewRemove = (index:number) => {
+  const handleSellerViewRemove = (index: number) => {
     const list = [...sellerView];
     list.splice(index, 1);
     setSellerView(list);
@@ -134,14 +138,14 @@ export default function HomePage() {
 
   // عکس محصول
 
-  const handleProductImageChange = (e:any, index:number) => {
+  const handleProductImageChange = (e: any, index: number) => {
     const {name, value} = e.target;
     const list = [...productImage];
     list[index][name] = value;
     setProductImage(list);
   };
 
-  const handleProductImageRemove = (index:number) => {
+  const handleProductImageRemove = (index: number) => {
     const list = [...productImage];
     list.splice(index, 1);
     setProductImage(list);
@@ -153,14 +157,14 @@ export default function HomePage() {
 
   // ویدیو محصول
 
-  const handleProductVideoChange = (e:any, index:number) => {
+  const handleProductVideoChange = (e: any, index: number) => {
     const {name, value} = e.target;
     const list = [...productVideo];
     list[index][name] = value;
     setProductVideo(list);
   };
 
-  const handleProductVideoRemove = (index:number) => {
+  const handleProductVideoRemove = (index: number) => {
     const list = [...productVideo];
     list.splice(index, 1);
     setProductVideo(list);
@@ -174,8 +178,8 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchBrand = async () => {
-      const result = await axios.get("http://localhost:3001/brand");
-      setBrand(result.data);
+      const result = await getBrandItemApi();
+      setBrand(result);
     };
     fetchBrand();
   }, []);
@@ -183,8 +187,8 @@ export default function HomePage() {
   // get main category
   useEffect(() => {
     const fetchMainCategory = async () => {
-      const result = await axios.get("http://localhost:3001/mainCategory");
-      setMainCategory(result.data);
+      const result = await getMainCategoryItemApi();
+      setMainCategory(result);
     };
     fetchMainCategory();
   }, []);
@@ -196,40 +200,35 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchFilterProducts = async () => {
-      const result = await axios.get("http://localhost:3001/filterProduct");
-      setFilterProducts(result.data);
+      const result = await getFilterProductApi();
+      setFilterProducts(result);
     };
     fetchFilterProducts();
   }, []);
-
-  useEffect(() => {
-    console.log(filterProducts?.map((a:any) => a.productValues).flatMap((a:any) => a).filter((b:any) => b.specifications == productsFilters.filter
-    ))
-  })
 
   // get filter value
 
   useEffect(() => {
     const fetchFilterValue = async () => {
-      const result = await axios.get("http://localhost:3001/filterValue");
-      setFilterValue(result.data.filter((value:any) => value.filterValue));
+      const result = await getFilterValueProductApi();
+      setFilterValue(result.filter((value: any) => value.filterValue));
     };
     fetchFilterValue();
   }, []);
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const result = await axios.get("http://localhost:3001/category");
-      setCategory(result.data);
-      setSubCategory(result.data.map((category:any) => category.subCategory));
+      const result = await getCategoryItemApi();
+      setCategory(result);
+      setSubCategory(result.map((category: any) => category.subCategory));
 
     };
     fetchCategory();
   }, []);
 
 
-  const changeIsSpecificationsHandler = (id:any) => {
-    productsValues.map((product:any) => {
+  const changeIsSpecificationsHandler = (id: any) => {
+    productsValues.map((product: any) => {
       if (product.id == id) {
         product.isSpecifications = !product.isSpecifications;
 
@@ -243,8 +242,8 @@ export default function HomePage() {
 
   useEffect(() => {
     function fetchCategorySlug() {
-      let categorySlugs = category?.filter((category:any) => category.name == product.category);
-      categorySlugs = categorySlugs?.map((c:any) => c.slug).join('')
+      let categorySlugs = category?.filter((category: any) => category.name == product.category);
+      categorySlugs = categorySlugs?.map((c: any) => c.slug).join('')
       setCategorySlug(categorySlugs);
     }
 
@@ -256,8 +255,8 @@ export default function HomePage() {
 
   useEffect(() => {
     function fetchMainCategorySlug() {
-      let mainCategorySlugs = mainCategory?.filter((mainCategory:any) => mainCategory.name == product.mainCategory);
-      mainCategorySlugs = mainCategorySlugs?.map((c:any) => c.slug).join('')
+      let mainCategorySlugs = mainCategory?.filter((mainCategory: any) => mainCategory.name == product.mainCategory);
+      mainCategorySlugs = mainCategorySlugs?.map((c: any) => c.slug).join('')
       setMainCategorySlug(mainCategorySlugs);
     }
 
@@ -269,36 +268,31 @@ export default function HomePage() {
 
   useEffect(() => {
     function fetchSubCategorySlug() {
-      let subCategorySlugs = subCategory.flatMap((sub:any) => sub).filter((subCategory:any) => subCategory.name == product.subCategory);
-      subCategorySlugs = subCategorySlugs?.map((c:any) => c.slug).join('')
+      let subCategorySlugs = subCategory.flatMap((sub: any) => sub).filter((subCategory: any) => subCategory.name == product.subCategory);
+      subCategorySlugs = subCategorySlugs?.map((c: any) => c.slug).join('')
       setSubCategorySlug(subCategorySlugs);
     }
 
     fetchSubCategorySlug()
   }, [subCategory, product, subCategorySlug]);
 
-  const submitHandler = async (e:any) => {
+  const submitHandler = async (e: any) => {
     e.preventDefault();
-    await axios
-    .post(
-      "http://localhost:3001/product",
+    await addProductItemApi(
       {
-        ...product,
-        productsValues,
-        timeStartOffer,
-        timeEndOffer,
-        productImage,
-        productVideo,
-        sellerView,
-        isSuggest,
-        mainCategorySlug,
-        categorySlug,
-        subCategorySlug
-      },
-      {headers: {"Content-Type": "application/json"}}
-    )
-    .then((res) => {
-
+        product: {...product},
+        productsValues: productsValues,
+        timeStartOffer: timeStartOffer,
+        timeEndOffer: timeEndOffer,
+        productImage: productImage,
+        productVideo: productVideo,
+        sellerView: sellerView,
+        isSuggest: isSuggest,
+        mainCategorySlug: mainCategorySlug,
+        categorySlug: categorySlug,
+        subCategorySlug: subCategorySlug,
+      })
+    .then(() => {
       setProduct({
         id: "",
         name: "",
@@ -330,9 +324,7 @@ export default function HomePage() {
         },
       ]);
     })
-    .catch((err) => {
-      console.log(err);
-    });
+
   };
 
   return (
@@ -397,7 +389,7 @@ export default function HomePage() {
             >
               <option value="">انتخاب دسته بندی کلی</option>
               {mainCategory &&
-                mainCategory.map((mainCategory:any, index:number) => (
+                mainCategory.map((mainCategory: any, index: number) => (
                   <option key={index} value={mainCategory.name}>
                     {mainCategory.name}
                   </option>
@@ -414,11 +406,11 @@ export default function HomePage() {
               <option value="">انتخاب دسته بندی</option>
               {category &&
                 category
-                .map((category:any) => category)
+                .map((category: any) => category)
                 .filter(
-                  (category:any) => category.mainCategory === product.mainCategory
+                  (category: any) => category.mainCategory === product.mainCategory
                 )
-                .map((category:any, index:number) => (
+                .map((category: any, index: number) => (
                   <option key={index} value={category.name}>
                     {category.name}
                   </option>
@@ -437,12 +429,12 @@ export default function HomePage() {
                 category &&
                 category
                 .filter(
-                  (category:any) => category.mainCategory === product.mainCategory
+                  (category: any) => category.mainCategory === product.mainCategory
                 ).filter(
-                  (category:any) => category.name === product.category
+                  (category: any) => category.name === product.category
                 )
-                .map((category:any) =>
-                  category.subCategory.map((subCategory:any, index:number) => (
+                .map((category: any) =>
+                  category.subCategory.map((subCategory: any, index: number) => (
                     <option
                       className="text-black"
                       key={index}
@@ -463,7 +455,7 @@ export default function HomePage() {
             >
               <option value="">انتخاب دسته بندی کلی</option>
               {brand &&
-                brand.map((brand:any, index:number) => (
+                brand.map((brand: any, index: number) => (
                   <option key={index} value={brand.name}>
                     {brand.name}
                   </option>
@@ -548,7 +540,7 @@ export default function HomePage() {
             />
 
             <h2 className="my-4 text-black">دیدگاه فروشنده</h2>
-            {sellerView.map((view:any, index:number) => (
+            {sellerView.map((view: any, index: number) => (
               <div key={index} className="flex flex-col gap-y-6">
                 <div className="first-division !flex !flex-row gap-x-5">
                   <input
@@ -610,10 +602,10 @@ export default function HomePage() {
                 filterProducts &&
                 filterProducts
                 .filter(
-                  (filterProducts:any) =>
+                  (filterProducts: any) =>
                     filterProducts.subCategory === product.subCategory
                 )
-                .map((filterProducts:any, index:number) => (
+                .map((filterProducts: any, index: number) => (
                   <option
                     className="text-black"
                     key={index}
@@ -636,7 +628,7 @@ export default function HomePage() {
 
               {productsFilters &&
                 filterValue &&
-                features?.map((filterProducts:any, index:number) => {
+                features?.map((filterProducts: any, index: number) => {
                   return (
                     <option className="text-black" key={index} value={filterProducts.value}>
                       {filterProducts.value}
@@ -656,7 +648,7 @@ export default function HomePage() {
               <>
 
                 <h5>موارد ویژگی</h5>
-                {productsValues.map((filter:any, index:number) => {
+                {productsValues.map((filter: any, index: number) => {
 
                   return (
 
@@ -682,7 +674,7 @@ export default function HomePage() {
               </>
             )}
             <h2 className="my-4 text-black">عکس محصول</h2>
-            {productImage.map((singleImage:any, index:number) => (
+            {productImage.map((singleImage: any, index: number) => (
               <div key={index} className="flex flex-col gap-y-6">
                 <div className="first-division !flex !flex-row gap-x-5">
                   <input
@@ -721,7 +713,7 @@ export default function HomePage() {
             ))}
 
             <h2 className="my-4 text-black">ویدیو محصول</h2>
-            {productVideo.map((singleVideo:any, index:number) => (
+            {productVideo.map((singleVideo: any, index: number) => (
               <div key={index} className="flex flex-col gap-y-6">
                 <div className="first-division !flex !flex-row gap-x-5">
                   <input

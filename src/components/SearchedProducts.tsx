@@ -78,7 +78,6 @@ const SearchedProducts = ({products}: any) => {
                     key={product.id}
                     passHref
                   >
-                    <a>
                       {!isImageReady && (
                         <ContentLoader
                           viewBox="0 0 500 500"
@@ -99,7 +98,6 @@ const SearchedProducts = ({products}: any) => {
                         objectFit="contain"
                         alt=""
                       />
-                    </a>
                   </Link>
                 </div>
                 <div className="block absolute bottom-0 right-0 sm:px-4  md:px-8 lg:px-0">

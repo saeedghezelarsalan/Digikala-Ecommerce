@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "@/components/image";
 import HomeSwiper from "../components/HomeSwiper";
 import Navbar from "../components/Navbar";
-import axios from "axios";
 import React, {useState, useEffect, useRef} from "react";
 import AmazingOfferSlider from "../components/AmazingOfferSlider";
 import QuadrupleBanner from "../components/QuadrupleBanner";
@@ -13,6 +12,13 @@ import ProductsBasedOnViews from "../components/ProductsBasedOnViews";
 import BlogPost from "../components/BlogPost";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import {ProductType} from "@/@types/product.props";
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import getProductItemApi from "@/api/product/get-product-item";
+import getHomePageApi from "@/api/home-page/get-home-page";
+import getSubsidiaryCompaniesApi from "@/api/home-page/get-subsidiary-companies";
+import getBrandItemApi from "@/api/product/get-brand-item";
+import getBlogApi from "@/api/blog/get-blog-item";
 
 export default function Home(
   {
@@ -330,27 +336,13 @@ export default function Home(
 }
 
 export async function getServerSideProps() {
-  let product = await axios.get(`http://localhost:3001/product`);
-  product = product.data;
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
-  mainCategory = mainCategory.data;
-  let category = await axios.get("http://localhost:3001/category");
-  category = category.data;
-
-  let homePageDetail = await axios.get("http://localhost:3001/homePageDetail");
-  homePageDetail = homePageDetail.data;
-
-  let DigikalaSubCategories = await axios.get(
-    "http://localhost:3001/DigikalaSubCategories"
-  );
-  DigikalaSubCategories = DigikalaSubCategories.data;
-
-
-  let brands = await axios.get("http://localhost:3001/brand")
-  brands = brands.data
-
-  let blogData = await axios.get("http://localhost:3001/blog")
-  blogData = blogData.data
+  let product = await getProductItemApi();
+  let mainCategory = await getMainCategoryItemApi();
+  let category = await getCategoryItemApi();
+  let homePageDetail = await getHomePageApi();
+  let DigikalaSubCategories = await getSubsidiaryCompaniesApi();
+  let brands = await getBrandItemApi();
+  let blogData = await getBlogApi();
 
   return {
     props: {

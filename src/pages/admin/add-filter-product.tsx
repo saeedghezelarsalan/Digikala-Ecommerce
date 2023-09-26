@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import {AdminSidebar} from '@/components/AdminSidebar'
-import axios from 'axios'
 import MenuIcon from '@mui/icons-material/Menu';
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import postFilterProduct from "@/api/product/post-filter-product";
+import getCategoryItemApi from "@/api/category/get-category-item";
 
 
 export default function HomePage() {
@@ -66,8 +68,13 @@ export default function HomePage() {
 
   const submitHandler = async (e: any) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/filterProduct', {...filter, productValues, showFilter, CategorySlug, subCategorySlug}, {headers: {"Content-Type": "application/json"}})
-    .then(res => {
+    await postFilterProduct({
+      ...filter,
+      productValues,
+      showFilter,
+      CategorySlug,
+      subCategorySlug
+    }).then(() => {
       setFilter({
         id: "",
         mainCategory: "",
@@ -90,8 +97,8 @@ export default function HomePage() {
   // get main category
   useEffect(() => {
     const fetchMainCategory = async () => {
-      const result = await axios.get('http://localhost:3001/mainCategory')
-      setMainCategory(result.data)
+      const result = await getMainCategoryItemApi();
+      setMainCategory(result)
     }
     fetchMainCategory()
   }, [])
@@ -100,7 +107,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const result = await axios.get('http://localhost:3001/category')
+      const result = await getCategoryItemApi();
       setCategory(result.data)
       setSubCategory(result.data.map((category: any) => category.subCategory))
     }

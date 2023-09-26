@@ -1,11 +1,13 @@
-import Link from "next/link";
 import React, {useEffect, useState} from "react";
+import Link from "next/link";
 import Head from "next/head";
-import Chart from "../../components/Chart";
-import {AdminSidebar} from "../../components/AdminSidebar";
-import axios from "axios";
+import Chart from "@/components/Chart";
+import {AdminSidebar} from "@/components/AdminSidebar";
 import MenuIcon from "@mui/icons-material/Menu";
 import CountUp from "react-countup";
+import getProductItemApi from "@/api/product/get-product-item";
+import getUsersComment from "@/api/users/get-users-comment";
+import getUsersItemApi from "@/api/users/get-users-item";
 
 export default function HomePage() {
   const [showSidebar, setShowSidebar] = useState<any>(false);
@@ -16,11 +18,9 @@ export default function HomePage() {
   // get data
   const userData = async () => {
     try {
-      const users = await axios.get("http://localhost:3001/user");
-      const product = await axios.get("http://localhost:3001/product");
-      const comments = await axios.get(
-        "http://localhost:3001/customersComment"
-      );
+      const users = await getUsersItemApi();
+      const product = await getProductItemApi();
+      const comments = await getUsersComment();
       setUsers(users.data);
       setProduct(product.data);
       setComments(comments.data);

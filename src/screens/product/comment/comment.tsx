@@ -19,8 +19,8 @@ import {Swiper, SwiperSlide} from "swiper/react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CheckBoxIcon from "@mui/icons-material/CheckBox";
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank";
-import axios from "axios";
 import {useRouter} from "next/router";
+import postUsersCommentApi from "@/api/users/post-users-comment";
 
 const Comment = forwardRef((
     {
@@ -104,9 +104,8 @@ const Comment = forwardRef((
 
     const submitCommentHandler = async (e: any) => {
       e.preventDefault();
-      await axios
-      .post(`http://localhost:3001/customersComment`, {
-        ...customerComment,
+      await postUsersCommentApi({
+        customerComment: {...customerComment},
         positiveComments: allPositive,
         negativeComments: allNegative,
         unknown: unknown,
@@ -163,7 +162,7 @@ const Comment = forwardRef((
               {/* rate borders */}
 
               <div ref={rateRef}>
-                {product.sellerView.map((sellerView:any, index:number) => {
+                {product.sellerView.map((sellerView: any, index: number) => {
                   return (
                     <div key={index} className="flex flex-col pt-5">
                       <p className="text-[#424750] text-xs mb-2">
@@ -196,7 +195,7 @@ const Comment = forwardRef((
             <div className="flex flex-col w-full">
               {comments.length > 0 ? (
                 comments
-                .map((comment:any, index:number) => {
+                .map((comment: any, index: number) => {
                   return (
                     <div key={index} className="flex flex-row mt-6">
                       <div
@@ -231,7 +230,7 @@ const Comment = forwardRef((
                           {/* نظرات مثبت */}
 
                           {comment.positiveComments.map(
-                            (positive:any, index:number) => {
+                            (positive: any, index: number) => {
                               return (
                                 <div key={index} className="flex flex-row items-end py-1">
                                   <div className="flex items-end ml-1">
@@ -251,7 +250,7 @@ const Comment = forwardRef((
                           {/* نظرات منفی */}
 
                           {comment.negativeComments.map(
-                            (negative:any, index:number) => {
+                            (negative: any, index: number) => {
                               return (
                                 <div key={index} className="flex flex-row items-end py-1">
                                   <div className="flex items-end ml-1">
@@ -323,7 +322,7 @@ const Comment = forwardRef((
           >
             fe
           </div>
-          {comment.map((comments:any) => comments).length > 0 ? (
+          {comment.map((comments: any) => comments).length > 0 ? (
             <div className="h-[210px] mb-20">
               <Swiper
                 breakpoints={{
@@ -344,7 +343,7 @@ const Comment = forwardRef((
                 spaceBetween={10}
                 className="!h-full w-full mt-4"
               >
-                {comment.slice(0, 10).map((comment:any) => {
+                {comment.slice(0, 10).map((comment: any) => {
                   return (
                     <Fragment key={comment.id}>
                       <SwiperSlide>
@@ -443,7 +442,7 @@ const Comment = forwardRef((
                   {/* input range score */}
                   <div className="w-full slider flex flex-col space-y-2   pt-4 pb-6 px-3 border border-r-0 border-t-0 border-l-0">
                     <input
-                      onChange={(e:any) => setCustomerScore(e.target.value)}
+                      onChange={(e: any) => setCustomerScore(e.target.value)}
                       className="accents w-full cursor-pointer rounded-lg  border-0"
                       defaultValue="0"
                       type="range"
@@ -500,7 +499,7 @@ const Comment = forwardRef((
                     </div>
 
                     <div className="mt-2 w-full">
-                      {allPositive.map((positive:any, index:number) => {
+                      {allPositive.map((positive: any, index: number) => {
                         return (
                           <div key={index} className="flex items-center py-1">
                             <AddIcon className="h-4 w-4 ml-1 cursor-pointer"/>
@@ -534,7 +533,7 @@ const Comment = forwardRef((
                     </div>
 
                     <div className="mt-2 w-full">
-                      {allNegative.map((negative:any) => {
+                      {allNegative.map((negative: any) => {
                         return (
                           <div key={negative?.id} className="flex items-center py-1">
                             <AddIcon className="h-4 w-4 ml-1 cursor-pointer"/>

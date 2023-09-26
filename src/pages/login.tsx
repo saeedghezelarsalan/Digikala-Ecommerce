@@ -1,11 +1,13 @@
+import React, {useRef, useEffect} from 'react'
 import Link from 'next/link'
-import React, {useRef, useEffect, useState} from 'react'
-import axios from 'axios'
 import {useRouter} from 'next/router'
 import Navbar from '../components/Navbar'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
 import Image from 'next/image'
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import postUsersItemApi from "@/api/users/post-user-item";
 
 export default function HomePage({mainCategory, category}: any) {
   const router = useRouter()
@@ -19,8 +21,8 @@ export default function HomePage({mainCategory, category}: any) {
   }
 
   const onSubmit = async (values: any) => {
-    await axios.post('http://localhost:3001/user', {...values}, {headers: {'Content-Type': 'application/json'}})
-    router.push('/')
+    await postUsersItemApi({...values});
+    router.push('/');
   }
 
   const validationSchema = Yup.object({
@@ -80,10 +82,8 @@ export default function HomePage({mainCategory, category}: any) {
 }
 
 export async function getServerSideProps() {
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
-  mainCategory = mainCategory.data;
-  let category = await axios.get("http://localhost:3001/category");
-  category = category.data;
+  let mainCategory = await getMainCategoryItemApi();
+  let category = await getCategoryItemApi();
 
   return {
     props: {

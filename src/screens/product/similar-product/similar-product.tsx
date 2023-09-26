@@ -17,9 +17,9 @@ import {Swiper, SwiperSlide} from "swiper/react";
 const SimilarProduct = ({products}: any) => {
   const router = useRouter();
   const smoothScrollToTopRef = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    console.log(products)
-  }, []);
+  // useEffect(() => {
+  //   console.log(products)
+  // }, []);
   // when go to the clicked related product page url with smoothy scroll to top
   useEffect(() => {
     smoothScrollToTopRef?.current?.childNodes.forEach((items: ChildNode) => {
@@ -36,9 +36,9 @@ const SimilarProduct = ({products}: any) => {
       })
     }
   })
-  useEffect(()=>{
-    console.log(products)
-  })
+  // useEffect(()=>{
+  //   console.log(products)
+  // })
   const relatedProductLink = ({products}:any) => {
    return router.push(`/product/${products}`, undefined, {scroll: false})
   }
