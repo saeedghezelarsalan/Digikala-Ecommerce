@@ -1,0 +1,94 @@
+import React, {useRef, useEffect} from 'react'
+import Link from 'next/link'
+import {useRouter} from 'next/router'
+import Navbar from '../components/Navbar'
+import {useFormik} from 'formik'
+import * as Yup from 'yup'
+import Image from 'next/image'
+import getCategoryItemApi from "@/api/category/get-category-item";
+import getMainCategoryItemApi from "@/api/category/get-main-category-item";
+import postUsersItemApi from "@/api/users/post-user-item";
+
+export default function HomePage({mainCategory, category}: any) {
+  const router = useRouter()
+
+  const initialValues = {
+    id: '',
+    name: '',
+    email: '',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+
+  const onSubmit = async (values: any) => {
+    await postUsersItemApi({...values});
+    router.push('/');
+  }
+
+  const validationSchema = Yup.object({
+    name: Yup.string().min(4, 'نام حداقل باید 4 کاراکتر داشته باشد').required("وارد کردن نام الزامیست"),
+    email: Yup.string().email('فرمت ایمیل صحیح نمی باشد').required("وارد کردن ایمیل الزامیست")
+  })
+
+  const formik = useFormik({
+    initialValues,
+    onSubmit,
+    validationSchema
+  })
+
+  const focus = useRef<any>(null)
+
+  useEffect(() => {
+    if (focus.current) {
+      focus?.current?.focus()
+    }
+  }, [])
+  return (
+    <>
+      <Navbar mainCategory={mainCategory} category={category}/>
+      <div className='relative w-auto h-fit flex items-center justify-center max-h-auto bg-white py-12'>
+        <div className='w-full px-8 xl:px-auto h-auto  xl:mx-auto xl:w-1/4 flex flex-col bg-white xl:h-auto border border-[#e0e0e2] py-8 max-w-lg rounded-lg'>
+          <Link href="/">
+            <div className='w-36 h-12 self-center'>
+              <Image className='w-full h-full object-contain' src="https://www.digikala.com/statics/img/svg/logo.svg" alt=""/>
+            </div>
+          </Link>
+          <h2 className='text-xl mt-2 mb-4 font-semibold text-[#424750]'>ورود | ثبت نام</h2>
+          <h5 className='text-xs my-1'>سلام!</h5>
+          <h5 className='text-xs my-1'>لطفا نام و ایمیل خود را وارد کنید</h5>
+
+          {/* form */}
+          <form onSubmit={formik.handleSubmit} className='flex flex-col items-center gap-y-5 my-6'>
+            <input
+              ref={focus}
+              {...formik.getFieldProps('name')}
+              className='w-full border border-[#f14d60] px-2 py-3 rounded-lg text-sm'
+              type="text" name="name" placeholder='لطفا نام خود را وارد کنید'/>
+            {formik.errors.name && formik.touched.name && <div className="text-red-600 text-right w-full">{formik.errors.name}</div>}
+            <input
+              {...formik.getFieldProps('email')}
+              className='w-full border border-[#f14d60] px-2 py-3 rounded-lg text-sm'
+              type="email" name="email" placeholder='لطفا ایمیل خود را وارد کنید'/>
+            {formik.errors.email && formik.touched.email && <div className="text-red-600 text-right w-full">{formik.errors.email}</div>}
+            <button type='submit' className='w-full bg-[#ef4056] py-4 mt-4 text-white rounded-xl text-xs'>ورود</button>
+          </form>
+          <h5 className='text-xs my-1'>ورود شما به معنای پذیرش شرایط دیجی‌کالا و قوانین حریم‌ خصوصی است
+          </h5>
+
+        </div>
+      </div>
+    </>
+  )
+}
+
+export async function getServerSideProps() {
+  let mainCategory = await getMainCategoryItemApi();
+  let category = await getCategoryItemApi();
+
+  return {
+    props: {
+      mainCategory,
+      category
+    },
+  };
+}
