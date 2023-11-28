@@ -16,10 +16,10 @@ export default function HomePage() {
   // get data
   const userData = async () => {
     try {
-      const users = await axios.get("http://localhost:3001/user");
-      const product = await axios.get("http://localhost:3001/product");
+      const users = await axios.get("https://digikala-demo-data-q7eo.vercel.app/user");
+      const product = await axios.get("https://digikala-demo-data-q7eo.vercel.app/product");
       const comments = await axios.get(
-        "http://localhost:3001/customersComment"
+        "https://digikala-demo-data-q7eo.vercel.app/customersComment"
       );
       setUsers(users.data);
       setProduct(product.data);

@@ -83,7 +83,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const result = await axios.get("http://localhost:3001/category");
+      const result = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
       setCategory(result.data);
       setSubCategory(result.data.map((category) => category.subCategory));
     };
@@ -179,7 +179,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchBrand = async (e) => {
-      const result = await axios.get("http://localhost:3001/brand");
+      const result = await axios.get("https://digikala-demo-data-q7eo.vercel.app/brand");
       setBrand(result.data);
     };
     fetchBrand();
@@ -188,7 +188,7 @@ export default function HomePage() {
   // get main category
   useEffect(() => {
     const fetchMainCategory = async () => {
-      const result = await axios.get("http://localhost:3001/mainCategory");
+      const result = await axios.get("https://digikala-demo-data-q7eo.vercel.app/mainCategory");
       setMainCategory(result.data);
     };
     fetchMainCategory();
@@ -202,7 +202,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchFilterProducts = async () => {
-      const result = await axios.get("http://localhost:3001/filterProduct");
+      const result = await axios.get("https://digikala-demo-data-q7eo.vercel.app/filterProduct");
       setFilterProducts(result.data);
     };
     fetchFilterProducts();
@@ -217,7 +217,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchFilterValue = async () => {
-      const result = await axios.get("http://localhost:3001/filterValue");
+      const result = await axios.get("https://digikala-demo-data-q7eo.vercel.app/filterValue");
       setFilterValue(result.data.filter((value) => value.filterValue));
     };
     fetchFilterValue();
@@ -225,7 +225,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const result = await axios.get("http://localhost:3001/category");
+      const result = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
       setCategory(result.data);
       setSubCategory(result.data.map((category) => category.subCategory));
 
@@ -284,7 +284,7 @@ export default function HomePage() {
     e.preventDefault();
     await axios
       .post(
-        "http://localhost:3001/product",
+        "https://digikala-demo-data-q7eo.vercel.app/product",
         {
           ...product,
           productsValues,

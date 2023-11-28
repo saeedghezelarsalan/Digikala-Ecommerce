@@ -449,9 +449,9 @@ export default function HomePage({ productss, brand, query, filterProduct, categ
 
 export async function getServerSideProps({ params }) {
   const query = params.search;
-  const { data } = await axios.get(`http://localhost:3001/product`);
+  const { data } = await axios.get(`https://digikala-demo-data-q7eo.vercel.app/product`);
 
-  let category = await axios.get("http://localhost:3001/category");
+  let category = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
   category = category.data
 
   let productss = data.map(a => a).filter((product) => product.subCategorySlug == query ? product.subCategorySlug == query : product.categorySlug == query ? product.categorySlug == query : null);
@@ -460,12 +460,12 @@ export async function getServerSideProps({ params }) {
 
   const productsCategorySlug = data.map(a => a).filter((product) => product.CategorySlug == query)
 
-  let brand = await axios.get("http://localhost:3001/brand");
+  let brand = await axios.get("https://digikala-demo-data-q7eo.vercel.app/brand");
   brand = brand.data;
 
-  let filterProduct = await axios.get("http://localhost:3001/filterProduct");
+  let filterProduct = await axios.get("https://digikala-demo-data-q7eo.vercel.app/filterProduct");
   filterProduct = filterProduct.data;
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory")
+  let mainCategory = await axios.get("https://digikala-demo-data-q7eo.vercel.app/mainCategory")
   const mainCategories = mainCategory.data
   if (!productss) {
     return {

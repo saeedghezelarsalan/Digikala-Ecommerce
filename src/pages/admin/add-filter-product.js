@@ -64,7 +64,7 @@ export default function HomePage() {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/filterProduct', { ...filter, productValues, showFilter, CategorySlug, subCategorySlug }, { headers: { "Content-Type": "application/json" } })
+    await axios.post('https://digikala-demo-data-q7eo.vercel.app/filterProduct', { ...filter, productValues, showFilter, CategorySlug, subCategorySlug }, { headers: { "Content-Type": "application/json" } })
       .then(res => {
         setFilter({
           id: "",
@@ -88,7 +88,7 @@ export default function HomePage() {
   // get main category
   useEffect(() => {
     const fetchMainCategory = async () => {
-      const result = await axios.get('http://localhost:3001/mainCategory')
+      const result = await axios.get('https://digikala-demo-data-q7eo.vercel.app/mainCategory')
       setMainCategory(result.data)
     }
     fetchMainCategory()
@@ -98,7 +98,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchCategory = async () => {
-      const result = await axios.get('http://localhost:3001/category')
+      const result = await axios.get('https://digikala-demo-data-q7eo.vercel.app/category')
       setCategory(result.data)
       setSubCategory(result.data.map(category => category.subCategory))
     }

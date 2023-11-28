@@ -19,7 +19,7 @@ export default function HomePage({ mainCategory, category }) {
   }
 
   const onSubmit = async (values) => {
-    await axios.post('http://localhost:3001/user', { ...values }, { headers: { 'Content-Type': 'application/json' } })
+    await axios.post('https://digikala-demo-data-q7eo.vercel.app/user', { ...values }, { headers: { 'Content-Type': 'application/json' } })
     router.push('/')
   }
 
@@ -78,9 +78,9 @@ export default function HomePage({ mainCategory, category }) {
 }
 
 export async function getServerSideProps({ params }) {
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
+  let mainCategory = await axios.get("https://digikala-demo-data-q7eo.vercel.app/mainCategory");
   mainCategory = mainCategory.data;
-  let category = await axios.get("http://localhost:3001/category");
+  let category = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
   category = category.data;
 
   return {

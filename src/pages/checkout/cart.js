@@ -305,10 +305,10 @@ const HomePage = ({ mainCategories, category }) => {
 export default HomePage;
 
 export async function getServerSideProps({ params }) {
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
+  let mainCategory = await axios.get("https://digikala-demo-data-q7eo.vercel.app/mainCategory");
   const mainCategories = mainCategory.data;
 
-  let category = await axios.get("http://localhost:3001/category");
+  let category = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
   category = category.data;
 
   return {

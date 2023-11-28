@@ -24,7 +24,7 @@ export default function HomePage() {
   const submitHandler = async (e) => {
     e.preventDefault();
     await axios
-      .post("http://localhost:3001/brand", brand)
+      .post("https://digikala-demo-data-q7eo.vercel.app/brand", brand)
       .then((res) => {
         setBrand({
           id: "",

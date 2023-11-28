@@ -1,12 +1,14 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import {Html, Head, Main, NextScript} from 'next/document'
 
 export default function Document() {
   return (
     <Html>
-      <Head />
+      <Head>
+        <link rel="manifest" href="/manifest.json"/>
+      </Head>
       <body dir='rtl' lang='fa' className='overflow-x-hidden'>
-        <Main />
-        <NextScript />
+      <Main/>
+      <NextScript/>
       </body>
     </Html>
   )

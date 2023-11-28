@@ -318,26 +318,26 @@ export default function Home({
 }
 
 export async function getServerSideProps({ params }) {
-  let product = await axios.get(`http://localhost:3001/product`);
+  let product = await axios.get(`https://digikala-demo-data-q7eo.vercel.app/product`);
   product = product.data;
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
+  let mainCategory = await axios.get("https://digikala-demo-data-q7eo.vercel.app/mainCategory");
   mainCategory = mainCategory.data;
-  let category = await axios.get("http://localhost:3001/category");
+  let category = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
   category = category.data;
 
-  let homePageDetail = await axios.get("http://localhost:3001/homePageDetail");
+  let homePageDetail = await axios.get("https://digikala-demo-data-q7eo.vercel.app/homePageDetail");
   homePageDetail = homePageDetail.data;
 
   let DigikalaSubCategories = await axios.get(
-    "http://localhost:3001/DigikalaSubCategories"
+    "https://digikala-demo-data-q7eo.vercel.app/DigikalaSubCategories"
   );
   DigikalaSubCategories = DigikalaSubCategories.data;
 
 
-  let brands = await axios.get("http://localhost:3001/brand")
+  let brands = await axios.get("https://digikala-demo-data-q7eo.vercel.app/brand")
   brands = brands.data
 
-  let blogData = await axios.get("http://localhost:3001/blog")
+  let blogData = await axios.get("https://digikala-demo-data-q7eo.vercel.app/blog")
   blogData = blogData.data
 
   return {

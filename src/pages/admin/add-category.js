@@ -30,7 +30,7 @@ export default function HomePage() {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/category', { ...category, subCategory }, { headers: { "Content-Type": "application/json" } })
+    await axios.post(`${process.env.API_BASE_URL}/category`, { ...category, subCategory }, { headers: { "Content-Type": "application/json" } })
       .then(res => {
         setCategory({
           id: "",
@@ -58,7 +58,7 @@ export default function HomePage() {
 
   useEffect(() => {
     const fetchMainCategory = async () => {
-      const result = await axios.get('http://localhost:3001/mainCategory')
+      const result = await axios.get('https://digikala-demo-data-q7eo.vercel.app/mainCategory')
       setMainCategory(result.data)
     }
     fetchMainCategory()

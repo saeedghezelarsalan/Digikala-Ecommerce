@@ -33,7 +33,7 @@ export default function HomePage() {
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/mainCategory', { ...mainCategory, slider, banner }, { headers: { "Content-Type": "application/json" } })
+    await axios.post('https://digikala-demo-data-q7eo.vercel.app/mainCategory', { ...mainCategory, slider, banner }, { headers: { "Content-Type": "application/json" } })
       .then(res => {
         console.log(res)
         setMainCategory({

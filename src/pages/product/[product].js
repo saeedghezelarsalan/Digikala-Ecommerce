@@ -159,7 +159,7 @@ function HomePage({
   const clickCustomersQuestions = async (e) => {
     e.preventDefault();
     await axios
-      .post(`http://localhost:3001/customersQuestion`, {
+      .post(`https://digikala-demo-data-q7eo.vercel.app/customersQuestion`, {
         id: "",
         questionsBox: questionsBox,
         slug: router.query.product,
@@ -175,7 +175,7 @@ function HomePage({
   const submitCommentHandler = async (e) => {
     e.preventDefault();
     await axios
-      .post(`http://localhost:3001/customersComment`, {
+      .post(`https://digikala-demo-data-q7eo.vercel.app/customersComment`, {
         ...customerComment,
         positiveComments: allPositive,
         negativeComments: allNegative,
@@ -2269,22 +2269,22 @@ function HomePage({
 
 export const getServerSideProps = store.getServerSideProps((store) => async ({ params }) => {
   const query = params.product;
-  const { data } = await axios.get(`http://localhost:3001/product`);
+  const { data } = await axios.get(`https://digikala-demo-data-q7eo.vercel.app/product`);
   const customerComment = await axios.get(
-    `http://localhost:3001/customersComment`
+    `https://digikala-demo-data-q7eo.vercel.app/customersComment`
   );
   let comments = customerComment.data;
   comments = comments.filter((comment) => comment.slug == query);
 
   const customerQuestion = await axios.get(
-    `http://localhost:3001/customersQuestion`
+    `https://digikala-demo-data-q7eo.vercel.app/customersQuestion`
   );
   let questions = customerQuestion.data;
   questions = questions.filter((questions) => questions.slug == query);
 
-  let mainCategory = await axios.get("http://localhost:3001/mainCategory");
+  let mainCategory = await axios.get("https://digikala-demo-data-q7eo.vercel.app/mainCategory");
   mainCategory = mainCategory.data;
-  let category = await axios.get("http://localhost:3001/category");
+  let category = await axios.get("https://digikala-demo-data-q7eo.vercel.app/category");
   category = category.data;
 
   let product = data.filter((product) => product.slug == query)[0];
